@@ -56,9 +56,24 @@ h2{margin:0 0 12px;font-family:var(--serif);font-style:italic;font-weight:400;fo
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
 .two p{font-family:var(--text);font-size:17px;line-height:1.6;color:var(--caption);margin:0}
 .soon{color:var(--muted)}
+.docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.doc{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;color:var(--title);text-decoration:none;background:#0d1112}
+.doc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.1,1),opacity .6s}
+.doc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,15,.15) 30%,rgba(10,14,15,.92) 100%)}
+.doc-body{position:absolute;left:40px;right:40px;bottom:40px;z-index:1}
+.doc-meta{display:block;font-family:var(--text);font-size:14px;color:var(--muted);margin-bottom:14px}
+.doc h2{margin:0 0 12px}
+.doc p{margin:0;max-width:34ch;font-family:var(--text);font-size:17px;line-height:1.55;color:var(--caption)}
+.doc-link{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-family:var(--serif);font-style:italic;font-size:26px;color:var(--gold);border-bottom:1px solid currentColor;padding-bottom:4px}
+.doc-link i{font-style:normal;font-family:var(--sans);font-size:20px;transition:transform .4s cubic-bezier(.2,.7,.1,1)}
+a.doc:hover img,a.doc:focus-visible img{transform:scale(1.04)}
+a.doc:hover .doc-link i,a.doc:focus-visible .doc-link i{transform:translateX(6px)}
+.doc.soon img{opacity:.55}
+.doc.soon .doc-link{color:var(--muted);border-bottom-color:transparent}
+@media (prefers-reduced-motion:reduce){.doc img,.doc-link i{transition:none}}
 footer{padding-block:80px;text-align:center;color:var(--muted);font-size:14px}
 footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
-@media (max-width:820px){.film,.two{grid-template-columns:1fr;gap:40px}section{padding-block:72px}.hero{padding-block:16px 80px}}
+@media (max-width:820px){.docs{grid-template-columns:1fr}.doc-body{left:24px;right:24px;bottom:28px}.film,.two{grid-template-columns:1fr;gap:40px}section{padding-block:72px}.hero{padding-block:16px 80px}}
 </style>
 </head>
 <body>
@@ -70,15 +85,24 @@ footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
 </div>
 
 <section id="documentos">
-  <div class="wrap two">
-    <div>
-      <h2>Pauta e plano tático</h2>
-      <p>O resumo da reunião com modelo de negócio, funil do clube e plano dos primeiros 30 dias. Documento interno dos sócios, com acesso restrito.</p>
-      <a class="btn" href="https://claude.ai/artifact/6boPujBQak3zBUUzWPpt2h" rel="noopener">Abrir a pauta</a>
-    </div>
-    <div>
-      <h2>Apresentação</h2>
-      <p class="soon">A apresentação institucional do Select Club entra aqui assim que estiver pronta: o que é o leilão extrajudicial, como funciona a assessoria, as etapas e a segurança jurídica.</p>
+  <div class="wrap docs">
+    <a class="doc" href="https://claude.ai/artifact/6boPujBQak3zBUUzWPpt2h" rel="noopener">
+      <img src="assets/doc-pauta.jpg" alt="" loading="lazy">
+      <div class="doc-body">
+        <span class="doc-meta">Documento interno · 7 de novembro de 2026</span>
+        <h2>Pauta e plano tático</h2>
+        <p>Modelo de negócio, funil do clube e o plano dos primeiros 30 dias.</p>
+        <span class="doc-link">Abrir a pauta <i aria-hidden="true">→</i></span>
+      </div>
+    </a>
+    <div class="doc soon">
+      <img src="assets/doc-apresentacao.jpg" alt="" loading="lazy">
+      <div class="doc-body">
+        <span class="doc-meta">Em produção</span>
+        <h2>Apresentação</h2>
+        <p>O leilão extrajudicial, a assessoria, as etapas e a segurança jurídica.</p>
+        <span class="doc-link">Em breve</span>
+      </div>
     </div>
   </div>
 </section>
