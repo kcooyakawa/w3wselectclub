@@ -7,8 +7,13 @@
 <meta name="description" content="Materiais do W3W Select Club: filme-convite, cards e apresentação.">
 <meta name="robots" content="noindex, nofollow">
 <style>
+@font-face{font-family:"PP Editorial New";src:url(assets/fonts/editorial-ultralight-italic.woff2) format("woff2");font-weight:200;font-style:italic;font-display:swap}
+@font-face{font-family:"PP Editorial New";src:url(assets/fonts/editorial-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"PP Neue Montreal";src:url(assets/fonts/montreal-light.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"PP Neue Montreal";src:url(assets/fonts/montreal-regular.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"PP Neue Montreal Text";src:url(assets/fonts/montreal-book.woff2) format("woff2");font-weight:400;font-display:swap}
 :root{--night:#14191B;--shadow:#1B2225;--title:#EFE6D6;--caption:#D8CDBB;--muted:#9E9584;--gold:#C9A46A;
---serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;color-scheme:dark}
+--serif:"PP Editorial New",Georgia,serif;--sans:"PP Neue Montreal","Helvetica Neue",Arial,sans-serif;--text:"PP Neue Montreal Text","PP Neue Montreal",Arial,sans-serif;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--night);color:var(--title);font-family:var(--sans)}
 a{color:inherit}
@@ -16,14 +21,14 @@ a{color:inherit}
 header{padding-block:56px 40px;display:flex;justify-content:center}
 header img{height:64px;width:auto}
 .hero{padding-block:24px 120px;text-align:center}
-.hero h1{margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(40px,7vw,92px);line-height:1;letter-spacing:-.02em;color:var(--gold)}
+.hero h1{margin:0;font-family:var(--serif);font-style:italic;font-weight:200;font-size:clamp(40px,7vw,92px);line-height:1;letter-spacing:-.02em;color:var(--gold)}
 .hero h1 span{display:block;font-family:var(--sans);font-style:normal;font-weight:300;color:var(--title);letter-spacing:-.04em}
 .hero p{margin:32px auto 0;max-width:46ch;font-size:18px;line-height:1.55;color:var(--caption)}
 section{padding-block:96px}
 section+section{background:var(--shadow)}
 section:nth-of-type(odd){background:var(--night)}
-h2{margin:0 0 12px;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(32px,4.5vw,56px);line-height:1.05;letter-spacing:-.01em}
-.lead{margin:0 0 48px;max-width:56ch;font-size:17px;line-height:1.6;color:var(--caption)}
+h2{margin:0 0 12px;font-family:var(--serif);font-style:italic;font-weight:200;font-size:clamp(32px,4.5vw,56px);line-height:1.05;letter-spacing:-.01em}
+.lead{font-family:var(--text);margin:0 0 48px;max-width:56ch;font-size:17px;line-height:1.6;color:var(--caption)}
 .film{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:64px;align-items:center}
 .film video{width:100%;aspect-ratio:9/16;background:#000;display:block}
 .film dl{margin:0;display:grid;gap:20px;font-size:16px;line-height:1.5;color:var(--caption)}
@@ -38,7 +43,7 @@ h2{margin:0 0 12px;font-family:var(--serif);font-style:italic;font-weight:400;fo
 .cards figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-size:15px;color:var(--caption)}
 .cards figcaption a{color:var(--title);text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
-.two p{font-size:17px;line-height:1.6;color:var(--caption);margin:0}
+.two p{font-family:var(--text);font-size:17px;line-height:1.6;color:var(--caption);margin:0}
 .soon{color:var(--muted)}
 footer{padding-block:80px;text-align:center;color:var(--muted);font-size:14px}
 footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
@@ -50,8 +55,22 @@ footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
 
 <div class="wrap hero">
   <h1>Oportunidades<span>que poucos veem.</span></h1>
-  <p>Curadoria e assessoria em leilões de imóveis para um grupo seleto de investidores. Aqui ficam os materiais oficiais do clube.</p>
+  <p>Curadoria e assessoria em leilões de imóveis para um grupo seleto de investidores. Aqui ficam a pauta, o filme-convite e os cards do clube.</p>
 </div>
+
+<section id="documentos">
+  <div class="wrap two">
+    <div>
+      <h2>Pauta e plano tático</h2>
+      <p>O resumo da reunião com modelo de negócio, funil do clube e plano dos primeiros 30 dias. Documento interno dos sócios, com acesso restrito.</p>
+      <a class="btn" href="https://claude.ai/artifact/6boPujBQak3zBUUzWPpt2h" rel="noopener">Abrir a pauta</a>
+    </div>
+    <div>
+      <h2>Apresentação</h2>
+      <p class="soon">A apresentação institucional do Select Club entra aqui assim que estiver pronta: o que é o leilão extrajudicial, como funciona a assessoria, as etapas e a segurança jurídica.</p>
+    </div>
+  </div>
+</section>
 
 <section id="filme">
   <div class="wrap film">
@@ -78,20 +97,6 @@ footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
       <figure><img src="assets/cards/v3-01-capital.jpg" alt="Card: Seu capital pode encontrar novas oportunidades" loading="lazy"><figcaption><span>Seu capital</span><a href="assets/cards/v3-01-capital.jpg" download>Baixar</a></figcaption></figure>
       <figure><img src="assets/cards/v3-02-nem-toda.jpg" alt="Card: Nem toda oportunidade chega a todos" loading="lazy"><figcaption><span>Nem toda oportunidade</span><a href="assets/cards/v3-02-nem-toda.jpg" download>Baixar</a></figcaption></figure>
       <figure><img src="assets/cards/v3-04-convidado.jpg" alt="Card: Você foi convidado" loading="lazy"><figcaption><span>Você foi convidado</span><a href="assets/cards/v3-04-convidado.jpg" download>Baixar</a></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section id="documentos">
-  <div class="wrap two">
-    <div>
-      <h2>Pauta e plano tático</h2>
-      <p>O resumo da reunião com modelo de negócio, funil do clube e plano dos primeiros 30 dias. Documento interno dos sócios, com acesso restrito.</p>
-      <a class="btn" href="https://claude.ai/artifact/6boPujBQak3zBUUzWPpt2h" rel="noopener">Abrir a pauta</a>
-    </div>
-    <div>
-      <h2>Apresentação</h2>
-      <p class="soon">A apresentação institucional do Select Club entra aqui assim que estiver pronta: o que é o leilão extrajudicial, como funciona a assessoria, as etapas e a segurança jurídica.</p>
     </div>
   </div>
 </section>
