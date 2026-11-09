@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="W3W Select Club · Apresentação">
+<meta property="og:description" content="Curadoria e assessoria em leilões de imóveis.">
+<meta property="og:image" content="https://kcooyakawa.github.io/w3wselectclub/assets/og.jpg">
+<link rel="icon" href="../assets/lockup.png">
+<title>W3W Select Club</title>
+<style>
+@font-face{font-family:"Michelangelus";font-style:italic;font-weight:400;src:url(../assets/fonts/michelangelus-italic.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Michelangelus";font-style:normal;font-weight:400;src:url(../assets/fonts/michelangelus-regular.woff2) format("woff2");font-display:block}
+@font-face{font-family:"PP Neue Montreal";font-weight:300;src:url(../assets/fonts/montreal-light.woff2) format("woff2")}
+@font-face{font-family:"PP Neue Montreal";font-weight:400;src:url(../assets/fonts/montreal-book.woff2) format("woff2")}
+@font-face{font-family:"PP Neue Montreal";font-weight:500;src:url(../assets/fonts/montreal-regular.woff2) format("woff2")}
+@font-face{font-family:"PP Editorial New";font-style:italic;font-weight:300;src:url(../assets/fonts/editorial-italic.woff2) format("woff2")}
+/* Layout: cinema — cada capítulo abre como um card do clube (objeto em luz dourada, título centralizado em duas linhas) e se desdobra em conteúdo sobre o preto */
+:root{
+  --night:#0C0D0D; --night-2:#141616; --stone:#1B1C1B;
+  --ivory:#EFE6D6; --ivory-2:#DDD5C7; --muted:#BDB3A2;
+  --champ:#D8C29A; --gold:#C9A46A; --hair:rgba(216,194,154,.22);
+  --script:"Michelangelus", "PP Editorial New", Georgia, serif;
+  --sans:"PP Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:var(--sans);font-weight:400;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+p,h1,h2,h3{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+/* título do clube: script champanhe + sans marfim */
+.t{text-align:center;text-wrap:balance}
+.t .s{display:block;font-family:var(--script);font-style:italic;color:var(--champ);font-weight:400;line-height:1.02;letter-spacing:-.005em}
+.t .n{display:block;font-family:var(--sans);font-weight:300;color:var(--ivory);line-height:1.05;letter-spacing:-.02em}
+.t.xl .s{font-size:clamp(52px,7.4vw,112px)}
+.t.xl .n{font-size:clamp(46px,6.6vw,100px)}
+.t.l .s{font-size:clamp(42px,5.4vw,80px)}
+.t.l .n{font-size:clamp(36px,4.6vw,68px)}
+.sub{font-weight:400;font-size:clamp(16px,1.4vw,19px);color:var(--ivory-2);max-width:46ch;margin:28px auto 0;text-align:center;line-height:1.55}
+.eyebrow{font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:center}
+
+/* topo */
+.top{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .6s,backdrop-filter .6s}
+.top .wrap{display:flex;justify-content:center;padding-block:22px}
+.top img{height:30px;width:auto;opacity:.95}
+.top.on{background:rgba(12,13,13,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.prog{position:absolute;left:0;bottom:0;height:1px;background:var(--gold);width:0}
+
+/* cena */
+.scene{position:relative;min-height:min(100svh,1000px);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start}
+.scene .bg{position:absolute;left:0;right:0;top:-12%;height:124%;background-size:cover;background-position:center 70%;will-change:transform}
+.scene .shade{position:absolute;inset:0;background:linear-gradient(180deg,var(--night) 0%,rgba(12,13,13,.82) 22%,rgba(12,13,13,.15) 52%,rgba(12,13,13,.2) 80%,var(--night) 100%)}
+.scene .beam{position:absolute;top:-30%;left:30%;width:42%;height:160%;background:linear-gradient(98deg,transparent 15%,rgba(216,194,154,.10) 46%,rgba(216,194,154,.03) 60%,transparent 80%);transform:rotate(16deg);mix-blend-mode:screen;pointer-events:none;animation:beam 12s ease-in-out infinite alternate}
+@keyframes beam{to{transform:translateX(14%) rotate(19deg)}}
+.scene .copy{position:relative;padding-top:clamp(120px,16vh,180px);will-change:transform}
+.scene canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .bg{background-position:70% 40%}
+.hero .shade{background:linear-gradient(180deg,rgba(12,13,13,.92) 0%,rgba(12,13,13,.55) 40%,rgba(12,13,13,.35) 70%,var(--night) 100%)}
+.hero .copy{padding-top:clamp(150px,24vh,250px)}
+.hero .lock{display:block;margin:0 auto 64px;height:clamp(54px,6vw,78px);width:auto}
+.cue{position:absolute;left:50%;bottom:36px;transform:translateX(-50%);font-size:13px;letter-spacing:.32em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:14px}
+.cue i{width:1px;height:48px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* entrada */
+.ln{display:block;overflow:hidden;padding-bottom:.08em}
+.ln > span{display:block;animation:up 1.5s cubic-bezier(.16,1,.3,1) both}
+.ln + .ln > span{animation-delay:.16s}
+@keyframes up{from{transform:translateY(110%)}}
+.rv{transition:transform 1.3s cubic-bezier(.16,1,.3,1),opacity 1.3s}
+.js .rv:not(.in){transform:translateY(32px);opacity:.2}
+
+/* blocos */
+.block{padding-block:clamp(80px,11vw,150px)}
+.rule{width:56px;height:1px;background:var(--gold);margin:44px auto}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px);margin-top:clamp(56px,7vw,96px)}
+.item{min-width:0;text-align:center;padding-top:28px;border-top:1px solid var(--hair)}
+.item h3{font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(30px,2.6vw,38px);line-height:1.1;margin-bottom:14px}
+.item p{color:var(--ivory-2);font-size:17px;max-width:30ch;margin:0 auto}
+
+/* carta */
+.letter{max-width:760px;margin:0 auto;text-align:center}
+.letter .s{font-family:var(--script);font-style:italic;color:var(--champ);font-size:clamp(34px,3.6vw,52px);margin-bottom:36px;display:block}
+.letter p.b{font-family:var(--sans);font-weight:300;font-size:clamp(21px,2vw,27px);line-height:1.55;color:var(--ivory)}
+.letter p.b + p.b{margin-top:1em}
+.letter .who{margin-top:52px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.letter .who b{font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:40px;line-height:1}
+.letter .who span{font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.creds{display:flex;justify-content:center;gap:clamp(28px,5vw,72px);margin-top:64px;flex-wrap:wrap}
+.creds div{text-align:center;min-width:0}
+.creds b{display:block;font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(48px,5vw,72px);line-height:1}
+.creds span{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-2);font-weight:500}
+
+/* método */
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:clamp(64px,8vw,110px)}
+.steps .track{position:absolute;left:10%;right:10%;top:22px;height:1px;background:var(--hair)}
+.steps .fill{position:absolute;left:10%;top:22px;height:1px;background:var(--gold);width:0;transition:width 2.6s cubic-bezier(.65,0,.35,1);box-shadow:0 0 12px rgba(201,164,106,.6)}
+.steps.in .fill{width:80%}
+.st{text-align:center;padding:0 12px;min-width:0;position:relative}
+.st .dot{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--night);margin:0 auto 26px;display:grid;place-items:center;font-family:var(--script);font-style:italic;color:var(--champ);font-size:22px}
+.st h3{font-family:var(--sans);font-weight:500;font-size:19px;color:var(--ivory);margin-bottom:10px}
+.st p{font-size:16px;color:var(--ivory-2);line-height:1.5}
+.funnel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(80px,10vw,140px)}
+.funnel div{text-align:center;padding:0 16px;min-width:0}
+.funnel div+div{border-left:1px solid var(--hair)}
+.funnel b{display:block;font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(56px,6.4vw,96px);line-height:1}
+.funnel span{display:block;margin-top:12px;font-size:17px;color:var(--ivory-2)}
+
+/* modalidades */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3vw,40px);margin-top:clamp(56px,7vw,96px)}
+.card{position:relative;padding:clamp(36px,4vw,56px);background:linear-gradient(160deg,#191A19,#0F1010);border:1px solid var(--hair);text-align:center;min-width:0;overflow:hidden}
+.card.main{border-color:rgba(201,164,106,.55)}
+.card.main::before{content:"";position:absolute;inset:-40% -10% auto;height:80%;background:radial-gradient(closest-side,rgba(216,194,154,.12),transparent);pointer-events:none}
+.card .tag{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);font-weight:500}
+.card h3{font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(46px,4.6vw,66px);line-height:1;margin:18px 0 18px}
+.card p{color:var(--ivory-2);font-size:17px;max-width:36ch;margin:0 auto}
+.card dl{margin:32px 0 0;border-top:1px solid var(--hair)}
+.card dl div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--hair);font-size:16px;text-align:left}
+.card dt{color:var(--muted)}
+.card dd{margin:0;color:var(--ivory);text-align:right}
+
+/* case */
+.photo{position:relative;height:clamp(380px,70vh,760px);overflow:hidden}
+.photo img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform;filter:saturate(.95) contrast(1.03)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--night) 0%,rgba(12,13,13,0) 12%,rgba(12,13,13,0) 88%,var(--night) 100%)}
+.ficha{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);margin-top:clamp(56px,7vw,96px);align-items:start}
+.stamp{display:inline-block;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);border:1px solid rgba(201,164,106,.5);padding:8px 14px;font-weight:500}
+.rows{margin-top:24px;border-top:1px solid var(--hair)}
+.rows div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.rows dt{color:var(--ivory-2);font-size:16px}
+.rows dd{margin:0;font-size:20px;font-weight:500;color:var(--ivory)}
+.small{font-size:15px;color:var(--muted);margin-top:18px;line-height:1.55}
+.chart h4{margin:0;font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(34px,3.2vw,46px);line-height:1.05}
+.legend{display:flex;gap:24px;margin:20px 0 10px;font-size:15px;color:var(--ivory-2)}
+.legend i{display:inline-block;width:14px;height:8px;margin-right:8px;vertical-align:middle}
+.crow{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hair)}
+.crow > span{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.bars{display:flex;flex-direction:column;gap:7px;padding-right:76px}
+.bars div{height:18px;width:0;position:relative;transition:width 1.8s cubic-bezier(.16,1,.3,1)}
+.bars .a{background:linear-gradient(90deg,#8E6E40,var(--champ))}
+.bars .b{background:rgba(216,194,154,.28)}
+.bars em{position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);font-style:normal;font-weight:500;font-size:16px;color:var(--ivory);white-space:nowrap}
+.duo.cases .card{text-align:left}
+.duo.cases .card p{margin:0}
+.duo.cases h3{margin:14px 0 14px}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 18px;padding-top:18px;border-top:1px solid var(--hair)}
+.trio b{display:block;font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ);font-size:clamp(26px,2.4vw,34px);line-height:1.1}
+.trio span{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pend{color:var(--champ) !important;font-size:15px !important;margin-top:10px !important}
+.big28{font-family:var(--script);font-style:italic;color:var(--champ);font-size:clamp(84px,9vw,128px);line-height:.9;display:block;margin-top:10px}
+
+/* fecho */
+.close .copy{padding-top:clamp(140px,20vh,220px)}
+.close .lock{display:block;margin:72px auto 0;height:46px;width:auto}
+.contact{display:flex;justify-content:center;gap:clamp(28px,5vw,72px);flex-wrap:wrap;margin-top:44px;text-align:center}
+.contact b{display:block;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);font-weight:500;margin-bottom:6px}
+.contact span{font-size:16px;color:var(--ivory)}
+.legal{max-width:76ch;margin:96px auto 0;font-size:14px;line-height:1.6;color:var(--muted);text-align:center}
+
+@media (max-width:860px){
+  .grid3,.duo,.ficha{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr);gap:36px}
+  .steps .track,.steps .fill{display:none}
+  .funnel{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .funnel div:nth-child(3){border-left:0}
+  .bars{padding-right:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .js .rv:not(.in){transform:none;opacity:1}
+  .steps .fill{width:80%}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top" id="top"><div class="wrap"><img src="../assets/lockup.png" alt="W3W Imóveis Select Club"></div><div class="prog" id="prog"></div></header>
+
+<section class="scene hero" id="hero">
+  <div class="bg" data-depth=".22" style="background-image:url(img/cidade.jpg)"></div>
+  <div class="shade"></div>
+  <div class="beam"></div>
+  <canvas data-dust></canvas>
+  <div class="copy wrap" data-fade>
+    <h1 class="t xl"><span class="ln"><span class="s">Oportunidades</span></span><span class="ln"><span class="n">que poucos veem.</span></span></h1>
+    <p class="sub">Curadoria e assessoria em leilões de imóveis para um grupo seleto de investidores.</p>
+  </div>
+  <div class="cue"><i></i>Role</div>
+</section>
+
+<section class="block">
+  <div class="wrap letter rv">
+    <span class="s">Prezado investidor,</span>
+    <p class="b">todos os dias eu olho mais de cem leilões. A maior parte não serve. Alguns parecem bons e escondem uma matrícula com problema, uma dívida, um preço que não se sustenta.</p>
+    <p class="b">O meu trabalho é reconhecer os poucos que valem. Esta apresentação mostra como faço isso, o que acontece depois do arremate e o que uma boa decisão pode render.</p>
+    <div class="who"><b>Haroldo Rosas</b><span>Arrematante e assessor em leilões de imóveis</span></div>
+    <div class="creds">
+      <div><b class="num" data-count="3">3</b><span>anos arrematando</span></div>
+      <div><b class="num" data-count="18">18</b><span>arremates no ecossistema</span></div>
+      <div><b class="num" data-count="30" data-pre="+" data-suf="%">+30%</b><span>nas operações concluídas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="bg" data-depth=".25" style="background-image:url(img/key.jpg)"></div>
+  <div class="shade"></div><div class="beam"></div><canvas data-dust></canvas>
+  <div class="copy wrap">
+    <p class="eyebrow rv">O mercado</p>
+    <h2 class="t xl rv" style="margin-top:28px"><span class="s">Nem todo imóvel</span><span class="n">é oportunidade.</span></h2>
+    <p class="sub rv">Bancos e securitizadoras levam a leilão imóveis retomados, muitas vezes de 40% a 70% abaixo do valor de mercado. O que separa o investidor da oportunidade é saber reconhecer.</p>
+  </div>
+</section>
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="grid3">
+      <div class="item rv"><h3>O preço</h3><p>O retorno nasce na compra. Arremates bem abaixo da avaliação são comuns.</p></div>
+      <div class="item rv"><h3>O receio</h3><p>Edital, dívidas, imóvel ocupado. O jurídico afasta a maioria dos investidores.</p></div>
+      <div class="item rv"><h3>O tempo</h3><p>Garimpar centenas de leilões por dia é trabalho de especialista.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="bg" data-depth=".25" style="background-image:url(img/gavel.jpg)"></div>
+  <div class="shade"></div><div class="beam"></div><canvas data-dust></canvas>
+  <div class="copy wrap">
+    <p class="eyebrow rv">O método</p>
+    <h2 class="t xl rv" style="margin-top:28px"><span class="s">O lance é a última</span><span class="n">etapa de uma boa decisão.</span></h2>
+  </div>
+</section>
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="steps rv" id="steps"><div class="track"></div><div class="fill"></div>
+      <div class="st"><div class="dot">1</div><h3>Perfil e garimpo</h3><p>Seu objetivo define o filtro. Editais lidos todos os dias.</p></div>
+      <div class="st"><div class="dot">2</div><h3>Análise jurídica</h3><p>Edital, matrícula, IPTU e condomínio.</p></div>
+      <div class="st"><div class="dot">3</div><h3>Viabilidade</h3><p>Valor real por comparáveis e lance máximo com margem.</p></div>
+      <div class="st"><div class="dot">4</div><h3>O leilão</h3><p>Lances com limite. Passou dele, não arrematamos.</p></div>
+      <div class="st"><div class="dot">5</div><h3>Posse e matrícula</h3><p>Arrematação, ITBI, registro e desocupação.</p></div>
+    </div>
+    <div class="funnel rv">
+      <div><b class="num" data-count="100" data-suf="+">100+</b><span>leilões garimpados por dia</span></div>
+      <div><b class="num" data-count="3" data-pre="~">~3</b><span>seguem para análise</span></div>
+      <div><b class="num" data-count="2" data-suf=" dias">2 dias</b><span>até para analisar um imóvel</span></div>
+      <div><b class="num" data-count="1">1</b><span>debate final antes do lance</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="bg" data-depth=".25" style="background-image:url(img/env.jpg)"></div>
+  <div class="shade"></div><div class="beam"></div><canvas data-dust></canvas>
+  <div class="copy wrap">
+    <p class="eyebrow rv">Segurança</p>
+    <h2 class="t xl rv" style="margin-top:28px"><span class="s">Tudo documentado</span><span class="n">antes do lance.</span></h2>
+  </div>
+</section>
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="grid3">
+      <div class="item rv"><h3>Só extrajudicial</h3><p>Bancos e securitizadoras, com evicção. Se o leilão for anulado, o valor volta corrigido.</p></div>
+      <div class="item rv"><h3>Análise completa</h3><p>Matrícula, dívidas e edital revisados por profissionais antes de qualquer aporte.</p></div>
+      <div class="item rv"><h3>Imóvel ocupado</h3><p>A maioria sai por acordo. Em último caso, imissão na posse em cerca de 60 dias.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:linear-gradient(180deg,var(--night),var(--night-2) 30%,var(--night))">
+  <div class="wrap">
+    <p class="eyebrow rv">Como participar</p>
+    <h2 class="t l rv" style="margin-top:28px"><span class="s">Sozinho</span><span class="n">ou como cotista.</span></h2>
+    <div class="duo">
+      <div class="card main rv"><span class="tag">Modelo principal</span><h3>Tradicional</h3><p>Do garimpo à posse, com matrícula no seu nome. Você decide a reforma e a venda e fica com todo o resultado.</p>
+        <dl><div><dt>Assessoria</dt><dd>10%, metade no arremate e metade na posse</dd></div><div><dt>Resultado</dt><dd>Integral do investidor</dd></div></dl></div>
+      <div class="card rv"><span class="tag" style="color:var(--ivory-2)">Casos pontuais</span><h3>Caixa Forte</h3><p>A assessoria conduz também reforma e venda. Mais cômodo, com o lucro dividido com a operação.</p>
+        <dl><div><dt>Assessoria</dt><dd>50% do lucro na venda</dd></div><div><dt>Resultado</dt><dd>Metade do lucro</dd></div></dl></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-bottom:0">
+  <div class="wrap">
+    <p class="eyebrow rv">Oportunidade analisada</p>
+    <h2 class="t l rv" style="margin-top:28px"><span class="s">Peruíbe,</span><span class="n">casa de 242 m².</span></h2>
+  </div>
+</section>
+<div class="photo"><img data-depth=".18" src="img/peruibe-a.jpg" alt="Fachada da casa em Peruíbe"></div>
+<section class="block" style="padding-top:0">
+  <div class="wrap ficha">
+    <div class="rv">
+      <span class="stamp">Simulação · 29/10/2026</span>
+      <dl class="rows">
+        <div><dt>Modalidade</dt><dd>Extrajudicial</dd></div>
+        <div><dt>Lance</dt><dd class="num">R$ 470.400</dd></div>
+        <div><dt>Avaliação fiscal</dt><dd class="num">R$ 1.154.000</dd></div>
+        <div><dt>Reforma prevista</dt><dd class="num">R$ 100.000</dd></div>
+        <div><dt>Venda projetada</dt><dd class="num">R$ 1.050.000</dd></div>
+        <div><dt>Pagamento</dt><dd>20% de entrada, financiado</dd></div>
+      </dl>
+      <p class="small">Inclui leiloeiro, ITBI, registro, desocupação, corretagem, financiamento e imposto de renda. Projeção, não resultado.</p>
+    </div>
+    <div class="chart rv" id="chart">
+      <p class="eyebrow" style="text-align:left">Retorno projetado sobre o capital</p>
+      <h4 style="margin-top:16px">Quanto antes vende,<br>mais rende.</h4>
+      <div class="legend"><span><i style="background:var(--champ)"></i>Tradicional</span><span><i style="background:rgba(216,194,154,.28)"></i>Caixa Forte</span></div>
+      <div class="crow"><span>1 mês</span><div class="bars"><div class="a" data-w="82.8"><em>82,8%</em></div><div class="b" data-w="55.9"><em>55,9%</em></div></div></div>
+      <div class="crow"><span>6 meses</span><div class="bars"><div class="a" data-w="72.6"><em>72,6%</em></div><div class="b" data-w="49.0"><em>49,0%</em></div></div></div>
+      <div class="crow"><span>12 meses</span><div class="bars"><div class="a" data-w="62.1"><em>62,1%</em></div><div class="b" data-w="42.1"><em>42,1%</em></div></div></div>
+      <p class="small">Lucro líquido projetado no Tradicional: R$ 252,5 mil em 1 mês, R$ 219,6 mil em 12 meses.</p>
+    </div>
+  </div>
+</section>
+<div class="photo" style="height:clamp(300px,50vh,540px)"><img data-depth=".18" src="img/peruibe-b.jpg" alt="Piscina da casa em Peruíbe"></div>
+
+<section class="block">
+  <div class="wrap">
+    <p class="eyebrow rv">Na prática</p>
+    <h2 class="t l rv" style="margin-top:28px"><span class="s">Operações</span><span class="n">e mercado.</span></h2>
+    <div class="duo cases">
+      <div class="card rv"><span class="tag">Operação do Haroldo · Patos de Minas, MG</span><span class="big28 num" data-count="28" data-suf=" dias">28 dias</span><h3 style="font-size:clamp(30px,2.8vw,40px)">da arrematação à desocupação.</h3><p>Sem processo, por acordo. O imóvel ocupado, que mais assusta quem começa, resolvido em menos de um mês.</p>
+        <div class="trio"><div><b>[R$ __]</b><span>Lance</span></div><div><b>[R$ __]</b><span>Venda</span></div><div><b>[__%]</b><span>Retorno</span></div></div><p class="pend">Números em validação com o Haroldo.</p></div>
+      <div class="card rv"><span class="tag" style="color:var(--ivory-2)">Exemplo do mercado · Alphaville, BH</span><h3>Casa em Alphaville</h3>
+        <div class="trio"><div><b class="num">R$ 2 mi</b><span>Arremate</span></div><div><b class="num">R$ 300 mil</b><span>Reforma</span></div><div><b class="num">R$ 15 mi</b><span>À venda</span></div></div>
+        <p>Valor anunciado, ainda não realizado.</p>
+        <h3 style="font-size:clamp(30px,2.8vw,40px);margin-top:30px">Prédio comercial em BH</h3><p>Convertido em residencial, com todas as unidades vendidas.</p><p class="pend">Operações de outros arrematantes do ecossistema. Dados em validação.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv">Com transparência</p>
+    <h2 class="t l rv" style="margin-top:28px"><span class="s">O que pode mudar,</span><span class="n">e o que vem a seguir.</span></h2>
+    <div class="grid3">
+      <div class="item rv"><h3>O prazo</h3><p>Registro, desocupação e venda podem levar mais tempo. Por isso projetamos de 1 a 12 meses.</p></div>
+      <div class="item rv"><h3>A reforma</h3><p>Orçada com reserva conservadora, por metragem e não por foto.</p></div>
+      <div class="item rv"><h3>O lance</h3><p>Se a disputa passar do limite, não arrematamos. O capital segue para a próxima.</p></div>
+    </div>
+    <div class="grid3">
+      <div class="item rv" style="border-color:var(--gold)"><h3>Select Weekly</h3><p>Toda semana, de 3 a 5 oportunidades já analisadas no grupo.</p></div>
+      <div class="item rv" style="border-color:var(--gold)"><h3>Select Report</h3><p>A ficha completa de cada imóvel: valores, custos, riscos e retorno.</p></div>
+      <div class="item rv" style="border-color:var(--gold)"><h3>Uma conversa</h3><p>15 minutos para entender seu perfil: valor, prazo, sozinho ou cotista.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene close">
+  <div class="bg" data-depth=".25" style="background-image:url(img/env2.jpg)"></div>
+  <div class="shade"></div><div class="beam"></div><canvas data-dust></canvas>
+  <div class="copy wrap">
+    <h2 class="t xl rv"><span class="s">Você foi</span><span class="n">convidado.</span></h2>
+    <div class="contact rv"><div><b>Haroldo Rosas</b><span>[WhatsApp]</span></div><div><b>W3W Imóveis</b><span>Moema, São Paulo</span></div><div><b>E-mail</b><span>[e-mail]</span></div></div>
+    <img class="lock rv" src="../assets/lockup.png" alt="W3W Imóveis Select Club">
+  </div>
+</section>
+<p class="legal wrap" style="padding-bottom:64px">Material informativo. Retornos apresentados são projeções de simulação e não constituem garantia. Resultados de terceiros não asseguram resultados futuros. Toda operação é precedida de análise jurídica e documental.</p>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var R=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var top=document.getElementById('top'),prog=document.getElementById('prog'),hero=document.getElementById('hero');
+  var depth=[].slice.call(document.querySelectorAll('[data-depth]')),fade=document.querySelector('[data-fade]');
+  function frame(){
+    var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.width=(h>0?y/h*100:0)+'%';
+    top.classList.toggle('on',y>hero.offsetHeight*.6);
+    if(R)return;
+    depth.forEach(function(el){
+      var r=el.parentNode.getBoundingClientRect(); if(r.bottom<-100||r.top>innerHeight+100)return;
+      var off=r.top+r.height/2-innerHeight/2;
+      el.style.transform='translate3d(0,'+(off*-+el.dataset.depth)+'px,0) scale(1.03)';
+    });
+    if(y<hero.offsetHeight){fade.style.transform='translate3d(0,'+(y*.35)+'px,0)';fade.style.opacity=Math.max(0,1-y/(hero.offsetHeight*.7));}
+  }
+  var tk=0;addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){frame();tk=0})}},{passive:true});frame();
+
+  function count(el){
+    var to=+el.dataset.count,pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0;
+    if(R)return;
+    (function f(t){t0=t0||t;var k=Math.min(1,(t-t0)/1700);k=1-Math.pow(1-k,4);el.textContent=pre+Math.round(to*k)+suf;if(k<1)requestAnimationFrame(f)})(performance.now());
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');
+    el.querySelectorAll('[data-count]').forEach(count); if(el.dataset.count)count(el);
+    if(el.id==='chart')el.querySelectorAll('[data-w]').forEach(function(b,i){setTimeout(function(){b.style.width=b.dataset.w+'%'},200+i*140)});
+    io.unobserve(el);
+  })},{threshold:.2});
+  document.querySelectorAll('.rv,.big28').forEach(function(el){io.observe(el)});
+  if(R)document.querySelectorAll('[data-w]').forEach(function(b){b.style.width=b.dataset.w+'%'});
+
+  // poeira dourada no feixe de luz
+  [].forEach.call(document.querySelectorAll('[data-dust]'),function(cv){
+    var ctx=cv.getContext('2d'),P=[],vis=false;
+    function sz(){var r=cv.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);cv.width=r.width*d;cv.height=r.height*d;ctx.setTransform(d,0,0,d,0,0)}
+    sz();addEventListener('resize',sz);
+    for(var i=0;i<60;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.3+.3,v:Math.random()*.00022+.00006,a:Math.random()*.6+.2,p:Math.random()*6.3});
+    new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
+    function d(t){
+      if(vis){var w=cv.clientWidth,h=cv.clientHeight;ctx.clearRect(0,0,w,h);
+      P.forEach(function(p){p.y-=p.v;if(p.y<-.02)p.y=1.02;var x=(p.x+Math.sin(t/4200+p.p)*.012)*w,y=p.y*h,b=Math.max(0,1-Math.abs(x/w-.5)*2.6);
+        ctx.fillStyle='rgba(216,194,154,'+(p.a*(.15+b*.85))+')';ctx.beginPath();ctx.arc(x,y,p.r,0,6.283);ctx.fill()});}
+      if(!R)requestAnimationFrame(d);
+    }
+    requestAnimationFrame(d);
+  });
+})();
+</script>
+
+</body>
+</html>
