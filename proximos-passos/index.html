@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/lockup.png">
+<title>Select Club · Próximos Passos</title>
+<style>
+@font-face{font-family:"Michelangelus";font-style:italic;src:url(../assets/fonts/michelangelus-italic.woff2) format("woff2");font-display:block}
+@font-face{font-family:"PP Neue Montreal";font-weight:300;src:url(../assets/fonts/montreal-light.woff2) format("woff2")}
+@font-face{font-family:"PP Neue Montreal";font-weight:400;src:url(../assets/fonts/montreal-book.woff2) format("woff2")}
+@font-face{font-family:"PP Neue Montreal";font-weight:500;src:url(../assets/fonts/montreal-regular.woff2) format("woff2")}
+/* Layout: cronograma de projeto — régua de semanas no topo, fases como capítulos, cada fase com entregas por responsável e o critério para avançar */
+:root{
+  --night:#0C0D0D; --panel:#151615; --panel-2:#1C1D1C;
+  --ivory:#EFE6D6; --ivory-2:#DDD5C7; --muted:#BDB3A2;
+  --champ:#D8C29A; --gold:#C9A46A; --hair:rgba(216,194,154,.24);
+  --kco:#D8C29A; --har:#9FB8C9; --wil:#C9A9A0; --yok:#B5C4A4;
+  --script:"Michelangelus", Georgia, serif;
+  --sans:"PP Neue Montreal","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+p,h1,h2,h3,h4{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.s{font-family:var(--script);font-style:italic;font-weight:400;color:var(--champ)}
+.eyebrow{font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500}
+header.hero{padding-block:clamp(80px,11vw,140px) 56px;text-align:center}
+.lock{height:44px;width:auto;display:block;margin:0 auto 56px}
+h1{text-wrap:balance}
+h1 .s{display:block;font-size:clamp(48px,6.6vw,96px);line-height:1.02}
+h1 .n{display:block;font-weight:300;font-size:clamp(40px,5.6vw,84px);line-height:1.05;letter-spacing:-.02em}
+.lede{max-width:56ch;margin:28px auto 0;color:var(--ivory-2);font-size:19px}
+.meta{display:flex;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap;margin-top:48px}
+.meta div{text-align:center}
+.meta b{display:block;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--champ);font-weight:500;margin-bottom:4px}
+
+/* responsáveis */
+.people{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:24px}
+.person{background:var(--panel);border:1px solid var(--hair);padding:20px 22px;min-width:0}
+.person h3{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:500}
+.person p{font-size:15px;color:var(--ivory-2);margin-top:6px;line-height:1.5}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+
+/* gantt */
+.sec{padding-block:clamp(56px,7vw,96px)}
+.sec h2 .s{font-size:clamp(36px,4vw,56px);line-height:1.05}
+.sec h2 .n{font-weight:300;font-size:clamp(30px,3.4vw,46px);line-height:1.1;display:block}
+.gantt-wrap{overflow-x:auto;margin-top:36px;border:1px solid var(--hair);background:var(--panel)}
+.gantt{min-width:880px;display:grid;grid-template-columns:240px repeat(8,minmax(0,1fr))}
+.gantt > div{padding:12px 10px;border-bottom:1px solid var(--hair);font-size:15px;min-width:0}
+.gh{font-size:13px !important;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;border-left:1px solid var(--hair)}
+.gh b{display:block;color:var(--ivory);font-weight:500;letter-spacing:.04em;text-transform:none;font-size:15px}
+.gl{font-weight:500;color:var(--ivory)}
+.gl small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.gb{grid-column:var(--c);display:flex;align-items:center;border-left:1px solid var(--hair)}
+.gb span{display:block;width:100%;padding:8px 10px;font-size:14px;line-height:1.3;font-weight:500;color:#141414;background:var(--champ)}
+.gb.r span{background:transparent;color:var(--champ);border:1px dashed var(--gold)}
+.gb.m span{background:var(--ivory)}
+.gb.e span{background:rgba(216,194,154,.35);color:var(--ivory)}
+
+/* fases */
+.phase{border-top:1px solid var(--hair);padding-block:clamp(48px,6vw,80px);display:grid;grid-template-columns:280px minmax(0,1fr);gap:clamp(28px,4vw,64px)}
+.ph-head .num{font-family:var(--script);font-style:italic;color:var(--champ);font-size:72px;line-height:1}
+.ph-head h3{font-size:30px;font-weight:300;line-height:1.15;margin-top:10px;letter-spacing:-.01em}
+.ph-head .when{display:inline-block;margin-top:16px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--champ);border:1px solid rgba(201,164,106,.5);padding:6px 12px;font-weight:500}
+.ph-head p.goal{margin-top:20px;color:var(--ivory-2);font-size:17px}
+.tasks{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--hair)}
+.task{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--hair)}
+.who{display:flex;align-items:flex-start;gap:10px;font-size:15px;font-weight:500;padding-top:3px}
+.who .dot{margin-top:6px}
+.task h4{font-size:18px;font-weight:500}
+.task p{color:var(--ivory-2);font-size:16px;margin-top:4px}
+.task ul{margin:8px 0 0;padding-left:18px;color:var(--ivory-2);font-size:16px}
+.task li+li{margin-top:2px}
+.gate{margin-top:28px;background:var(--panel-2);border:1px solid rgba(201,164,106,.5);padding:24px 26px}
+.gate b{display:block;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--champ);font-weight:500;margin-bottom:8px}
+.gate ul{margin:0;padding-left:18px}
+.gate li{font-size:16px}
+.gate li+li{margin-top:4px}
+.deps{margin-top:16px;font-size:15px;color:var(--muted)}
+
+/* rotina */
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:36px}
+.day{background:var(--panel);border:1px solid var(--hair);padding:20px;min-width:0}
+.day .d{font-family:var(--script);font-style:italic;color:var(--champ);font-size:30px;line-height:1}
+.day h4{font-size:16px;font-weight:500;margin-top:12px}
+.day p{font-size:15px;color:var(--ivory-2);margin-top:6px;line-height:1.5}
+.day .w{margin-top:12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* decisões */
+table.dec{width:100%;border-collapse:collapse;margin-top:32px;font-size:16px}
+.dec th{text-align:left;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 12px 12px 0;border-bottom:1px solid var(--ivory)}
+.dec td{padding:16px 12px 16px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+.dec td:first-child{font-weight:500;width:34%}
+.dec td.dl{white-space:nowrap;color:var(--champ)}
+.tbl{overflow-x:auto}
+footer{padding-block:64px 80px;text-align:center;color:var(--muted);font-size:15px;border-top:1px solid var(--hair)}
+
+@media (max-width:860px){
+  .people{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phase{grid-template-columns:minmax(0,1fr)}
+  .task{grid-template-columns:minmax(0,1fr);gap:6px}
+  .week{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){.people{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+
+<header class="hero wrap">
+  <img class="lock" src="../assets/lockup.png" alt="W3W Imóveis Select Club">
+  <p class="eyebrow">Plano de projeto · Documento interno</p>
+  <h1 style="margin-top:24px"><span class="s">Próximos passos</span><span class="n">até o primeiro arremate.</span></h1>
+  <p class="lede">O que precisa acontecer, em que ordem e com quem, para o W3W Select Club sair da validação interna, ir para o domínio da W3W e chegar à carteira de clientes.</p>
+  <div class="meta">
+    <div><b>Início</b>9 de novembro de 2026</div>
+    <div><b>Primeiro disparo</b>Semana de 23 de novembro</div>
+    <div><b>Duração até a escala</b>8 semanas</div>
+  </div>
+</header>
+
+<section class="sec" style="padding-top:24px">
+  <div class="wrap">
+    <p class="eyebrow">Quem faz o quê</p>
+    <div class="people">
+      <div class="person"><h3><span class="dot" style="background:var(--kco)"></span>Kco</h3><p>Marca, peças, vídeo, apresentação, hub, modelos do Select Weekly e landing page.</p></div>
+      <div class="person"><h3><span class="dot" style="background:var(--har)"></span>Haroldo</h3><p>Garimpo, análise, cases com números, curadoria semanal e respostas técnicas.</p></div>
+      <div class="person"><h3><span class="dot" style="background:var(--wil)"></span>Wilson</h3><p>Regras do clube, jurídico, domínio, estratégia comercial e atendimento dos interessados.</p></div>
+      <div class="person"><h3><span class="dot" style="background:var(--yok)"></span>Yoko</h3><p>Suporte e retaguarda da W3W. Indica investidores da sua carteira.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2><span class="s">Linha do tempo</span><span class="n">oito semanas.</span></h2>
+    <div class="gantt-wrap"><div class="gantt">
+      <div class="gl">Etapa</div>
+      <div class="gh">Sem 1<b>9 nov</b></div><div class="gh">Sem 2<b>16 nov</b></div><div class="gh">Sem 3<b>23 nov</b></div><div class="gh">Sem 4<b>30 nov</b></div><div class="gh">Sem 5<b>7 dez</b></div><div class="gh">Sem 6<b>14 dez</b></div><div class="gh">Sem 7<b>21 dez</b></div><div class="gh">Sem 8<b>28 dez</b></div>
+      <div class="gl">1 · Validação interna<small>Aprovar tudo</small></div><div class="gb" style="--c:2 / span 1"><span>Aprovação</span></div><div style="grid-column:3 / span 7"></div>
+      <div class="gl">2 · Preparação<small>Estrutura e modelos</small></div><div style="grid-column:2 / span 1"></div><div class="gb" style="--c:3 / span 1"><span>Estrutura</span></div><div style="grid-column:4 / span 6"></div>
+      <div class="gl">3 · Disparo para a carteira<small>Primeiros convites</small></div><div style="grid-column:2 / span 2"></div><div class="gb m" style="--c:4 / span 2"><span>Convites e grupo</span></div><div style="grid-column:6 / span 4"></div>
+      <div class="gl">Select Weekly<small>Toda semana, a partir da 3</small></div><div style="grid-column:2 / span 2"></div><div class="gb r" style="--c:4 / span 6"><span>3 oportunidades por semana</span></div>
+      <div class="gl">4 · Primeiras operações<small>Grupos por leilão</small></div><div style="grid-column:2 / span 3"></div><div class="gb e" style="--c:5 / span 4"><span>Cotistas e arremates</span></div><div style="grid-column:9 / span 1"></div>
+      <div class="gl">5 · Escala<small>Landing, newsletter, mídia</small></div><div style="grid-column:2 / span 5"></div><div class="gb e" style="--c:7 / span 3"><span>Landing page e captação</span></div>
+    </div></div>
+    <p class="deps">As semanas 7 e 8 caem nas festas de fim de ano. Se o ritmo cair, a fase 5 passa para janeiro sem afetar o resto.</p>
+  </div>
+</section>
+
+<section class="wrap">
+
+  <div class="phase">
+    <div class="ph-head"><p class="num">1</p><h3>Validação interna</h3><span class="when">Semana 1 · 9 a 15 nov</span><p class="goal">Os sócios aprovam tudo o que existe no hub e o Haroldo entrega o material que falta.</p></div>
+    <div>
+      <div class="tasks">
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Todos</div><div><h4>Revisar e aprovar o hub</h4><p>Cada sócio abre o hub e registra o que aprova e o que muda.</p><ul><li>Nome W3W Select Club e assinatura com o logo</li><li>Filme-convite e os cinco cards</li><li>Apresentação para investidores</li></ul></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--har)"></span>Haroldo</div><div><h4>Entregar os cases reais</h4><p>Números e fotos para substituir o que está marcado entre colchetes na apresentação.</p><ul><li>Patos de Minas: lance, avaliação, reforma, venda, prazo, retorno, fotos</li><li>Peruíbe: resultado do leilão de 3/11</li><li>Alphaville BH e prédio de BH: valores confirmados e fotos</li><li>Nome da pós-graduação e aprovação da carta de abertura</li></ul></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Fechar as regras do clube</h4><ul><li>Valor mínimo da cota e número de cotistas por imóvel</li><li>Quem atende os interessados e por qual número</li><li>Advogado de retaguarda e validação da oferta coletiva</li><li>Divisão entre os sócios registrada por escrito</li></ul></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--har)"></span>Haroldo</div><div><h4>Assumir o compromisso do Select Weekly</h4><p>Até 3 oportunidades garimpadas por semana, cada uma com ficha completa. Definir o dia fixo de envio.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Aplicar os ajustes aprovados</h4><p>Atualizar apresentação, cards e vídeo com as correções e os números reais.</p></div></div>
+      </div>
+      <div class="gate"><b>Para avançar à fase 2</b><ul><li>Marca, cards, vídeo e apresentação aprovados pelos sócios</li><li>Pelo menos 1 case próprio com números reais</li><li>Valor da cota, atendimento e advogado definidos</li></ul></div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph-head"><p class="num">2</p><h3>Preparação</h3><span class="when">Semana 2 · 16 a 22 nov</span><p class="goal">Deixar pronta toda a estrutura que o investidor vai encontrar depois de dizer sim.</p></div>
+    <div>
+      <div class="tasks">
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Liberar o subdomínio da W3W</h4><p>Ex.: select.w3wimoveis.com.br. Passar o acesso ao painel do domínio para o Kco apontar.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Publicar a versão final do hub</h4><p>No subdomínio, sem a pauta interna, com apresentação, filme e cards.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Criar os modelos do Select Weekly e do Select Report</h4><p>Card semanal com até 3 oportunidades e a ficha de cada imóvel: valores, custos, riscos e retorno projetado.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--har)"></span>Haroldo</div><div><h4>Preparar a primeira edição</h4><p>3 oportunidades já analisadas, para estrear o Select Weekly na semana 3.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Montar a operação de atendimento</h4><ul><li>Grupo de investidores no WhatsApp, com descrição e regras</li><li>Mensagem padrão para quem responder sim, com perguntas de perfil</li><li>Planilha de interessados: nome, sócio de origem, perfil e etapa</li></ul></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Todos</div><div><h4>Listar a carteira</h4><p>Cada sócio separa cerca de 50 contatos com perfil de investidor para o primeiro disparo. A Yoko indica os investidores da carteira dela.</p></div></div>
+      </div>
+      <div class="gate"><b>Para avançar à fase 3</b><ul><li>Hub no ar no domínio da W3W</li><li>Grupo criado e mensagem padrão aprovada</li><li>Primeira edição do Select Weekly pronta</li><li>Lista de contatos de cada sócio separada</li></ul></div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph-head"><p class="num">3</p><h3>Disparo para a carteira</h3><span class="when">Semanas 3 e 4 · 23 nov a 6 dez</span><p class="goal">Chegar a cerca de 50 interessados no grupo, sem queimar contatos nem arriscar bloqueio no WhatsApp.</p></div>
+    <div>
+      <div class="tasks">
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Todos</div><div><h4>Enviar o card convite</h4><p>Cada sócio manda pessoalmente para a sua lista, em lotes pequenos ao longo da semana.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Atender quem responde</h4><p>Quem disser sim recebe o filme e a apresentação, responde às perguntas de perfil e entra no grupo.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--har)"></span>Haroldo</div><div><h4>Estrear o Select Weekly</h4><p>Primeira edição no grupo e conversas individuais com quem demonstrar interesse em um imóvel.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Medir e ajustar</h4><p>Taxa de resposta por sócio e por card. Ajustar a mensagem antes de ampliar o envio.</p></div></div>
+      </div>
+      <div class="gate"><b>Para avançar à fase 4</b><ul><li>Cerca de 50 interessados no grupo</li><li>Pelo menos 1 oportunidade com cotistas interessados</li></ul></div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph-head"><p class="num">4</p><h3>Primeiras operações</h3><span class="when">Semanas 4 a 7 · 30 nov a 27 dez</span><p class="goal">Transformar interesse em arremate e mostrar o método funcionando dentro do clube.</p></div>
+    <div>
+      <div class="tasks">
+        <div class="task"><div class="who"><span class="dot" style="background:var(--har)"></span>Haroldo</div><div><h4>Abrir grupos por leilão</h4><p>Para cada oportunidade com cotistas, um grupo próprio. Ganhou: segue até a posse. Perdeu: os cotistas voltam ao grupo principal.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Formalizar cada operação</h4><p>Contrato de assessoria e acordo entre cotistas, revisados pelo advogado, antes de qualquer aporte.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Registrar como case</h4><p>Cada arremate do clube vira conteúdo: ficha, fotos e acompanhamento até a venda.</p></div></div>
+      </div>
+      <div class="gate"><b>Para avançar à fase 5</b><ul><li>Primeiro arremate do clube realizado</li><li>2 a 3 edições do Select Weekly publicadas</li></ul></div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="ph-head"><p class="num">5</p><h3>Escala</h3><span class="when">A partir da semana 7 · ou janeiro</span><p class="goal">Atrair investidores além da carteira, com a operação já testada.</p></div>
+    <div>
+      <div class="tasks">
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Landing page de captação</h4><p>No domínio da W3W, com cadastro e perfil do investidor, as edições do Select Weekly e os cases do clube.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--kco)"></span>Kco</div><div><h4>Newsletter</h4><p>O Select Weekly também por e-mail, quando houver mais de 50 investidores.</p></div></div>
+        <div class="task"><div class="who"><span class="dot" style="background:var(--wil)"></span>Wilson</div><div><h4>Mídia e ferramentas</h4><p>Anúncios com verba definida, CRM com WhatsApp e uso de IA para resumir editais e apoiar o garimpo.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="s">A rotina semanal</span><span class="n">do Select Weekly.</span></h2>
+    <div class="week">
+      <div class="day"><p class="d">Seg</p><h4>Garimpo</h4><p>Filtro dos leilões da semana e pré-seleção.</p><p class="w">Haroldo</p></div>
+      <div class="day"><p class="d">Ter</p><h4>Análise</h4><p>Jurídica e financeira das pré-selecionadas.</p><p class="w">Haroldo</p></div>
+      <div class="day"><p class="d">Qua</p><h4>Debate final</h4><p>Wilson e Haroldo escolhem até 3 oportunidades.</p><p class="w">Wilson e Haroldo</p></div>
+      <div class="day"><p class="d">Qui</p><h4>Fichas</h4><p>Select Report e card da semana montados.</p><p class="w">Kco e Haroldo</p></div>
+      <div class="day"><p class="d">Sex</p><h4>Envio</h4><p>Select Weekly no grupo e conversas com interessados.</p><p class="w">Haroldo e Wilson</p></div>
+    </div>
+    <p class="deps">Dias sugeridos. O que importa é o dia de envio ser sempre o mesmo.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2><span class="s">Decisões em aberto</span><span class="n">e prazos.</span></h2>
+    <div class="tbl"><table class="dec">
+      <tr><th>Decisão</th><th>Responsável</th><th>Prazo</th></tr>
+      <tr><td>Valor mínimo da cota e cotistas por imóvel</td><td>Wilson e Haroldo</td><td class="dl">13 nov</td></tr>
+      <tr><td>Quem atende os interessados e por qual número</td><td>Wilson</td><td class="dl">13 nov</td></tr>
+      <tr><td>Advogado de retaguarda e formato da oferta coletiva</td><td>Wilson</td><td class="dl">15 nov</td></tr>
+      <tr><td>Dia fixo de envio do Select Weekly</td><td>Haroldo</td><td class="dl">15 nov</td></tr>
+      <tr><td>Divisão entre os sócios e fundo de caixa por escrito</td><td>Wilson</td><td class="dl">15 nov</td></tr>
+      <tr><td>Subdomínio da W3W e acesso ao painel</td><td>Wilson</td><td class="dl">18 nov</td></tr>
+      <tr><td>Verba de mídia para a fase 5</td><td>Todos</td><td class="dl">Dezembro</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<footer class="wrap">Documento interno · W3W Select Club · Versão de 9 de novembro de 2026</footer>
+
+</body>
+</html>
