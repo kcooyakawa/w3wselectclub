@@ -69,6 +69,7 @@ h2{margin:0 0 12px;font-family:var(--serif);font-style:italic;font-weight:400;fo
 a.doc:hover img,a.doc:focus-visible img{transform:scale(1.04)}
 a.doc:hover .doc-link i,a.doc:focus-visible .doc-link i{transform:translateX(6px)}
 .doc.soon img{opacity:.55}
+.step{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 .doc.wide{grid-column:1 / -1;aspect-ratio:16 / 8}
 .doc.soon .doc-link{color:var(--muted);border-bottom-color:transparent}
 @media (prefers-reduced-motion:reduce){.doc img,.doc-link i{transition:none}}
@@ -105,22 +106,28 @@ footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
         <span class="doc-link">Abrir o plano <i aria-hidden="true">→</i></span>
       </div>
     </a>
-    <a class="doc wide" href="apresentacao/">
-      <img src="assets/doc-apresentacao.jpg" alt="" loading="lazy">
-      <div class="doc-body">
-        <span class="doc-meta">Para o investidor · Enviada quando ele entra no grupo</span>
-        <h2>Apresentação</h2>
-        <p>Depois do convite, o investidor recebe a apresentação: o método, a segurança jurídica, as modalidades e os cases.</p>
-        <span class="doc-link">Abrir a apresentação <i aria-hidden="true">→</i></span>
-      </div>
-    </a>
   </div>
 </section>
 
+<section id="cards">
+  <div class="wrap">
+    <span class="step">Funil · 1 · O convite</span>
+    <h2>Cards digitais</h2>
+    <p class="lead">Feed do Instagram, formato 4:5 (1080×1350). O institucional fica fixado no topo do perfil.</p>
+    <div class="cards">
+      <figure><img src="assets/cards/v3-00-institucional.jpg" alt="Card institucional W3W Select Club: Oportunidades que poucos veem" loading="lazy"><figcaption><span>Institucional</span><a href="assets/cards/v3-00-institucional.jpg" download>Baixar</a></figcaption></figure>
+      <figure><img src="assets/cards/v3-03-potencial.jpg" alt="Card: Você conhece o potencial dos leilões imobiliários?" loading="lazy"><figcaption><span>O potencial</span><a href="assets/cards/v3-03-potencial.jpg" download>Baixar</a></figcaption></figure>
+      <figure><img src="assets/cards/v3-01-capital.jpg" alt="Card: Seu capital pode encontrar novas oportunidades" loading="lazy"><figcaption><span>Seu capital</span><a href="assets/cards/v3-01-capital.jpg" download>Baixar</a></figcaption></figure>
+      <figure><img src="assets/cards/v3-02-nem-toda.jpg" alt="Card: Nem toda oportunidade chega a todos" loading="lazy"><figcaption><span>Nem toda oportunidade</span><a href="assets/cards/v3-02-nem-toda.jpg" download>Baixar</a></figcaption></figure>
+      <figure><img src="assets/cards/v3-04-convidado.jpg" alt="Card: Você foi convidado" loading="lazy"><figcaption><span>Você foi convidado</span><a href="assets/cards/v3-04-convidado.jpg" download>Baixar</a></figcaption></figure>
+    </div>
+  </div>
+</section>
 <section id="filme">
   <div class="wrap film">
     <video src="assets/video/convite.mp4" poster="assets/video/poster.jpg" controls playsinline preload="metadata"></video>
     <div>
+      <span class="step">Funil · 2 · Depois do sim</span>
       <h2>Filme-convite</h2>
       <p class="lead">O convite individual, apresentado por Haroldo Rosas. Enviado pessoalmente no WhatsApp e publicado como Reels.</p>
       <dl>
@@ -131,18 +138,18 @@ footer img{height:40px;width:auto;opacity:.8;display:block;margin:0 auto 20px}
     </div>
   </div>
 </section>
-
-<section id="cards">
-  <div class="wrap">
-    <h2>Cards digitais</h2>
-    <p class="lead">Feed do Instagram, formato 4:5 (1080×1350). O institucional fica fixado no topo do perfil.</p>
-    <div class="cards">
-      <figure><img src="assets/cards/v3-00-institucional.jpg" alt="Card institucional W3W Select Club: Oportunidades que poucos veem" loading="lazy"><figcaption><span>Institucional</span><a href="assets/cards/v3-00-institucional.jpg" download>Baixar</a></figcaption></figure>
-      <figure><img src="assets/cards/v3-03-potencial.jpg" alt="Card: Você conhece o potencial dos leilões imobiliários?" loading="lazy"><figcaption><span>O potencial</span><a href="assets/cards/v3-03-potencial.jpg" download>Baixar</a></figcaption></figure>
-      <figure><img src="assets/cards/v3-01-capital.jpg" alt="Card: Seu capital pode encontrar novas oportunidades" loading="lazy"><figcaption><span>Seu capital</span><a href="assets/cards/v3-01-capital.jpg" download>Baixar</a></figcaption></figure>
-      <figure><img src="assets/cards/v3-02-nem-toda.jpg" alt="Card: Nem toda oportunidade chega a todos" loading="lazy"><figcaption><span>Nem toda oportunidade</span><a href="assets/cards/v3-02-nem-toda.jpg" download>Baixar</a></figcaption></figure>
-      <figure><img src="assets/cards/v3-04-convidado.jpg" alt="Card: Você foi convidado" loading="lazy"><figcaption><span>Você foi convidado</span><a href="assets/cards/v3-04-convidado.jpg" download>Baixar</a></figcaption></figure>
-    </div>
+<section id="apresentacao">
+  <div class="wrap docs">
+    <a class="doc wide" href="apresentacao/">
+      <img src="assets/doc-apresentacao.jpg" alt="" loading="lazy">
+      <div class="doc-body">
+        <span class="step">Funil · 3 · No grupo</span>
+        <span class="doc-meta">Para o investidor · Enviada quando ele entra no grupo</span>
+        <h2>Apresentação</h2>
+        <p>Depois do convite, o investidor recebe a apresentação: o método, a segurança jurídica, as modalidades e os cases.</p>
+        <span class="doc-link">Abrir a apresentação <i aria-hidden="true">→</i></span>
+      </div>
+    </a>
   </div>
 </section>
 
