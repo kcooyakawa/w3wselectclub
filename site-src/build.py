@@ -319,6 +319,7 @@ html.lock{overflow:hidden}
 .fxp .fx-ph{aspect-ratio:21/9}@media(max-width:900px){.fxp .fx-ph{aspect-ratio:4/3}}
 
 /* v4 hero */
+.hx>.wrap{width:100%}
 .hx{min-height:calc(100svh - 150px)!important;display:flex!important;flex-direction:column;justify-content:space-between}
 .hx-top{position:relative;z-index:1;display:flex;justify-content:space-between;padding-top:120px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,249,.8)}
 .hx h1{font-size:clamp(72px,13vw,210px)!important;line-height:.86!important}
