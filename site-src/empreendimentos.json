@@ -1358,7 +1358,7 @@
  },
  {
   "slug": "park-lane",
-  "nome": "Park Lane",
+  "nome": "Park Lane Ibirapuera",
   "bairro": "Moema",
   "bairro_slug": "moema",
   "status": "Pronto",
@@ -1372,10 +1372,145 @@
    "vagas": "5 à 7 Vagas (determinadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/parklane-fachada-1.jpg-1.jpg",
+  "img": "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-fachada-1.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Mansões suspensas a caminho do Ibirapuera.",
+   "conceito": "Apenas 28 apartamentos, um por andar, numa torre de 105 metros com vista para o Parque Ibirapuera e o Clube Monte Líbano. A sofisticação da Lindenberg como estado de natureza.",
+   "endereco": "Av. Min. Gabriel de Rezende Passos, 319 · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "375 a 688 m²",
+   "plantas_tit": "um apartamento por andar.",
+   "assinaturas": [
+    [
+     "Incorporação e construção",
+     "Adolpho Lindenberg"
+    ],
+    [
+     "Torre",
+     "105 m de altura"
+    ],
+    [
+     "Unidades",
+     "28, uma por andar"
+    ],
+    [
+     "Entrega",
+     "Julho de 2023"
+    ]
+   ],
+   "destaques": [
+    [
+     "1",
+     "apartamento por andar"
+    ],
+    [
+     "28",
+     "residências"
+    ],
+    [
+     "105 m",
+     "de altura"
+    ],
+    [
+     "4",
+     "suítes em todas as plantas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "375 m²",
+     "4 suítes",
+     "4 vagas"
+    ],
+    [
+     "Garden",
+     "Até 548 m²",
+     "4 suítes",
+     "Sob consulta"
+    ],
+    [
+     "Cobertura duplex",
+     "688 m²",
+     "4 suítes",
+     "Até 7 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina",
+    "Fitness",
+    "Salão de festas",
+    "Churrasqueira",
+    "Brinquedoteca",
+    "Hall social privativo",
+    "Dois elevadores por andar com biometria"
+   ],
+   "local": [
+    "Vista para o Parque Ibirapuera",
+    "Vizinho ao Clube Monte Líbano",
+    "Entre Moema e o Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Unidades",
+     "28, uma por andar"
+    ],
+    [
+     "Altura",
+     "105 m"
+    ],
+    [
+     "Diferenciais",
+     "Persianas automatizadas, aspiração central, carga para carro elétrico"
+    ],
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-fachada-1.jpg",
+    "par": [
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-hall-1.jpg",
+      "Hall social"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-hall-2.jpg",
+      "Hall social"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-sala-piscina.jpg",
+      "Piscina"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-academia-1.jpg",
+      "Fitness"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-festas-1.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-churrasqueira-1.jpg",
+      "Churrasqueira"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-brinquedoteca-1.jpg",
+      "Brinquedoteca"
+     ],
+     [
+      "https://lindenberg.com.br/wp-content/uploads/2024/01/parklane-festas-2.jpg",
+      "Salão de festas"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "filadelfo-vila-nova-conceicao",
