@@ -1,0 +1,386 @@
+#!/usr/bin/env python3
+"""Gera o site estático da W3W a partir de empreendimentos.json.
+Uso: python3 build.py  ->  escreve em ../site/
+"""
+import json, os, html, shutil, urllib.parse
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(ROOT, '..', 'site')
+BASE = os.environ.get('W3W_BASE', '/w3wselectclub/site')   # caminho base no GitHub Pages
+SITE = os.environ.get('W3W_SITE', 'https://kcooyakawa.github.io')
+FONTS = os.environ.get('W3W_FONTS', '/w3wselectclub/fonts')
+WA = '5511940297871'
+EMAIL = 'w3wimoveis@gmail.com'
+TEL = '+55 (11) 94029-7871'
+CRECI = 'CRECI 047467-J'
+OG = 'https://kcooyakawa.github.io/w3wselectclub/share/w3w-og.jpg'
+HERO = 'https://w3wimoveis.com.br/wp-content/uploads/2024/12/o-que-fazer-no-parque-ibirapuera.jpeg'
+
+E = json.load(open(os.path.join(ROOT, 'empreendimentos.json'), encoding='utf-8'))
+LOGO = open(os.path.join(ROOT, 'logo.svg'), encoding='utf-8').read().strip()
+LOGO = LOGO.replace('aria-label="W3W Imóveis"', 'role="img" aria-label="W3W Imóveis"')
+
+esc = html.escape
+def u(p=''): return f'{BASE}/{p}'.rstrip('/') + '/' if p and not p.endswith('.html') else f'{BASE}/{p}'
+def wa(msg): return f'https://wa.me/{WA}?text=' + urllib.parse.quote(msg)
+
+BAIRROS = {
+ 'moema': dict(nome='Moema', titulo='Imóveis novos em Moema',
+   lead='Moema reúne ruas arborizadas, o Parque Ibirapuera a poucos minutos, metrô, boa gastronomia e alguns dos lançamentos mais disputados de São Paulo. Selecionamos aqui os empreendimentos que acompanhamos de perto, de studios a apartamentos de alto padrão.',
+   desc='Apartamentos e studios novos em Moema: lançamentos, imóveis em obras e prontos para morar, com curadoria da W3W Imóveis.'),
+ 'vila-nova-conceicao': dict(nome='Vila Nova Conceição', titulo='Imóveis novos na Vila Nova Conceição',
+   lead='A Vila Nova Conceição é um dos endereços mais valorizados de São Paulo: vizinha do Ibirapuera, residencial, silenciosa e com projetos assinados por grandes incorporadoras. Aqui estão os empreendimentos que a W3W acompanha no bairro.',
+   desc='Apartamentos novos de alto padrão na Vila Nova Conceição: lançamentos, em obras e prontos, com curadoria da W3W Imóveis.'),
+}
+
+CSS = r"""
+@font-face{font-family:'PP Editorial New';src:url(__F__/ppeditorial-ultralight.woff2) format('woff2');font-weight:200 300;font-style:normal;font-display:swap}
+@font-face{font-family:'PP Editorial New';src:url(__F__/ppeditorial-ultralight-italic.woff2) format('woff2');font-weight:200 300;font-style:italic;font-display:swap}
+@font-face{font-family:'PP Editorial New';src:url(__F__/ppeditorial-regular.woff2) format('woff2');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'PP Neue Montreal';src:url(__F__/ppneuemontreal-light.woff2) format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'PP Neue Montreal';src:url(__F__/ppneuemontreal-regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'PP Neue Montreal';src:url(__F__/ppneuemontreal-semibold.woff2) format('woff2');font-weight:500 600;font-display:swap}
+:root{--ink:#1A1817;--ink-2:#5E6672;--slate:#757E8D;--slate-2:#9AA3AF;--paper:#ECEEF1;--paper-2:#F6F7F9;--line:rgba(26,24,23,.12);
+--serif:'PP Editorial New',Georgia,serif;--sans:'PP Neue Montreal',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1);--w:1200px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--ink-2)}
+.serif{font-family:var(--serif);font-weight:300}
+.it{font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);padding:14px 26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:background .25s var(--ease),color .25s var(--ease);cursor:pointer;background:transparent;color:var(--ink);font-family:var(--sans)}
+.btn:hover{background:var(--ink);color:var(--paper-2)}
+.btn.solid{background:var(--ink);color:var(--paper-2)}.btn.solid:hover{background:var(--slate);border-color:var(--slate)}
+.btn.light{border-color:rgba(246,247,249,.55);color:#F6F7F9}.btn.light:hover{background:#F6F7F9;color:var(--ink)}
+/* header */
+.hd{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;flex-direction:column;align-items:center;gap:6px}
+.brand svg{height:44px;width:auto;color:var(--ink)}
+.creci{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:8px 12px;opacity:.72;transition:opacity .2s}
+.nav a:hover,.nav a[aria-current]{opacity:1}
+.nav .btn{opacity:1;margin-left:8px;padding:11px 18px}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;color:var(--ink)}
+@media(max-width:900px){.nav{position:fixed;inset:84px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--paper-2);border-bottom:1px solid var(--line);padding:12px 20px 24px;gap:0;transform:translateY(-120%);transition:transform .35s var(--ease)}
+.nav.open{transform:none}.nav a{padding:14px 0;border-bottom:1px solid var(--line)}.nav .btn{margin:16px 0 0}.burger{display:block}.hd .wrap{height:72px}.nav{inset:72px 0 auto 0}.brand svg{height:36px}}
+/* hero */
+.hero{position:relative;color:#F6F7F9;background:#1A1817 center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.86) 0%,rgba(18,17,16,.66) 50%,rgba(18,17,16,.86) 100%)}
+.hero .wrap{position:relative;padding-top:96px;padding-bottom:96px}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,68px);line-height:1.04;letter-spacing:-.02em;max-width:900px}
+.hero h1 em{font-style:italic}
+.hero p.lead{font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:rgba(246,247,249,.82);max-width:640px;margin:28px 0 48px;font-weight:300}
+.bairros{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bx{position:relative;overflow:hidden;padding:34px;border:1px solid rgba(246,247,249,.18);background:linear-gradient(155deg,rgba(117,126,141,.34),rgba(26,24,23,.72) 70%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:border-color .35s var(--ease),transform .5s var(--ease)}
+.bx::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.bx:hover{border-color:rgba(246,247,249,.4);transform:translateY(-2px)}
+.bx .eyebrow{color:rgba(246,247,249,.6)}
+.bx h2{font-family:var(--serif);font-style:italic;font-weight:300;font-size:36px;line-height:1.05;margin:10px 0 0;padding-bottom:22px;border-bottom:1px solid rgba(246,247,249,.22)}
+.bx .meta{font-size:13px;color:rgba(246,247,249,.7);margin:18px 0 22px}
+.bx .row{display:flex;gap:8px;flex-wrap:wrap}
+.bx .btn{padding:12px 18px}
+@media(max-width:767px){.bairros{grid-template-columns:1fr}.bx{padding:24px}.bx h2{font-size:30px}.hero .wrap{padding-top:64px;padding-bottom:64px}}
+/* sections */
+.sec{padding:112px 0}
+.sec-hd{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:44px;flex-wrap:wrap}
+.sec-hd h2,.pg-hd h1{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(38px,4.6vw,64px);line-height:1;letter-spacing:-.02em}
+.sec-hd a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+@media(max-width:767px){.sec{padding:64px 0}.wrap{padding:0 20px}}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--paper-2);border:1px solid var(--line);transition:background .45s var(--ease),border-color .45s var(--ease),color .45s var(--ease)}
+.card .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#d9dde2}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.card:hover .ph img{transform:scale(1.03)}
+.tag{position:absolute;background:#F6F7F9;border:1px solid var(--ink);color:var(--ink);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:6px 11px}
+.tag.st{top:16px;left:16px}.tags-b{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}.tags-b .tag{position:static}
+.card .bd{flex:1;display:flex;flex-direction:column;padding:22px}
+.card .bd .eyebrow{font-size:10px}
+.card h3{font-family:var(--serif);font-weight:300;font-size:26px;line-height:1.08;letter-spacing:-.01em;margin:6px 0 14px}
+.card ul{list-style:none;border-top:1px solid var(--line);padding-top:14px;margin-bottom:20px;font-size:13px;color:var(--ink-2)}
+.card li{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.card li svg{flex:0 0 13px;width:13px;height:13px;opacity:.7}
+.card .btn{margin-top:auto;width:100%;padding:13px 10px;font-size:10px}
+.card:hover{background:var(--slate);border-color:var(--slate);color:#F6F7F9}
+.card:hover .eyebrow,.card:hover ul{color:#F6F7F9}.card:hover ul{border-top-color:rgba(246,247,249,.3)}
+.card:hover .btn{background:#F6F7F9;color:var(--ink);border-color:#F6F7F9}
+/* filters */
+.filters{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:36px}
+.fg{display:flex;flex-direction:column;gap:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;padding:9px 14px;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;color:var(--ink);transition:all .2s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
+.count{font-size:13px;color:var(--ink-2);margin-bottom:18px}
+/* page header */
+.pg-hd{padding:96px 0 40px}
+.pg-hd p{max-width:760px;margin-top:24px;font-family:var(--serif);font-weight:300;font-size:clamp(19px,1.8vw,24px);line-height:1.45}
+.crumbs{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:28px}
+.crumbs a{border-bottom:1px solid var(--line)}
+@media(max-width:767px){.pg-hd{padding:56px 0 24px}}
+/* empreendimento */
+.emp{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:start}
+.emp .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#d9dde2}
+.emp h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.02em;margin:10px 0 24px}
+.emp .frase{font-family:var(--serif);font-weight:300;font-size:22px;line-height:1.4;margin-bottom:32px}
+.ficha{border-top:1px solid var(--line);margin-bottom:32px}
+.ficha div{display:flex;justify-content:space-between;gap:24px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ficha dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.ficha dd{text-align:right}
+.emp .cta{display:flex;flex-direction:column;gap:10px}
+.emp .sticky{position:sticky;top:120px}
+@media(max-width:900px){.emp{grid-template-columns:1fr;gap:32px}.emp .sticky{position:static}}
+/* quem somos */
+.qs p{font-family:var(--serif);font-weight:300;font-size:clamp(20px,2vw,26px);line-height:1.45;max-width:860px;margin-bottom:24px}
+.mvv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mvv .c{background:var(--paper-2);border:1px solid var(--line);padding:40px;transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease)}
+.mvv .c.full{grid-column:1/-1}
+.mvv h3{font-family:var(--serif);font-style:italic;font-weight:300;font-size:36px;margin-bottom:16px}
+.mvv p,.mvv li{font-size:15px;line-height:1.6;opacity:.85}
+.mvv ul{list-style:none}.mvv li{margin-bottom:10px;padding-left:20px;position:relative}.mvv li::before{content:"—";position:absolute;left:0;color:var(--slate)}
+.mvv .c:hover{background:var(--slate);color:#F6F7F9;border-color:var(--slate)}.mvv .c:hover li::before{color:#F6F7F9}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.team .c{border-top:1px solid var(--ink);padding-top:20px}
+.team h4{font-family:var(--serif);font-weight:300;font-size:28px}
+.team p{font-size:14px;color:var(--ink-2);margin-top:6px}
+@media(max-width:767px){.mvv,.team{grid-template-columns:1fr}.mvv .c{padding:28px}}
+/* contato */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.form label{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-top:22px}
+.form input,.form textarea,.form select{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:12px 0;font-family:var(--sans);font-size:16px;color:var(--ink);border-radius:0}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-bottom-color:var(--ink)}
+.form .btn{margin-top:32px}
+.form small{display:block;margin-top:14px;color:var(--ink-2);font-size:12px}
+.ct .info dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);margin-top:26px}
+.ct .info dd{font-family:var(--serif);font-weight:300;font-size:26px;margin-top:6px}
+@media(max-width:900px){.ct{grid-template-columns:1fr;gap:40px}}
+/* faixa */
+.band{background:var(--ink);color:#F6F7F9}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;padding-top:72px;padding-bottom:72px;flex-wrap:wrap}
+.band h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.4vw,44px);line-height:1.1;max-width:640px}
+.band h2 em{font-style:italic}
+/* footer */
+.ft{background:var(--ink);color:#C9CED5;border-top:1px solid rgba(246,247,249,.08)}
+.ft .top{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;padding-top:96px;padding-bottom:72px;border-bottom:1px solid rgba(246,247,249,.1)}
+.ft .brand{align-items:center;width:max-content}
+.ft .brand svg{height:80px;color:var(--slate-2)}
+.ft .creci{color:#8A929C}
+.ft h5{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--slate-2);font-weight:500;margin-bottom:20px}
+.ft li{list-style:none;margin-bottom:10px;font-size:15px;font-weight:300;color:#E6E9ED}
+.ft li a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s var(--ease)}.ft li a:hover{background-size:100% 1px}
+.ft .bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A929C}
+@media(max-width:900px){.ft .top{grid-template-columns:1fr 1fr;padding-top:64px}.ft .top>div:first-child{grid-column:1/-1}.ft .bot{flex-direction:column;text-align:center}}
+/* whatsapp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);transition:transform .25s var(--ease)}
+.wa:hover{transform:scale(1.06)}.wa svg{width:28px;height:28px;color:#fff}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+""".replace('__F__', FONTS)
+
+ICON = {
+ 'tip': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18V8m0 6h18v4M21 18v-4a3 3 0 0 0-3-3h-7v3"/><circle cx="7" cy="11" r="1.6"/></svg>',
+ 'met': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20 20 4M7 17l-1.5-1.5M10 14l-1.5-1.5M13 11l-1.5-1.5M16 8l-1.5-1.5"/></svg>',
+ 'vag': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 16V11l2-5h10l2 5v5M5 16h14M5 16v2M19 16v2"/><circle cx="8" cy="13.5" r=".8"/><circle cx="16" cy="13.5" r=".8"/></svg>',
+}
+WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.2.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.2.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3 0 .1 0 .7-.2 1.3Z"/></svg>'
+
+def head(title, desc, path, extra=''):
+    url = SITE + u(path)
+    return f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{url}">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website"><meta property="og:site_name" content="W3W Imóveis"><meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">
+<meta property="og:image" content="{OG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="{FONTS}/ppeditorial-ultralight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{FONTS}/ppneuemontreal-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{BASE}/assets/site.css">
+<link rel="icon" href="{BASE}/assets/favicon.svg" type="image/svg+xml">
+{extra}</head><body>'''
+
+def header(active=''):
+    def a(p, t):
+        cur = ' aria-current="page"' if active == p else ''
+        return f'<a href="{u(p)}"{cur}>{t}</a>'
+    return f'''<header class="hd"><div class="wrap">
+<a class="brand" href="{BASE}/" aria-label="W3W Imóveis, página inicial">{LOGO}<span class="creci">{CRECI}</span></a>
+<button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="var n=document.querySelector('.nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg></button>
+<nav class="nav" aria-label="Principal">
+<a href="{BASE}/"{' aria-current="page"' if active=='' else ''}>Home</a>{a('moema','Moema')}{a('vila-nova-conceicao','Vila Nova Conceição')}{a('quem-somos','Quem somos')}
+<a class="btn" href="{u('contato')}">Fale conosco</a></nav></div></header>'''
+
+def footer():
+    return f'''<footer class="ft"><div class="wrap top">
+<div><a class="brand" href="{BASE}/">{LOGO}<span class="creci">{CRECI}</span></a></div>
+<div><h5>Bairros</h5><ul><li><a href="{u('moema')}">Moema</a></li><li><a href="{u('vila-nova-conceicao')}">Vila Nova Conceição</a></li></ul></div>
+<div><h5>Institucional</h5><ul><li><a href="{u('quem-somos')}">Quem somos</a></li><li><a href="{u('contato')}">Contato</a></li><li><a href="{u('politica-de-privacidade')}">Política de Privacidade / LGPD</a></li></ul></div>
+<div><h5>Contato</h5><ul><li><a href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener">{TEL}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
+</div><div class="wrap bot"><span>© 2026 W3W Imóveis · Todos os direitos reservados</span><span>{CRECI} · Moema · São Paulo</span></div></footer>
+<a class="wa" href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{WA_ICON}</a>
+</body></html>'''
+
+def card(e):
+    tags = ''.join(f'<span class="tag">{t}</span>' for t in e['tipos'])
+    r = e['resumo']
+    lis = ''
+    if r['tipologias']: lis += f'<li>{ICON["tip"]}{esc(r["tipologias"])}</li>'
+    if r['metragem']: lis += f'<li>{ICON["met"]}{esc(r["metragem"])}</li>'
+    if r['vagas']: lis += f'<li>{ICON["vag"]}{esc(r["vagas"])}</li>'
+    return f'''<a class="card" href="{u('empreendimentos/'+e['slug'])}" data-tipos="{' '.join(e['tipos'])}" data-status="{e['status']}">
+<div class="ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"><span class="tag st">{e['status']}</span><div class="tags-b">{tags}</div></div>
+<div class="bd"><span class="eyebrow">{esc(e['bairro'])} · SP</span><h3>{esc(e['nome'])}</h3><ul>{lis}</ul><span class="btn">Ver empreendimento</span></div></a>'''
+
+def band():
+    return f'''<section class="band"><div class="wrap"><h2>Atendimento pessoal, <em>do primeiro contato às chaves.</em></h2>
+<a class="btn light" href="{wa('Olá, quero ajuda para encontrar um imóvel em Moema ou na Vila Nova Conceição.')}" target="_blank" rel="noopener">Falar com a W3W</a></div></section>'''
+
+def write(path, content):
+    p = os.path.join(OUT, path)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    open(p, 'w', encoding='utf-8').write(content)
+
+ORG = {"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "W3W Imóveis",
+       "url": SITE + BASE + '/', "telephone": TEL, "email": EMAIL, "image": OG,
+       "areaServed": ["Moema, São Paulo", "Vila Nova Conceição, São Paulo"],
+       "address": {"@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR"},
+       "identifier": CRECI}
+
+def build():
+    if os.path.isdir(OUT): shutil.rmtree(OUT)
+    write('assets/site.css', CSS)
+    write('assets/favicon.svg', LOGO.replace('currentColor', '#1A1817'))
+    filt_js = '''<script>
+(function(){var st={tipo:'',status:''};var cards=[].slice.call(document.querySelectorAll('.card'));var cnt=document.querySelector('.count');
+function apply(){var n=0;cards.forEach(function(c){var ok=(!st.tipo||c.dataset.tipos.indexOf(st.tipo)>-1)&&(!st.status||c.dataset.status===st.status);c.hidden=!ok;if(ok)n++});cnt.textContent=n+(n===1?' empreendimento':' empreendimentos')}
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){var g=b.dataset.g;document.querySelectorAll('.chip[data-g='+g+']').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');st[g]=b.dataset.v;apply()})});apply()})();
+</script>'''
+
+    # HOME
+    dest = [e for e in E if e['status'] == 'Lançamento'] + [e for e in E if e['nome'] in ('Mirage Ibirapuera', 'Ópera Vila Nova', 'Saffire')]
+    def bx(slug):
+        b = BAIRROS[slug]; n = sum(1 for e in E if e['bairro_slug'] == slug)
+        return f'''<div class="bx"><span class="eyebrow">Bairro</span><h2>{b['nome']}</h2><p class="meta">{n} empreendimentos selecionados</p>
+<div class="row"><a class="btn light" href="{u(slug)}?tipo=Apartamento">Apartamentos</a><a class="btn light" href="{u(slug)}?tipo=Studio">Studios</a></div></div>'''
+    home = head('W3W Imóveis — Imóveis novos em Moema e Vila Nova Conceição',
+                'Imobiliária boutique especializada em apartamentos novos e studios de alto padrão em Moema e Vila Nova Conceição, com 20 anos de experiência no mercado imobiliário.', '',
+                f'<script type="application/ld+json">{json.dumps(ORG, ensure_ascii=False)}</script>')
+    home += header('')
+    home += f'''<main><section class="hero" style="background-image:url('{HERO}')"><div class="wrap">
+<span class="eyebrow" style="color:rgba(246,247,249,.6)">Imobiliária boutique · 20 anos de mercado</span>
+<h1 style="margin-top:18px">Imóveis novos em Moema <em>e Vila Nova Conceição.</em></h1>
+<p class="lead">Somos uma imobiliária boutique digital especializada em apartamentos novos em Moema e Vila Nova Conceição, com 20 anos de experiência no mercado imobiliário. Conte conosco para encontrar o imóvel ideal, com a segurança e a atenção que você merece.</p>
+<div class="bairros">{bx('moema')}{bx('vila-nova-conceicao')}</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-hd"><h2>Destaques</h2><a href="{u('moema')}">Ver todos</a></div>
+<div class="grid">{''.join(card(e) for e in dest[:6])}</div></div></section>{band()}</main>'''
+    home += footer()
+    write('index.html', home)
+
+    # BAIRROS
+    for slug, b in BAIRROS.items():
+        lst = [e for e in E if e['bairro_slug'] == slug]
+        chips = lambda g, vals: ''.join(f'<button class="chip" data-g="{g}" data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{lab}</button>' for v, lab in vals)
+        bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + BASE + '/'},
+            {"@type": "ListItem", "position": 2, "name": b['nome'], "item": SITE + u(slug)}]}
+        pg = head(f"{b['titulo']} | W3W Imóveis", b['desc'], slug, f'<script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>')
+        pg += header(slug)
+        pg += f'''<main><section class="pg-hd"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / {b['nome']}</div>
+<h1>{b['titulo']}</h1><p>{b['lead']}</p></div></section>
+<section class="sec" style="padding-top:24px"><div class="wrap">
+<div class="filters"><div class="fg"><span class="eyebrow">Tipo</span><div class="chips">{chips('tipo', [('', 'Todos'), ('Apartamento', 'Apartamentos'), ('Studio', 'Studios')])}</div></div>
+<div class="fg"><span class="eyebrow">Status</span><div class="chips">{chips('status', [('', 'Todos'), ('Lançamento', 'Lançamento'), ('Em obras', 'Em obras'), ('Pronto', 'Pronto')])}</div></div></div>
+<p class="count"></p><div class="grid">{''.join(card(e) for e in lst)}</div></div></section>{band()}</main>'''
+        pg += f'''<script>(function(){{var t=new URLSearchParams(location.search).get('tipo');if(t){{var b=document.querySelector('.chip[data-g=tipo][data-v="'+t+'"]');if(b)setTimeout(function(){{b.click()}},0)}}}})();</script>''' + filt_js
+        pg += footer()
+        write(f'{slug}/index.html', pg)
+
+    # EMPREENDIMENTOS
+    for e in E:
+        r = e['resumo']
+        b = BAIRROS[e['bairro_slug']]
+        desc = f"{e['nome']} em {e['bairro']}, São Paulo: {r['tipologias']}, {r['metragem']}. {e['status']}. Atendimento personalizado W3W Imóveis."
+        rows = [('Bairro', f"{e['bairro']}, São Paulo"), ('Status', e['status']), ('Tipologias', r['tipologias']), ('Metragem', r['metragem'])]
+        if r['vagas']: rows.append(('Vagas', r['vagas']))
+        ficha = ''.join(f'<div><dt>{k}</dt><dd>{esc(v)}</dd></div>' for k, v in rows)
+        msg = f"Olá, vi o {e['nome']} ({e['bairro']}) no site da W3W e quero mais informações."
+        ld = {"@context": "https://schema.org", "@type": "Residence", "name": e['nome'], "image": e['img'], "description": desc,
+              "address": {"@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR", "streetAddress": e['bairro']}}
+        bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + BASE + '/'},
+            {"@type": "ListItem", "position": 2, "name": b['nome'], "item": SITE + u(e['bairro_slug'])},
+            {"@type": "ListItem", "position": 3, "name": e['nome'], "item": SITE + u('empreendimentos/' + e['slug'])}]}
+        rel = [x for x in E if x['bairro_slug'] == e['bairro_slug'] and x['slug'] != e['slug']][:3]
+        pg = head(f"{e['nome']} — {r['tipologias']} em {e['bairro']} | W3W Imóveis", desc, 'empreendimentos/' + e['slug'],
+                  f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>')
+        pg += header(e['bairro_slug'])
+        pg += f'''<main><section class="pg-hd" style="padding-bottom:0"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / <a href="{u(e['bairro_slug'])}">{e['bairro']}</a> / {esc(e['nome'])}</div></div></section>
+<section class="sec" style="padding-top:8px"><div class="wrap emp">
+<div class="ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" decoding="async"></div>
+<div class="sticky"><span class="eyebrow">{esc(e['bairro'])} · {e['status']}</span><h1>{esc(e['nome'])}</h1>
+{f'<p class="frase">{esc(e["frase"])}</p>' if e['frase'] else ''}
+<dl class="ficha">{ficha}</dl>
+<div class="cta"><a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Quero mais informações</a>
+<a class="btn" href="{wa('Olá, quero agendar uma visita ao ' + e['nome'] + '.')}" target="_blank" rel="noopener">Agendar visita</a></div></div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-hd"><h2>Também em {e['bairro']}</h2><a href="{u(e['bairro_slug'])}">Ver todos</a></div>
+<div class="grid">{''.join(card(x) for x in rel)}</div></div></section>{band()}</main>'''
+        pg += footer()
+        write(f"empreendimentos/{e['slug']}/index.html", pg)
+
+    # QUEM SOMOS
+    pg = head('Quem somos | W3W Imóveis', 'A W3W Imóveis é uma imobiliária boutique com mais de 20 anos de experiência no mercado imobiliário de alto padrão em Moema e Vila Nova Conceição.', 'quem-somos')
+    pg += header('quem-somos')
+    pg += f'''<main><section class="pg-hd"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / Quem somos</div><h1>Quem somos</h1></div></section>
+<section class="sec qs" style="padding-top:16px"><div class="wrap">
+<p>Nossa trajetória de mais de 20 anos de experiência no mercado imobiliário nos permitiu construir uma rede sólida de relacionamentos e adquirir um profundo conhecimento das dinâmicas deste setor.</p>
+<p>Nosso foco é proporcionar agilidade e eficiência nas negociações, aproveitando nossa expertise para identificar as melhores oportunidades de negócios para nossos clientes. Oferecemos serviços que priorizam a confiança e a satisfação.</p>
+<div class="team"><div class="c"><h4>Wilson Rodrigues</h4><p>Sócio-diretor · CRECI 69.228</p></div><div class="c"><h4>Marli Oyakawa (Yoko)</h4><p>Sócia · CRECI 42.877</p></div></div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-hd"><h2>Missão, Visão e Valores</h2></div><div class="mvv">
+<div class="c"><h3>Missão</h3><p>Entender as necessidades dos nossos clientes para apresentar oportunidades de negócios personalizadas que superem suas expectativas, proporcionando decisões informadas e seguras.</p></div>
+<div class="c"><h3>Visão</h3><p>Ser reconhecida como uma empresa que torna o processo de compra e venda de imóveis uma experiência gratificante e memorável.</p></div>
+<div class="c full"><h3>Valores</h3><ul><li>Clareza e Honestidade: mantemos uma comunicação transparente em todas as etapas do nosso processo de atendimento, construindo relacionamentos de confiança.</li><li>Foco na Satisfação do Cliente: buscamos maneiras de exceder suas expectativas.</li><li>Ética em Nossos Relacionamentos: agimos com integridade, respeitando todos os envolvidos nas negociações.</li><li>Respeito às Diferenças Sociais: tratamos clientes e parceiros com dignidade.</li></ul></div>
+</div></div></section>{band()}</main>'''
+    pg += footer()
+    write('quem-somos/index.html', pg)
+
+    # CONTATO
+    pg = head('Contato | W3W Imóveis', 'Fale com a W3W Imóveis pelo WhatsApp, e-mail ou formulário. Atendimento personalizado para imóveis em Moema e Vila Nova Conceição.', 'contato')
+    pg += header('contato')
+    opts = ''.join(f'<option>{esc(e["nome"])}</option>' for e in sorted(E, key=lambda x: x['nome']))
+    pg += f'''<main><section class="pg-hd"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / Contato</div><h1>Fale conosco</h1>
+<p>Conte o que você procura e respondemos pessoalmente, pelo canal que preferir.</p></div></section>
+<section class="sec" style="padding-top:16px"><div class="wrap ct">
+<form class="form" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa" onsubmit="if(!this.hasAttribute('data-live')){{event.preventDefault();var d=new FormData(this);var m='Olá, sou '+d.get('nome')+'. '+(d.get('interesse')?'Interesse: '+d.get('interesse')+'. ':'')+(d.get('mensagem')||'');window.open('https://wa.me/{WA}?text='+encodeURIComponent(m),'_blank')}}">
+<input type="hidden" name="form-name" value="contato"><p hidden><input name="empresa"></p>
+<label for="f-nome">Nome</label><input id="f-nome" name="nome" required autocomplete="name">
+<label for="f-tel">WhatsApp</label><input id="f-tel" name="telefone" type="tel" required autocomplete="tel">
+<label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email">
+<label for="f-int">Interesse</label><select id="f-int" name="interesse"><option value="">Selecione (opcional)</option><option>Apartamento em Moema</option><option>Studio em Moema</option><option>Apartamento na Vila Nova Conceição</option><option>Investimento</option>{opts}</select>
+<label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" rows="4"></textarea>
+<button class="btn solid" type="submit">Enviar</button>
+<small>Ao enviar, você concorda com a nossa <a href="{u('politica-de-privacidade')}" style="border-bottom:1px solid">Política de Privacidade</a>.</small></form>
+<dl class="info"><dt>WhatsApp</dt><dd><a href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener">{TEL}</a></dd>
+<dt>E-mail</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd><dt>Atendimento</dt><dd>Moema · São Paulo</dd><dt>Registro</dt><dd>{CRECI}</dd></dl>
+</div></section></main>'''
+    pg += footer()
+    write('contato/index.html', pg)
+
+    # PRIVACIDADE (resumo provisório)
+    pg = head('Política de Privacidade | W3W Imóveis', 'Política de Privacidade e LGPD da W3W Imóveis.', 'politica-de-privacidade')
+    pg += header('')
+    pg += f'''<main><section class="pg-hd"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / Política de Privacidade</div><h1>Política de Privacidade</h1>
+<p>Esta página receberá o texto completo da Política de Privacidade / LGPD do site atual na migração. Para dúvidas sobre seus dados, fale conosco pelo e-mail {EMAIL} ou pelo telefone {TEL}.</p></div></section></main>'''
+    pg += footer()
+    write('politica-de-privacidade/index.html', pg)
+
+    write('robots.txt', 'User-agent: *\nDisallow: /\n')
+    print('ok', len(E), 'empreendimentos')
+
+if __name__ == '__main__':
+    build()

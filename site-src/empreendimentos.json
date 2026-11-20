@@ -1,0 +1,929 @@
+[
+ {
+  "slug": "agami-park-residences",
+  "nome": "Agami Park Residences",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Lançamento",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "215 e 290 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Agami_EZTEC.png"
+ },
+ {
+  "slug": "copa",
+  "nome": "Copa",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra o verdadeiro significado de viver com exclusividade e conforto.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "300 m²",
+   "vagas": "4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Copa_Lote-5.png"
+ },
+ {
+  "slug": "composite-moema",
+  "nome": "Composite Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Viva em um espaço único, cercado de conforto e sofisticação.",
+  "resumo": {
+   "tipologias": "Studio",
+   "metragem": "27 a 62 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Composite.png"
+ },
+ {
+  "slug": "autoral-moema",
+  "nome": "Autoral Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Viva a experiência única de um lar que se conecta com a natureza e o bem-estar.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "27 a 62 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Autoral.png"
+ },
+ {
+  "slug": "on-imares",
+  "nome": "ON Imarés",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Viva o conforto e a elegância no seu novo lar. Sua vida, seu estilo, sua felicidade.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "20 a 28 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/ON-IMARES-10.jpg"
+ },
+ {
+  "slug": "on-maracatins",
+  "nome": "ON Maracatins",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Bem-vindo ao seu novo lar de conforto e elegância. Viva a experiência completa.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "24 e 29 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/01-R00.jpg"
+ },
+ {
+  "slug": "on-jurupis",
+  "nome": "ON Jurupis",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Charme, modernidade conforto, segurança e lazer em um só lugar.",
+  "resumo": {
+   "tipologias": "Studios e 3 dormitórios",
+   "metragem": "26 a 107 m²",
+   "vagas": "2 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/DJI_1046.jpg"
+ },
+ {
+  "slug": "nex-one-nhambiquaras",
+  "nome": "NEX One Nhambiquaras",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra um conceito único de moradia em São Paulo, com design moderno e áreas exclusivas.",
+  "resumo": {
+   "tipologias": "1 e 2 dormitórios",
+   "metragem": "27 a 69 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nhamb.jpg"
+ },
+ {
+  "slug": "nex-one-jurupis",
+  "nome": "NEX One Jurupis",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Moradia inovadora e exclusiva para quem busca sofisticação e qualidade de vida.",
+  "resumo": {
+   "tipologias": "Studio, 1 e 2 dormitórios",
+   "metragem": "29 e 47 m²",
+   "vagas": "1 Vaga"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nex-one-juru.jpg"
+ },
+ {
+  "slug": "most-moema",
+  "nome": "Most Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Reinvente seu viver. Descubra um conceito inovador de moradia que transforma sua qualidade de vida.",
+  "resumo": {
+   "tipologias": "Studio, 1 e 2 dormitórios",
+   "metragem": "33 a 147 m²",
+   "vagas": "1 e 2 Vagas (demarcadas) + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/most-moema-20230419092314000.jpg"
+ },
+ {
+  "slug": "bem-moema",
+  "nome": "Bem Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Descubra um novo jeito de viver: sofisticação, natureza e exclusividade. Uma experiência única.",
+  "resumo": {
+   "tipologias": "Studios, 2 e 3 Suítes",
+   "metragem": "26 a 36, 80 e 123 m²",
+   "vagas": "1 e 2 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Tegra-Incorporadora-Perspectiva-Ilustrada-Area-Externa-Lazer-Apartamentos-Bem-Moema-Sao-Paulo-SP-001-1715460274740.jpg"
+ },
+ {
+  "slug": "moema-signature-by-you-inc",
+  "nome": "Moema Signature by You,Inc",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Viva com conforto e estilo. Garanta seu lugar neste empreendimento único e desfrute de exclusividade e modernidade.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "23 a 33 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/03_YOU_GAI_ESQUINA_FINAL_2SCOPEOMEDIA-2.jpg"
+ },
+ {
+  "slug": "moma-moema",
+  "nome": "MOMA Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Sofisticação, design exclusivo e localização privilegiada se unem para uma experiência única.",
+  "resumo": {
+   "tipologias": "Studios e 3 Suítes",
+   "metragem": "25 a 194 m²",
+   "vagas": "3 e 4 Vagas (demarcadas)"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-listagem_MOMA_vs02.jpg"
+ },
+ {
+  "slug": "mirage-ibirapuera",
+  "nome": "Mirage Ibirapuera",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Exclusividade, sofisticação e natureza: uma nova forma de viver.",
+  "resumo": {
+   "tipologias": "Studios - 4 e 5 Suítes",
+   "metragem": "19 a 25 m² - 238 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/3021a7ce-8333-49ca-a46a-7cc9ea1ce043.jpg"
+ },
+ {
+  "slug": "canto-sabia",
+  "nome": "Canto Sabiá",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra um novo conceito de moradia que vai transformar sua vida com sofisticação e exclusividade.",
+  "resumo": {
+   "tipologias": "1 e 2 Suítes",
+   "metragem": "48 a 135 m²",
+   "vagas": "1 Vaga"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_SABIA_EXTERNA_FACHADALATERAL_HR00-1-5000x485-1.jpg"
+ },
+ {
+  "slug": "atmos-moema",
+  "nome": "Atmos Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra a experiência de morar em Moema: exclusividade, conforto e um toque de futuro.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "160 a 292 m²",
+   "vagas": "2 e 3 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-atmos-moema-sao-paulo-sp-detalhes-2.jpg"
+ },
+ {
+  "slug": "nex-one-estacao-moema",
+  "nome": "NEX One Estação Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Lançamento",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Prepare-se para uma experiência única! Novo conceito de vida com design inovador e tudo o que você sempre quis.",
+  "resumo": {
+   "tipologias": "Studios e 1 dormitório",
+   "metragem": "19 e 28 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/8_2x-1.png"
+ },
+ {
+  "slug": "moema-vida-nova",
+  "nome": "Moema Vida Nova",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Novo jeito de viver: design inovador e experiência única. Empreendimento que redefine a qualidade de vida.",
+  "resumo": {
+   "tipologias": "1 e 2 Suítes",
+   "metragem": "66 e 80 m²",
+   "vagas": "1 Vaga"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/DSC0262-1.png"
+ },
+ {
+  "slug": "villa-versace-home",
+  "nome": "Villa Versace Home",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Viva o estilo de vida dos seus sonhos. Descubra o que te espera.",
+  "resumo": {
+   "tipologias": "Studios, 3 e 4 Suítes",
+   "metragem": "28 a 291 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/644037cb5f7255e46368c870_02.png"
+ },
+ {
+  "slug": "saffire",
+  "nome": "Saffire",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Exclusividade e luxo esperam por você em um endereço sofisticado. Descubra novas experiências e comodidades.",
+  "resumo": {
+   "tipologias": "4 e 5 Suítes",
+   "metragem": "360 e 493 m²",
+   "vagas": "4 a 6 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/642b1d3c2dba16a98a0a1da9_01.jpg"
+ },
+ {
+  "slug": "ibirapuera-park-houses",
+  "nome": "Ibirapuera Park Houses",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Novo jeito de viver em São Paulo: studios inteligentes a 3 min do Ibirapuera. Conforto e exclusividade.",
+  "resumo": {
+   "tipologias": "3 suítes",
+   "metragem": "153 m²",
+   "vagas": "2 vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/01-fachada.jpg"
+ },
+ {
+  "slug": "park-avenue",
+  "nome": "Park Avenue",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Exclusividade no seu espaço privado: privacidade transforma cada dia em conforto e sofisticação.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "240 e 298 m²",
+   "vagas": "4 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/park-avenue-fachada.jpg"
+ },
+ {
+  "slug": "z-ibirapuera",
+  "nome": "Z Ibirapuera",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Novo jeito de viver: conforto, modernidade e experiência única em um endereço que te conecta a tudo.",
+  "resumo": {
+   "tipologias": "Studio",
+   "metragem": "24 e 54 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/z-ibirapuera-fachada.jpg"
+ },
+ {
+  "slug": "chanes-street",
+  "nome": "Chanés Street",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio",
+   "Apartamento"
+  ],
+  "frase": "Moema com o charme do Soho! Descubra o Chanés, um novo conceito de morar que vai te surpreender.",
+  "resumo": {
+   "tipologias": "Studio, 1 e 2 Suítes",
+   "metragem": "29 a 75 m²",
+   "vagas": "1 Vaga"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/chanes-moema-fachada-1.jpg"
+ },
+ {
+  "slug": "splend-moema",
+  "nome": "Splend Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Novidade que une sofisticação, natureza e tecnologia em um só lugar.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "258 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/splend-banner-vitrine.jpg"
+ },
+ {
+  "slug": "casa-sabia",
+  "nome": "Casa Sabiá",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Vida premium e sustentável em um endereço desejável, próximo ao Parque Ibirapuera.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "317 m²",
+   "vagas": "4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/ad9d54e7-2381-4c60-b267-5c3360d50a99-29022024204430-1.png"
+ },
+ {
+  "slug": "mona-the-grand-lodge",
+  "nome": "Monã the Grand Lodge",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Exclusividade e sofisticação te esperam em Moema. Descubra um refúgio com detalhes que surpreendem.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "177 a 392 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/f46633e13c5a0efd06078d2a796bd5457a0722c7.png"
+ },
+ {
+  "slug": "cyrela-for-you-moema",
+  "nome": "Cyrela For You Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Moema te espera! Novo jeito de viver com espaços inteligentes e conectados ao seu estilo.",
+  "resumo": {
+   "tipologias": "1 Suíte",
+   "metragem": "61 m²",
+   "vagas": "1 Vaga"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CYRELA_ARAPANES_FACHADA_RESIDENCIAL_NOTURNA_HR00.jpg"
+ },
+ {
+  "slug": "cyrela-moema-by-yoo",
+  "nome": "Cyrela Moema by YOO",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Desvende um novo jeito de viver em Moema. Design inovador e exclusividade em uma torre única.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "252 a 291 m²",
+   "vagas": "3 e 4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/JUR_02_Fachada_Frontal_EF3_ajustada_1.png"
+ },
+ {
+  "slug": "lis-moema",
+  "nome": "Lis Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra um novo lar em Moema, onde sofisticação e natureza se encontram.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "172 a 253 m²",
+   "vagas": "2 e 3 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CTV_01_Fachada_T1e2_A_EF2_v2-1.png"
+ },
+ {
+  "slug": "ibate",
+  "nome": "Ibaté",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Vivencie a autenticidade que você sempre sonhou em Moema. Um novo empreendimento que vai te surpreender.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "480 m²",
+   "vagas": "5 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-ibate-fachada2-scaled-1.jpg"
+ },
+ {
+  "slug": "purity-moema",
+  "nome": "Purity Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Moema reinventada: luxo e exclusividade em um novo conceito. Descubra o que te espera.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "150 a 290 m²",
+   "vagas": "2 e 3 Vagas (determinadas)"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/img_fachada-pag-int-empreen_ficha-tecnica.jpg"
+ },
+ {
+  "slug": "ndk-studios-moema",
+  "nome": "NDK Studios Moema",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Descubra tecnologias que vão revolucionar seu dia a dia. Prepare-se para uma experiência única.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "26 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-2.jpg"
+ },
+ {
+  "slug": "monogram",
+  "nome": "Monogram",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Explore um novo conceito em design e exclusividade. A experiência que você sempre quis, ao seu alcance.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "121 m²",
+   "vagas": "2 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada.jpg"
+ },
+ {
+  "slug": "park-lane",
+  "nome": "Park Lane",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Transforme seu conceito de luxo e exclusividade. Projeto inovador para um novo patamar de bem morar.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "375 a 688 m²",
+   "vagas": "5 à 7 Vagas (determinadas)"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/parklane-fachada-1.jpg-1.jpg"
+ },
+ {
+  "slug": "filadelfo-vila-nova-conceicao",
+  "nome": "Filadelfo Vila Nova Conceição",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra seu novo lar em uma localização privilegiada, onde sofisticação e natureza se encontram.",
+  "resumo": {
+   "tipologias": "2 ou 3 dormitórios",
+   "metragem": "75 a 275 m²",
+   "vagas": "1 ou 2 vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Filadelfo-1.png"
+ },
+ {
+  "slug": "tiel",
+  "nome": "Tiel",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Studio"
+  ],
+  "frase": "Viva de um jeito novo em Vila Nova: inovação, localização privilegiada e qualidade em um só lugar.",
+  "resumo": {
+   "tipologias": "Studios",
+   "metragem": "19 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/tiel.jpg"
+ },
+ {
+  "slug": "nex-one-praca-pereira-coutinho",
+  "nome": "NEX One Praça Pereira Coutinho",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Inove seu estilo de vida em Vila Nova Conceição. Conforto, exclusividade e praticidade.",
+  "resumo": {
+   "tipologias": "1 e 2 dormitórios",
+   "metragem": "26 e 48 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/apartamento-nex-one-pereira-coutinho-sao-paulo-sp-fachada-destaque-2.png"
+ },
+ {
+  "slug": "nex-one-vila-nova",
+  "nome": "NEX One Vila Nova",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Vila Nova: descubra um novo jeito de viver! Inovação, localização e qualidade de vida em um só lugar.",
+  "resumo": {
+   "tipologias": "1 e 2 dormitórios",
+   "metragem": "24 a 37 m²",
+   "vagas": ""
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/next-one.jpg"
+ },
+ {
+  "slug": "dom-564",
+  "nome": "DOM 564",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Novo jeito de viver na Vila Nova Conceição! Exclusividade, piscina no rooftop e vista do Ibirapuera.",
+  "resumo": {
+   "tipologias": "1 e 2 Suítes",
+   "metragem": "56 a 107 m²",
+   "vagas": "1 e 2 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/4c51744dac86d0672fa7b1304acae0380a7756ec.png"
+ },
+ {
+  "slug": "arbre-vila-nova",
+  "nome": "Arbre Vila Nova",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Viva o luxo em um apartamento de alto padrão, com amplos espaços e lazer completo.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "372 m²",
+   "vagas": "4 e 5 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/arbre.jpg"
+ },
+ {
+  "slug": "d-o-c-vila-nova",
+  "nome": "D.O.C Vila Nova",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Exclusividade e sofisticação em um novo endereço. Vila Nova Conceição: descubra o que te espera.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "195 m²",
+   "vagas": "3 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/19-Afonso-Braz_Fachada-R.-Afonso-Braz_R06-HR-.jpg"
+ },
+ {
+  "slug": "bueno-brandao",
+  "nome": "Bueno Brandão",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Elegância e inovação: explore o que está por vir! Um novo conceito de vida à sua disposição.",
+  "resumo": {
+   "tipologias": "5 Suítes",
+   "metragem": "500 m²",
+   "vagas": "5 e 7 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada_noturna.png"
+ },
+ {
+  "slug": "opera-vila-nova",
+  "nome": "Ópera Vila Nova",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Novo padrão de vida na Vila Nova Conceição: privacidade e sofisticação à sua espera.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "293 m²",
+   "vagas": "4 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/EMOCOES_HELIO_FACHADA_DIURNA_HR.jpg"
+ },
+ {
+  "slug": "helio-454",
+  "nome": "Helio 454",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Design inovador e exclusividade inédita! Um novo conceito de vida, esperando por você.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "258 m² e 491 m²",
+   "vagas": "3 e 4 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_Helio-Pelegrino-01-FACHADA-FRONTAL_HR1.png"
+ },
+ {
+  "slug": "sete-vila-nova-conceicao",
+  "nome": "Sete Vila Nova Conceição",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Viva uma experiência inigualável: moradia com design inovador e todas as comodidades que você merece.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "398 m²",
+   "vagas": "5 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-1723570998863-1.jpg"
+ },
+ {
+  "slug": "pallazo-grimaldi",
+  "nome": "Pallazo Grimaldi",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Em obras",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Morar em uma obra-prima na Vila Nova Conceição. Redefinindo luxo e inovação. Experiência única te espera.",
+  "resumo": {
+   "tipologias": "3 e 4 Suítes",
+   "metragem": "290 a 422 m²",
+   "vagas": "4 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/palazzo-1.png"
+ },
+ {
+  "slug": "the-frame",
+  "nome": "The Frame",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Descubra um novo estilo de vida, onde arte e inovação redefinem o conceito de luxo.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "358 m²",
+   "vagas": "4 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/theframe_Fachada.jpg"
+ },
+ {
+  "slug": "praca-da-vila",
+  "nome": "Praça da Vila",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Redefina o luxo com arte e inovação. Uma experiência única te espera.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "154 m²",
+   "vagas": "2 Vagas"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/destaquehome-praca-da-vila-fachada-m.jpg"
+ },
+ {
+  "slug": "triad-vila-nova-conceicao",
+  "nome": "Triad Vila Nova Conceição",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Pronto",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Desvende um empreendimento que vai além de suas expectativas. Descubra a novidade que transformará sua vida.",
+  "resumo": {
+   "tipologias": "3 Suítes",
+   "metragem": "160 m²",
+   "vagas": "3 Vagas (demarcadas)"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/galeria-header-triad-entrada.jpg"
+ },
+ {
+  "slug": "bosque-vila-nova",
+  "nome": "Bosque Vila Nova",
+  "bairro": "Vila Nova Conceição",
+  "bairro_slug": "vila-nova-conceicao",
+  "status": "Lançamento",
+  "tipos": [
+   "Apartamento"
+  ],
+  "frase": "Sofisticação e tecnologia esperam por você na Vila Nova Conceição. Descubra como sua vida pode ser transformada.",
+  "resumo": {
+   "tipologias": "4 Suítes",
+   "metragem": "194 e 237 m²",
+   "vagas": "2 e 3 Vagas + depósito"
+  },
+  "torres": [],
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Fachada-Noturna.png"
+ }
+]
