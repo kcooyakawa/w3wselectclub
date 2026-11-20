@@ -488,6 +488,20 @@ body:has(.lx-bar) .wa{bottom:92px}
 .bk-pair{grid-template-columns:1fr;padding:56px 20px 20px}.bk-pair .bk-f img{aspect-ratio:4/3!important}.bk-txt{padding:48px 20px}.bk-voo{height:64vh}.bk-voo-t{left:20px;bottom:28px}
 .bk-grid{grid-template-columns:1fr 1fr;gap:24px 12px;padding:32px 20px 0}.bk-grid .bk-f:nth-child(3n+2){margin-top:0}.bk-grid .bk-f:nth-child(even){margin-top:40px}
 .bk-list{columns:1}.bk-loc{grid-template-columns:1fr;padding:56px 20px;gap:28px}.bk-loc iframe{height:300px}.bk-tec dl{grid-template-columns:1fr 1fr}}
+
+/* CTA fixo + motion */
+.lx-bar{background:var(--ink)!important;color:#F6F7F9;border-top:0!important;padding:16px 56px!important}
+.lx-bar-t{display:flex;flex-direction:column;gap:2px}.lx-bar-t small{color:rgba(246,247,249,.6)!important;display:block!important}
+.lx-bar-t strong{font-family:var(--serif);font-weight:300;font-size:clamp(17px,1.8vw,24px)!important;line-height:1.2}.lx-bar-t em{font-style:italic}
+.lx-go{white-space:nowrap;animation:pulse 2.8s var(--ease) infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(246,247,249,.35)}50%{box-shadow:0 0 0 10px rgba(246,247,249,0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.bk-cover img,.bk-full img,.bk-voo img{will-change:transform;transform:scale(1.14)}
+.bk-full{overflow:hidden}
+.back{display:inline-flex;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:2px}
+@media(max-width:900px){.lx-bar{padding:12px 16px!important}.lx-bar-t small{display:none!important}.lx-bar-t strong{font-size:15px!important}}
+@media(prefers-reduced-motion:reduce){.lx-go{animation:none}.bk-cover img,.bk-full img,.bk-voo img{transform:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -533,6 +547,7 @@ def footer():
 <div class="ft-c"><a href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener">{TEL}</a><a href="mailto:{EMAIL}">{EMAIL}</a></div>
 </div><div class="wrap ft-bot"><span>W3W Imóveis · Curadoria imobiliária · Desde 2004</span><span>{CRECI} · Moema, São Paulo</span></div></footer>
 <a class="wa" href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{WA_ICON}</a>
+<script src="{BASE}/assets/motion.js?v={VER}" defer></script>
 </body></html>"""
 
 def card(e):
@@ -587,7 +602,7 @@ def rich(e, h='h2'):
     st = e['status'].split()[0].lower().replace('ç', 'c')
     fig = lambda src, cap, cls='': f'<figure class="bk-f {cls}"><img src="{src}" alt="{esc(cap)}" loading="lazy" decoding="async"><figcaption>{esc(cap)}</figcaption></figure>'
     nome = e['nome']
-    plantas = ''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, gostaria de solicitar a planta de {b} ({a}) do {nome}.")}" target="_blank" rel="noopener">Solicitar planta</a></td></tr>' for a, b, c, d in f['plantas'])
+    plantas = ''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, quero receber a planta de {b} ({a}) do {nome}.")}" target="_blank" rel="noopener">Receber planta</a></td></tr>' for a, b, c, d in f['plantas'])
     out = f"""<article class="lx bk">
 <header class="bk-cover"><img src="{I.get('capa', e['img'])}" alt="{esc(nome)}"><div class="bk-sh"></div>
 <div class="bk-ct"><div class="bk-top"><span>{esc(e['bairro'])} · São Paulo</span><span class="lx-st st-{st}">{e['status']}</span></div>
@@ -610,8 +625,8 @@ def rich(e, h='h2'):
 <p class="bk-note">Imagens: perspectivas ilustradas fornecidas pela incorporadora. Informações sujeitas a alteração.</p></section>
 <section class="lx-end"><span class="eyebrow">Tabela, plantas e condições</span><h3>Receba o material completo <em>do {esc(nome)}.</em></h3>
 <a class="btn light solid-l" href="{wa(msg)}" target="_blank" rel="noopener">Receber no WhatsApp</a></section>
-<div class="lx-bar"><span><strong>{esc(nome)}</strong><small>{esc(f.get('faixa', r['metragem']))} · {e['status']}</small></span>
-<a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Receber tabela e plantas</a></div></article>"""
+<div class="lx-bar"><span class="lx-bar-t"><small>{esc(nome)} · {e['status']}</small><strong>Book completo, tabela e plantas <em>no seu WhatsApp.</em></strong></span>
+<a class="btn light solid-l lx-go" href="{wa("Olá, quero receber o book completo, a tabela e as plantas do " + nome + ".")}" target="_blank" rel="noopener">Quero receber <span aria-hidden="true">→</span></a></div></article>"""
     return out
 
 def build_home():
@@ -698,6 +713,7 @@ var h=document.querySelector('.hd.over');function sc(){{h.classList.toggle('soli
 def build():
     if os.path.isdir(OUT): shutil.rmtree(OUT)
     write('assets/site.css', CSS)
+    write('assets/motion.js', open(os.path.join(ROOT,'motion.js'),encoding='utf-8').read())
     write('assets/sheet.js', open(os.path.join(ROOT,'sheet.js'),encoding='utf-8').read())
     write('assets/favicon.svg', LOGO.replace('currentColor', '#1A1817'))
     filt_js = '''<script>
@@ -746,7 +762,7 @@ document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click
         pg = head(f"{e['nome']} — {r['tipologias']} em {e['bairro']} | W3W Imóveis", desc, 'empreendimentos/' + e['slug'],
                   f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>')
         pg += header(e['bairro_slug'])
-        pg += f'''<main><section class="pg-hd" style="padding-bottom:0"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / <a href="{u(e['bairro_slug'])}">{e['bairro']}</a> / {esc(e['nome'])}</div></div></section>
+        pg += f'''<main><section class="pg-hd" style="padding-bottom:0"><div class="wrap"><div class="crumbs"><a class="back" href="{BASE}/#imoveis">← Voltar à galeria</a></div></div></section>
 ''' + (rich(e,'h1') if e.get('ficha') else f'''<section class="sec fxp" style="padding-top:8px"><div class="wrap">
 <div class="fx-ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" decoding="async"><span class="tag st">{e['status']}</span></div>
 <div class="fx-b"><div class="fx-t"><span class="eyebrow">{esc(e['bairro'])} · {e['status']}</span><h1>{esc(e['nome'])}</h1>{f'<p class="fx-q">{esc(e["frase"])}</p>' if e['frase'] else ''}</div>

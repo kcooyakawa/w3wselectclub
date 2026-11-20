@@ -20,7 +20,7 @@ return '<div class="fx-ph"><img src="'+e.img+'" alt="'+esc(e.nome)+'"><span clas
 '<div class="fx-cta2"><div><span class="eyebrow">Ficha completa</span><h4>Plantas, tabela, incorporadora e previsão de entrega.</h4></div><a class="btn solid" target="_blank" rel="noopener" href="'+wa('Olá, quero receber a ficha completa do '+e.nome+' (plantas, tabela e entrega).')+'">Receber no WhatsApp</a></div>'+
 '<a class="fx-l" href="'+window.W3W_BASE+'/empreendimentos/'+e.slug+'/">Abrir página do empreendimento ↗</a>'}
 function open(slug,push){var e=data[slug];if(!e)return;last=document.activeElement;var tp=document.getElementById('fx-'+slug);IN.innerHTML=tp?tp.innerHTML:html(e);S.classList.toggle('rich',!!tp);S.hidden=false;P.style.transform='';P.scrollTop=0;
-document.documentElement.classList.add('lock');requestAnimationFrame(function(){S.classList.add('on')});P.focus();if(push)history.pushState({sheet:slug},'','#'+slug)}
+document.documentElement.classList.add('lock');requestAnimationFrame(function(){S.classList.add('on')});if(tp&&window.W3WMotion)window.W3WMotion(IN.querySelector('.lx'));P.focus();if(push)history.pushState({sheet:slug},'','#'+slug)}
 function close(fromPop){if(S.hidden)return;S.classList.remove('on');document.documentElement.classList.remove('lock');setTimeout(function(){S.hidden=true;IN.innerHTML=''},350);if(last)last.focus();if(!fromPop&&history.state&&history.state.sheet)history.back()}
 document.addEventListener('click',function(ev){var a=ev.target.closest('a.g[data-slug]');if(a&&!ev.metaKey&&!ev.ctrlKey){ev.preventDefault();open(a.dataset.slug,true)}if(ev.target.closest('[data-close]'))close()});
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close()});
