@@ -284,6 +284,8 @@ html.lock{overflow:hidden}
 .fxp .fx-ph{aspect-ratio:21/9}@media(max-width:900px){.fxp .fx-ph{aspect-ratio:4/3}}
 
 /* v4 hero */
+@media(min-width:560px) and (max-width:767px){.scs{grid-template-columns:repeat(3,1fr)!important;gap:14px!important}.sc h3{font-size:22px}.sc p{font-size:13px}}
+@media(max-width:559px){.sc-ph{aspect-ratio:1/1}}
 .hx>.wrap{width:100%}
 .hx{min-height:calc(100svh - 150px)!important;display:flex!important;flex-direction:column;justify-content:space-between}
 .hx-top{position:relative;z-index:1;display:flex;justify-content:space-between;padding-top:120px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,249,.8)}
