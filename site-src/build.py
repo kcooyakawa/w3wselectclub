@@ -502,6 +502,15 @@ body:has(.lx-bar) .wa{bottom:92px}
 .back{display:inline-flex;gap:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:2px}
 @media(max-width:900px){.lx-bar{padding:12px 16px!important}.lx-bar-t small{display:none!important}.lx-bar-t strong{font-size:15px!important}}
 @media(prefers-reduced-motion:reduce){.lx-go{animation:none}.bk-cover img,.bk-full img,.bk-voo img{transform:none}}
+
+/* CTA: topo no desktop, base no celular */
+@media(min-width:901px){
+.lx{display:flex;flex-direction:column}
+.lx-bar{order:-1;position:sticky!important;top:92px;bottom:auto!important;z-index:6}
+.sheet .lx-bar{top:0}
+.lx>.bk-cover{order:-2}
+}
+body:has(.lx) .wa,.sheet.rich~.wa{display:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
