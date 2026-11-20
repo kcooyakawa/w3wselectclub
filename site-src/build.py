@@ -381,6 +381,13 @@ html.lock{overflow:hidden}
 .fx-cta2 .btn.solid{background:#F6F7F9;color:var(--ink);border-color:#F6F7F9}
 .sh-in .fx-l{display:inline-block;margin:0}
 @media(max-width:900px){.fx-x{grid-template-columns:1fr;gap:28px}.fx-cta2{padding:28px 22px}.fx-map iframe{height:280px}}
+
+.pf-ov{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:22px;color:#F6F7F9;background:linear-gradient(180deg,rgba(18,17,16,.15),rgba(18,17,16,.72));opacity:0;transition:opacity .45s var(--ease)}
+.pf-ov em{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.05;transform:translateY(10px);transition:transform .5s var(--ease)}
+.pf-ov small{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.g:hover .pf-ov,.g:focus-visible .pf-ov{opacity:1}.g:hover .pf-ov em{transform:none}
+.pf-grid .g .ph::after{display:none}
+@media(hover:none){.pf-ov{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -460,7 +467,7 @@ CATS = [('', 'Todos'), ('studios', 'Studios'), ('apartamentos', 'Apartamentos'),
 def gcard(e, i):
     r = e['resumo']
     return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-slug="{e['slug']}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}" data-st="{e['status']}">
-<div class="ph"><span class="pf-st">{e['status']}</span><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
+<div class="ph"><span class="pf-st">{e['status']}</span><span class="pf-ov"><em>{esc(e['nome'])}</em><small>Ver ficha →</small></span><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
 <div class="gi"><span class="n">{i:02d}</span><div><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])} · {esc(r['tipologias'])}</p><p class="sp">{esc(r['metragem'])}</p></div></div></a>"""
 
 STATUS = [('Lançamento', 'Lançamentos', 'Antes de todo mundo.'), ('Em obras', 'Em obras', 'Garanta na planta.'), ('Pronto', 'Prontos para morar', 'Chaves na mão.')]
