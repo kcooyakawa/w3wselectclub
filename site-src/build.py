@@ -551,7 +551,7 @@ def rich(e, h='h2'):
 <section class="lx-s lx-intro"><p class="lx-c">{esc(f['conceito'])}</p>
 <dl class="lx-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>
 <section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>
-<section class="lx-s"><div class="lx-k"><span class="eyebrow">Plantas</span><h3>{esc(r['metragem'])}</h3><p>Opções tipo, garden e duplex, com {esc(r['tipologias'].lower())}.</p></div>
+<section class="lx-s"><div class="lx-k"><span class="eyebrow">Plantas</span><h3>{esc(f.get('faixa', r['metragem']))}</h3><p>Opções tipo, garden e duplex, com {esc(r['tipologias'].lower())}.</p></div>
 <table class="lx-t"><thead><tr><th>Tipologia</th><th>Área</th><th>Suítes</th><th>Vagas</th><th></th></tr></thead><tbody>
 {''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, quero a planta de {b} ({a}) do {e[chr(110)+chr(111)+chr(109)+chr(101)]}.")}" target="_blank" rel="noopener">Ver planta →</a></td></tr>' for a, b, c, d in f['plantas'])}</tbody></table></section>
 <section class="lx-s lx-dk"><div class="lx-k"><span class="eyebrow">Lazer</span><h3>Um clube <em>dentro de casa.</em></h3></div>
@@ -561,7 +561,7 @@ def rich(e, h='h2'):
 <section class="lx-s lx-tec"><div class="lx-k"><span class="eyebrow">Ficha técnica</span></div><dl>{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['tecnica'])}</dl></section>
 <section class="lx-end"><span class="eyebrow">Tabela, plantas e condições</span><h3>Receba o material completo <em>do {esc(e['nome'])}.</em></h3>
 <a class="btn light solid-l" href="{wa(msg)}" target="_blank" rel="noopener">Receber no WhatsApp</a></section>
-<div class="lx-bar"><span><strong>{esc(e['nome'])}</strong><small>{esc(r['metragem'])} · {e['status']}</small></span>
+<div class="lx-bar"><span><strong>{esc(e['nome'])}</strong><small>{esc(f.get('faixa', r['metragem']))} · {e['status']}</small></span>
 <a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Receber tabela e plantas</a></div>
 </article>"""
 
