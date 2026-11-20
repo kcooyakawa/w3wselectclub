@@ -616,18 +616,18 @@ def rich(e, h='h2'):
 <header class="bk-cover"><img src="{I.get('capa', e['img'])}" alt="{esc(nome)}"><div class="bk-sh"></div>
 <div class="bk-ct"><div class="bk-top"><span>{esc(e['bairro'])} · São Paulo</span><span class="lx-st st-{st}">{e['status']}</span></div>
 <{h} id="sh-t">{esc(nome)}</{h}><p class="bk-tg">{esc(f['tagline'])}</p></div></header>
-<section class="bk-open"><div class="bk-meta"><span class="eyebrow">{esc(f['endereco'])}</span><span class="eyebrow">Entrega {esc(f['entrega'])}</span></div>
+<section class="bk-open"><div class="bk-meta"><span class="eyebrow">{esc(f['endereco'])}</span><span class="eyebrow">{esc(f['entrega']) if 'ronto' in f['entrega'] else 'Entrega ' + esc(f['entrega'])}</span></div>
 <p class="bk-lead">{esc(f['conceito'])}</p>
 <dl class="bk-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>"""
     if I.get('fachada'): out += fig(I['fachada'], 'Fachada · Perspectiva ilustrada', 'bk-full')
     out += f"""<section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>"""
     if I.get('par'): out += '<section class="bk-pair">' + ''.join(fig(s2, c2) for s2, c2 in I['par']) + '</section>'
-    out += f"""<section class="bk-txt"><span class="eyebrow">As plantas</span><h3>{esc(f.get('faixa', r['metragem']))}, <em>tipo, garden e duplex.</em></h3>
+    out += f"""<section class="bk-txt"><span class="eyebrow">As plantas</span><h3>{esc(f.get('faixa', r['metragem']))}, <em>{esc(f.get('plantas_tit', 'tipo, garden e duplex.'))}</em></h3>
 <table class="lx-t"><thead><tr><th>Tipologia</th><th>Área</th><th>Suítes</th><th>Vagas</th><th></th></tr></thead><tbody>{plantas}</tbody></table></section>"""
     if I.get('voo'): out += f'<section class="bk-voo"><img src="{I["voo"]}" alt="Lazer do {esc(nome)}" loading="lazy"><div class="bk-voo-t"><span class="eyebrow">O lazer</span><h3>Um clube <em>dentro de casa.</em></h3></div></section>'
     if I.get('lazer'): out += '<section class="bk-grid">' + ''.join(fig(s2, c2) for s2, c2 in I['lazer']) + '</section>'
     out += f'<section class="bk-txt bk-lz"><span class="eyebrow">Tudo o que o lazer oferece</span><ul class="bk-list">{"".join(f"<li>{esc(x)}</li>" for x in f["lazer"])}</ul></section>'
-    if I.get('terraco'): out += fig(I['terraco'], 'Terraço, duplex de 572 m²', 'bk-full')
+    if I.get('terraco'): out += fig(I['terraco'], I.get('terraco_cap', 'Terraço, duplex de 572 m²'), 'bk-full')
     out += f"""<section class="bk-loc"><div><span class="eyebrow">O endereço</span><h3>{esc(f['endereco'])}</h3><ul>{''.join(f'<li>{esc(x)}</li>' for x in f['local'])}</ul></div>
 <iframe loading="lazy" title="Mapa {esc(nome)}" src="https://www.google.com/maps?q={q}&output=embed"></iframe></section>
 <section class="bk-txt bk-tec"><span class="eyebrow">Ficha técnica</span><dl>{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['tecnica'])}</dl>

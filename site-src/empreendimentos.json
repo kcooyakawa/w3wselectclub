@@ -454,7 +454,7 @@
   "nome": "Mirage Ibirapuera",
   "bairro": "Moema",
   "bairro_slug": "moema",
-  "status": "Em obras",
+  "status": "Pronto",
   "tipos": [
    "Studio",
    "Apartamento"
@@ -470,7 +470,157 @@
   "categorias": [
    "alto-padrao",
    "studios"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Uma nova forma de olhar.",
+   "conceito": "Um apartamento por andar em frente ao Clube Monte Líbano, a poucos passos do Ibirapuera. Linhas puras, luz natural e um paisagismo de Mata Atlântica que traz a natureza para dentro do projeto.",
+   "endereco": "Av. República do Líbano, 2354 · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "238 a 427 m²",
+   "plantas_tit": "um apartamento por andar.",
+   "assinaturas": [
+    [
+     "Incorporação",
+     "DZ Inc"
+    ],
+    [
+     "Arquitetura",
+     "Jonas Birger"
+    ],
+    [
+     "Interiores",
+     "Suite Arquitetos"
+    ],
+    [
+     "Paisagismo",
+     "Cardim Arquitetura Paisagística"
+    ]
+   ],
+   "destaques": [
+    [
+     "1",
+     "apartamento por andar"
+    ],
+    [
+     "19",
+     "unidades e um duplex"
+    ],
+    [
+     "4",
+     "suítes por unidade"
+    ],
+    [
+     "1.200 m²",
+     "de terreno"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "238,70 m²",
+     "4 suítes",
+     "3 vagas"
+    ],
+    [
+     "Tipo opção",
+     "238,70 m²",
+     "3 suítes",
+     "3 vagas"
+    ],
+    [
+     "Duplex",
+     "427,10 m²",
+     "4 suítes",
+     "4 vagas"
+    ],
+    [
+     "Studios",
+     "19 a 25 m²",
+     "Studio",
+     "Sob consulta"
+    ]
+   ],
+   "lazer": [
+    "Piscina adulta climatizada",
+    "Fitness",
+    "Salão de festas",
+    "Lazer exclusivo dos studios",
+    "Bicicletário e lockers",
+    "Hall social privativo",
+    "Elevador com biometria"
+   ],
+   "local": [
+    "Em frente ao Clube Monte Líbano",
+    "Poucos minutos do Parque Ibirapuera",
+    "Na Av. República do Líbano, entre Moema e Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Terreno",
+     "1.200 m²"
+    ],
+    [
+     "Torre",
+     "Única"
+    ],
+    [
+     "Unidades",
+     "19 apartamentos e um duplex"
+    ],
+    [
+     "Por andar",
+     "1 apartamento"
+    ],
+    [
+     "Diferenciais",
+     "Personalização livre, tratamento acústico, carga para carro elétrico"
+    ],
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://cdnm.com.br/dzinc/media/f0/33/ab/80/conversions/mirage-ibirapuera-20211022163849000-min-width-1200@2x.jpg",
+    "fachada": "https://cdnm.com.br/dzinc/media/e4/da/3b/5/conversions/mirage-ibirapuera-20211007095546000-min-width-1200@2x.jpg",
+    "par": [
+     [
+      "https://cdnm.com.br/dzinc/media/d6/45/92/40/conversions/mirage-ibirapuera-20211014095741000-min-width-1200@2x.jpg",
+      "Perspectiva ilustrada"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/e2/c4/20/71/conversions/mirage-ibirapuera-20211018142344000-min-width-1200@2x.jpg",
+      "Perspectiva ilustrada"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://cdnm.com.br/dzinc/media/17/e6/21/43/conversions/mirage-ibirapuera-20211014095840000-min-width-1200@2x.jpg",
+      "Piscina climatizada"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/a3/f3/90/68/conversions/mirage-ibirapuera-20211018142256000-min-width-1200@2x.jpg",
+      "Fitness"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/7c/bb/c4/70/conversions/mirage-ibirapuera-20211018142329000-min-width-1200@2x.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/ad/61/ab/74/conversions/mirage-ibirapuera-20211018142415000-min-width-1200@2x.jpg",
+      "Lazer dos studios"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/34/16/a7/41/conversions/mirage-ibirapuera-20211014095800000-min-width-1200@2x.jpg",
+      "Lazer dos studios"
+     ],
+     [
+      "https://cdnm.com.br/dzinc/media/14/bf/a6/69/conversions/mirage-ibirapuera-20211018142313000-min-width-1200@2x.jpg",
+      "Bicicletário e lockers"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "canto-sabia",
@@ -628,7 +778,7 @@
   "nome": "Park Avenue",
   "bairro": "Moema",
   "bairro_slug": "moema",
-  "status": "Em obras",
+  "status": "Pronto",
   "tipos": [
    "Apartamento"
   ],
@@ -639,10 +789,162 @@
    "vagas": "4 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/park-avenue-fachada.jpg",
+  "img": "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_fachada.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "De frente para o Ibirapuera.",
+   "conceito": "Um raro terreno na Avenida República do Líbano, com vista para o Parque Ibirapuera. Torre de 102 metros, duas unidades por andar e um diálogo entre o contemporâneo e o natural em cada detalhe.",
+   "endereco": "Av. República do Líbano × Al. dos Arapanés · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "240 e 298 m²",
+   "assinaturas": [
+    [
+     "Incorporação",
+     "EZTEC e Fraiha"
+    ],
+    [
+     "Arquitetura",
+     "Pablo Slemenson"
+    ],
+    [
+     "Interiores",
+     "Fernanda Marques"
+    ],
+    [
+     "Paisagismo",
+     "Alex Hanazaki"
+    ]
+   ],
+   "destaques": [
+    [
+     "3 min",
+     "do Parque Ibirapuera"
+    ],
+    [
+     "102 m",
+     "de altura"
+    ],
+    [
+     "25 m",
+     "raia na piscina"
+    ],
+    [
+     "2",
+     "unidades por andar"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "240 m²",
+     "3 suítes",
+     "4 vagas + depósito"
+    ],
+    [
+     "Tipo",
+     "298 m²",
+     "4 suítes",
+     "4 vagas + depósito"
+    ],
+    [
+     "Cobertura duplex",
+     "Sob consulta",
+     "4 suítes",
+     "Sob consulta"
+    ]
+   ],
+   "lazer": [
+    "Piscina com raia de 25 m",
+    "Piscina adulto e infantil",
+    "Deck molhado",
+    "Bar lounge da piscina",
+    "Solarium",
+    "Hidromassagem",
+    "Sauna seca",
+    "Sala de massagem",
+    "Fitness completo",
+    "Coworking",
+    "Salão de festas com jardim integrado",
+    "Brinquedoteca",
+    "Playground",
+    "Salão de jogos",
+    "Pet place"
+   ],
+   "local": [
+    "3 min do Parque Ibirapuera",
+    "Em frente ao Clube Monte Líbano",
+    "2 min do Parque das Bicicletas",
+    "7 min do Aeroporto de Congonhas"
+   ],
+   "tecnica": [
+    [
+     "Terreno",
+     "2.495 m²"
+    ],
+    [
+     "Torre",
+     "Única, 21 pavimentos tipo + cobertura"
+    ],
+    [
+     "Unidades",
+     "44, duas por andar"
+    ],
+    [
+     "Altura",
+     "102 m"
+    ],
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_hero.jpg",
+    "fachada": "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_fachada.jpg",
+    "par": [
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_living_do_apto_de_298m_planta_opcao_final_1.jpg",
+      "Living, apartamento de 298 m²"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_suite_master_do_apto_de_298m_final_1.jpg",
+      "Suíte master, 298 m²"
+     ]
+    ],
+    "voo": "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_vista_aerea_do_4_andar.jpg",
+    "lazer": [
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_piscina_de_25m.jpg",
+      "Piscina com raia de 25 m"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_deck_molhado.jpg",
+      "Deck molhado"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_salao_de_festas.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_fitness_musculacao.jpg",
+      "Fitness"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_jardim_integrado_ao_salao_de_festas.jpg",
+      "Jardim integrado"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_salao_de_jogos.jpg",
+      "Salão de jogos"
+     ]
+    ],
+    "terraco": "https://hub.eztec.com.br/wp-content/uploads/2026/08/park_avenue_terraco_do_apto_de_298m_planta_opcao_final_1.jpg",
+    "terraco_cap": "Terraço, apartamento de 298 m²"
+   },
+   "plantas_tit": "3 e 4 suítes, todos com depósito."
+  }
  },
  {
   "slug": "z-ibirapuera",
