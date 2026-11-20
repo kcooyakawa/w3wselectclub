@@ -1,5 +1,168 @@
 [
  {
+  "slug": "vp-cotovia",
+  "nome": "VP Cotovia",
+  "bairro": "Moema",
+  "bairro_slug": "moema",
+  "status": "Lançamento",
+  "tipos": "Studios, 1 e 2 dorms.",
+  "frase": "Studios e 1 dormitório em Moema, para morar ou investir.",
+  "resumo": {
+   "tipologias": "Studio, 1 e 2 dorms. e gardens",
+   "metragem": "22 a 60 m²",
+   "vagas": "Opcional"
+  },
+  "torres": "1",
+  "img": "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/fachada.jpg",
+  "categorias": [
+   "studios",
+   "apartamentos"
+  ],
+  "ficha": {
+   "tagline": "Moema para morar, investir e locar.",
+   "conceito": "Torre única recuada, com jardim de entrada, 374 unidades 100% residenciais e short stay permitido em convenção. Lazer completo num pavimento inteiro.",
+   "endereco": "Av. Cotovia, 372 · Moema",
+   "entrega": "Breve lançamento",
+   "faixa": "22 a 60 m²",
+   "plantas_tit": "studios, 1 e 2 dormitórios e gardens.",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "Marcos Perazzo"
+    ],
+    [
+     "Decoração",
+     "Carlos Rossi"
+    ],
+    [
+     "Paisagismo",
+     "Benedito Abbud"
+    ],
+    [
+     "Incorporação",
+     "Vistaplan"
+    ]
+   ],
+   "destaques": [
+    [
+     "374",
+     "unidades"
+    ],
+    [
+     "20 m",
+     "de piscina"
+    ],
+    [
+     "5 min",
+     "da Estação Eucaliptos"
+    ],
+    [
+     "Short stay",
+     "permitido"
+    ]
+   ],
+   "plantas": [
+    [
+     "Studio",
+     "22 a 23 m²",
+     "—",
+     "Sem vaga"
+    ],
+    [
+     "1 dormitório",
+     "30 a 37 m²",
+     "—",
+     "Com ou sem vaga"
+    ],
+    [
+     "2 dormitórios",
+     "45 m²",
+     "—",
+     "Com vaga"
+    ],
+    [
+     "Garden",
+     "37 a 60 m²",
+     "—",
+     "Sob consulta"
+    ]
+   ],
+   "lazer": [
+    "Piscina de 20 m com deck molhado",
+    "Pool bar",
+    "Fitness interno e externo",
+    "Coworking",
+    "Lounge",
+    "Salão e terraço de festas",
+    "Wellness spa",
+    "Mini market e lavanderia",
+    "Pet place",
+    "VP Bike"
+   ],
+   "local": [
+    "5 min da Estação Eucaliptos e do Ibirapuera Shopping",
+    "15 min de Congonhas"
+   ],
+   "tecnica": [
+    [
+     "Pavimentos",
+     "20 residenciais"
+    ],
+    [
+     "Elevadores",
+     "4"
+    ],
+    [
+     "Unidades",
+     "Fechadura digital, infra de ar-condicionado"
+    ],
+    [
+     "Status",
+     "Breve lançamento"
+    ]
+   ],
+   "img": {
+    "capa": "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/fachada.jpg",
+    "par": [
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/lobby.jpg",
+      "Lobby"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/studio.jpg",
+      "Studio decorado"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/piscina.jpg",
+      "Piscina"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/fitness.jpg",
+      "Fitness"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/coworking.jpg",
+      "Coworking"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/lounge.jpg",
+      "Lounge"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/festas.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://kcooyakawa.github.io/kco-imobiliario/vp-cotovia/img/terraco-festas.jpg",
+      "Terraço de festas"
+     ]
+    ]
+   }
+  }
+ },
+ {
   "slug": "agami-park-residences",
   "nome": "Agami Park Residences",
   "bairro": "Moema",
@@ -202,10 +365,143 @@
    "vagas": "4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Copa_Lote-5.png",
+  "img": "https://www.edificiocopa.com.br/images/fachada.webp",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Viver bem é uma arte.",
+   "conceito": "Torre única com apenas 28 residências de 300 m², bosque privativo de 800 m² com 97 árvores centenárias preservadas e 3 mil m² de lazer, em frente ao Parque das Bicicletas.",
+   "endereco": "Av. Indianópolis, 300 · Moema",
+   "entrega": "Obras em andamento",
+   "faixa": "300 m²",
+   "plantas_tit": "três ou quatro suítes, plantas personalizáveis.",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "MCAA"
+    ],
+    [
+     "Paisagismo",
+     "Benedito Abbud"
+    ],
+    [
+     "Interiores",
+     "Fernanda Marques"
+    ],
+    [
+     "Realização",
+     "Lote5"
+    ]
+   ],
+   "destaques": [
+    [
+     "28",
+     "residências"
+    ],
+    [
+     "800 m²",
+     "de bosque privativo"
+    ],
+    [
+     "3 mil m²",
+     "de lazer"
+    ],
+    [
+     "4",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "300 m²",
+     "3 suítes",
+     "4 vagas"
+    ],
+    [
+     "Tipo",
+     "300 m²",
+     "4 suítes",
+     "4 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina com teto retrátil e raia de 25 m",
+    "Piscina infantil",
+    "Spa e jacuzzi",
+    "Sala de massagem",
+    "Academia",
+    "Espaço gourmet",
+    "Bar e festas",
+    "Brinquedoteca",
+    "Playground",
+    "Pet place"
+   ],
+   "local": [
+    "Em frente ao Parque das Bicicletas",
+    "Vizinho aos clubes Monte Líbano e Sírio",
+    "Minutos do Parque Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Torre",
+     "Única, 100% residencial"
+    ],
+    [
+     "Vagas",
+     "4, duas com ponto para carro elétrico"
+    ],
+    [
+     "Diferenciais",
+     "Garagem para esportivos, sala de motorista, aspiração central"
+    ],
+    [
+     "Status",
+     "Em obras"
+    ]
+   ],
+   "img": {
+    "capa": "https://www.edificiocopa.com.br/images/fachada.webp",
+    "par": [
+     [
+      "https://www.edificiocopa.com.br/images/lobby_r2_dia.effectsResult-copy.webp",
+      "Lobby"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/bosque_elev_noite.webp",
+      "Bosque privativo"
+     ]
+    ],
+    "voo": "https://www.edificiocopa.com.br/images/aerea_foto_insercao_2_mirror-copy.webp",
+    "lazer": [
+     [
+      "https://www.edificiocopa.com.br/images/piscina_3_dia_r4.webp",
+      "Piscina com raia de 25 m"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/spa_r2.effectsResult-copy.webp",
+      "Spa"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/academia2_r2.webp",
+      "Academia"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/gourmet_r1.webp",
+      "Espaço gourmet"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/bar_festas_r1.effectsResult-copy.webp",
+      "Bar e festas"
+     ],
+     [
+      "https://www.edificiocopa.com.br/images/brinquedoteca.webp",
+      "Brinquedoteca"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "composite-moema",
@@ -790,7 +1086,7 @@
  },
  {
   "slug": "nex-one-estacao-moema",
-  "nome": "NEX One Estação Moema",
+  "nome": "NEX One Cotovia | Arapanés",
   "bairro": "Moema",
   "bairro_slug": "moema",
   "status": "Lançamento",
@@ -805,11 +1101,138 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/8_2x-1.png",
+  "img": "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-fachada-principal.jpg",
   "categorias": [
    "apartamentos",
    "studios"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Studios e apartamentos a 2 minutos da Estação Eucaliptos.",
+   "conceito": "Duas torres na esquina da Av. Cotovia com a Al. dos Arapanés, com piscina no rooftop, coworking e fitness, a dois minutos a pé do metrô.",
+   "endereco": "Av. Cotovia, 756 · Moema",
+   "entrega": "Breve lançamento",
+   "faixa": "20 a 38,5 m²",
+   "plantas_tit": "studios, 1 e 2 dormitórios.",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "Rodrigo Sobreiro Arquitetos"
+    ],
+    [
+     "Paisagismo",
+     "Núcleo da Paisagem"
+    ],
+    [
+     "Interiores",
+     "Debora Dalanezi"
+    ],
+    [
+     "Incorporação",
+     "One Innovation"
+    ]
+   ],
+   "destaques": [
+    [
+     "2",
+     "torres"
+    ],
+    [
+     "2 min",
+     "da Estação Eucaliptos"
+    ],
+    [
+     "Rooftop",
+     "com piscina"
+    ],
+    [
+     "2.320 m²",
+     "de terreno"
+    ]
+   ],
+   "plantas": [
+    [
+     "Studio",
+     "20 m²",
+     "—",
+     "Sob consulta"
+    ],
+    [
+     "1 dormitório",
+     "24 a 27,5 m²",
+     "—",
+     "Sob consulta"
+    ],
+    [
+     "2 dormitórios",
+     "38,5 m²",
+     "—",
+     "Sob consulta"
+    ]
+   ],
+   "lazer": [
+    "Piscina rooftop",
+    "Lounge gourmet",
+    "Coworking",
+    "Fitness",
+    "Espaço recovery",
+    "Salão de festas",
+    "Churrasqueira",
+    "Bicicletário"
+   ],
+   "local": [
+    "2 minutos a pé da Estação Eucaliptos",
+    "Perto do Ibirapuera Shopping e da Av. Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Torres",
+     "Cotovia e Arapanés"
+    ],
+    [
+     "Status",
+     "Breve lançamento"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-fachada-principal.jpg",
+    "par": [
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-acesso.jpg",
+      "Acesso"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-embasamento-fachada.jpg",
+      "Embasamento"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-piscina-rooftop.jpg",
+      "Piscina rooftop"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-fitness.jpg",
+      "Fitness"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-coworking.jpg",
+      "Coworking"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-festas.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-churrasqueira.jpg",
+      "Churrasqueira"
+     ],
+     [
+      "https://api.oneinnovation.com.br/wp-content/uploads/2026/11/apartamento-nex-one-cotovia-arapanes-sao-paulo-sp-galeria-festas-2.jpg",
+      "Festas"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "moema-vida-nova",
