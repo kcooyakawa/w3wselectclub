@@ -414,7 +414,7 @@ body:has(.lx-bar) .wa{bottom:92px}
 /* book editorial */
 .bk-cover{position:relative;height:min(92vh,900px);overflow:hidden;background:#1A1817;color:#F6F7F9}
 .bk-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.bk-sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.55) 0%,rgba(18,17,16,0) 30%,rgba(18,17,16,0) 55%,rgba(18,17,16,.75))}
+.bk-sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.5) 0%,rgba(18,17,16,0) 25%,rgba(18,17,16,.1) 45%,rgba(18,17,16,.82) 100%)}
 .bk-ct{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:28px 56px 52px}
 .bk-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding-right:60px}
 .bk-ct h1,.bk-ct h2{font-family:var(--serif);font-weight:300;font-size:clamp(56px,10vw,168px);line-height:.88;letter-spacing:-.035em}
