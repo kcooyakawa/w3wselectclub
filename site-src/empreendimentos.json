@@ -137,8 +137,54 @@
     ]
    ],
    "galeria": [],
-   "faixa": "215 a 572 m²"
-  }
+   "faixa": "215 a 572 m²",
+   "img": {
+    "capa": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_hero.jpg",
+    "fachada": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_fachada.jpg",
+    "conceito": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_conceito.jpg",
+    "par": [
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_living_apto_290m-scaled.jpg",
+      "Living, apartamento de 290 m²"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_suite_duplex_571m-scaled.jpg",
+      "Suíte, duplex de 572 m²"
+     ]
+    ],
+    "voo": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_voo_piscinas.jpg",
+    "lazer": [
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_piscina_adulto_de_25m.jpg",
+      "Piscina adulto com raia de 25 m"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_deck_molhado_spa.jpg",
+      "Deck molhado e spa"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_lounge_lareira.jpg",
+      "Lounge com lareira"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_fitness_musculacao.jpg",
+      "Fitness"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_salao_de_festas.jpg",
+      "Salão de festas"
+     ],
+     [
+      "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_pool_bar.jpg",
+      "Pool bar"
+     ]
+    ],
+    "terraco": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_terraco_duplex_571m.jpg",
+    "lobby": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_lobby_galeria.jpg",
+    "regiao": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_regiao.jpg"
+   }
+  },
+  "img_card": "https://hub.eztec.com.br/wp-content/uploads/2026/08/agami_fachada.jpg"
  },
  {
   "slug": "copa",

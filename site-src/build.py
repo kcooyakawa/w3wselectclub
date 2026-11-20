@@ -447,6 +447,47 @@ body:has(.lx-bar) .wa{bottom:92px}
 .sheet.rich .sh-in{padding:0}.sheet.rich .sh-x{position:sticky;top:12px;margin:12px 14px -58px auto;display:grid;float:none}
 .sheet.rich .sh-grab{position:relative;z-index:2;margin-bottom:-14px;background:rgba(246,247,249,.6)}
 @media(max-width:900px){.lx-ht{padding:0 20px 28px}.lx-s{grid-template-columns:1fr;gap:28px;padding:48px 20px}.lx-intro{grid-template-columns:1fr}.lx-num{grid-template-columns:1fr 1fr}.lx-num div{padding:28px 20px;border-top:1px solid rgba(246,247,249,.12)}.lx-lz{grid-template-columns:1fr}.lx-t th:nth-child(4),.lx-t td:nth-child(4){display:none}.lx-bar{padding:12px 16px}.lx-bar small{display:none}.lx-bar .btn{padding:12px 14px;font-size:10px}.lx-end{padding:56px 20px}.lx-loc iframe{height:300px}.lx-h{height:68vh}}
+
+/* book editorial */
+.bk-cover{position:relative;height:min(92vh,900px);overflow:hidden;background:#1A1817;color:#F6F7F9}
+.bk-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bk-sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.55) 0%,rgba(18,17,16,0) 30%,rgba(18,17,16,0) 55%,rgba(18,17,16,.75))}
+.bk-ct{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:28px 56px 52px}
+.bk-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding-right:60px}
+.bk-ct h1,.bk-ct h2{font-family:var(--serif);font-weight:300;font-size:clamp(56px,10vw,168px);line-height:.88;letter-spacing:-.035em}
+.bk-tg{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,2.6vw,38px);margin-top:14px}
+.bk-open{display:grid;grid-template-columns:1fr 2fr 1.2fr;gap:56px;padding:96px 56px;align-items:start}
+.bk-meta{display:flex;flex-direction:column;gap:10px}
+.bk-lead{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.7vw,40px);line-height:1.22;letter-spacing:-.01em}
+.bk-sig div{padding:12px 0;border-bottom:1px solid var(--line)}.bk-sig div:first-child{border-top:1px solid var(--ink)}
+.bk-sig dt{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:500}.bk-sig dd{font-family:var(--serif);font-weight:300;font-size:22px;margin-top:4px}
+.bk-f{margin:0;position:relative}.bk-f img{width:100%;display:block;object-fit:cover;background:#dfe2e6}
+.bk-f figcaption{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding:12px 0 0}
+.bk-full img{aspect-ratio:16/8}.bk-full figcaption{padding:12px 56px 0}
+.bk-full+.lx-num{margin-top:56px}
+.bk-pair{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;padding:96px 56px 40px;align-items:end}
+.bk-pair .bk-f:first-child img{aspect-ratio:4/3}.bk-pair .bk-f:last-child img{aspect-ratio:3/4}
+.bk-txt{padding:72px 56px;max-width:1180px}
+.bk-txt h3,.bk-voo h3,.bk-loc h3{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.2vw,64px);line-height:1;letter-spacing:-.02em;margin:14px 0 36px}
+.bk-txt h3 em,.bk-voo h3 em{font-style:italic}
+.bk-voo{position:relative;height:min(86vh,820px);overflow:hidden;color:#F6F7F9}
+.bk-voo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bk-voo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,0) 45%,rgba(18,17,16,.7))}
+.bk-voo-t{position:absolute;left:56px;bottom:48px;z-index:1}.bk-voo .eyebrow{color:rgba(246,247,249,.75)}.bk-voo h3{margin-bottom:0}
+.bk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 20px;padding:56px 56px 0}
+.bk-grid .bk-f img{aspect-ratio:4/5}.bk-grid .bk-f:nth-child(3n+2){margin-top:72px}
+.bk-list{list-style:none;columns:3;column-gap:40px}.bk-list li{font-family:var(--serif);font-weight:300;font-size:20px;padding:12px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.bk-loc{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;padding:96px 56px;align-items:start}
+.bk-loc ul{list-style:none}.bk-loc li{font-size:15px;color:var(--ink-2);padding:12px 0;border-bottom:1px solid var(--line)}
+.bk-loc iframe{width:100%;height:440px;border:0;filter:grayscale(1) contrast(1.05)}
+.bk-tec dl{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}.bk-tec dl div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}
+.bk-tec dt{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:500}.bk-tec dd{font-family:var(--serif);font-weight:300;font-size:22px;margin-top:6px}
+.bk-note{margin-top:20px;font-size:12px;color:var(--ink-2)}
+.lx-t a{font-weight:500}
+@media(max-width:900px){.bk-ct{padding:20px 20px 32px}.bk-top{padding-right:56px;font-size:10px}.bk-open{grid-template-columns:1fr;gap:28px;padding:56px 20px}.bk-full img{aspect-ratio:4/3}.bk-full figcaption{padding:10px 20px 0}
+.bk-pair{grid-template-columns:1fr;padding:56px 20px 20px}.bk-pair .bk-f img{aspect-ratio:4/3!important}.bk-txt{padding:48px 20px}.bk-voo{height:64vh}.bk-voo-t{left:20px;bottom:28px}
+.bk-grid{grid-template-columns:1fr 1fr;gap:24px 12px;padding:32px 20px 0}.bk-grid .bk-f:nth-child(3n+2){margin-top:0}.bk-grid .bk-f:nth-child(even){margin-top:40px}
+.bk-list{columns:1}.bk-loc{grid-template-columns:1fr;padding:56px 20px;gap:28px}.bk-loc iframe{height:300px}.bk-tec dl{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -540,30 +581,38 @@ SHEET = r"""<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-l
 <div class="sh-in"></div></div></div>"""
 
 def rich(e, h='h2'):
-    f = e['ficha']; r = e['resumo']
+    f = e['ficha']; r = e['resumo']; I = f.get('img', {})
     msg = f"Olá, vi o {e['nome']} ({e['bairro']}) no site da W3W e quero receber a tabela e as plantas."
-    gal = f.get('galeria') or [e['img']]
     q = urllib.parse.quote(f"{f.get('endereco', e['nome'])} São Paulo")
-    return f"""<article class="lx">
-<header class="lx-h"><img src="{gal[0]}" alt="{esc(e['nome'])}"><div class="lx-hs"></div>
-<div class="lx-ht"><span class="lx-st st-{e['status'].split()[0].lower().replace('ç','c')}">{e['status']}</span>
-<{h} id="sh-t">{esc(e['nome'])}</{h}><p class="lx-tg">{esc(f['tagline'])}</p><p class="lx-ad">{esc(f['endereco'])} · Entrega {esc(f['entrega'])}</p></div></header>
-<section class="lx-s lx-intro"><p class="lx-c">{esc(f['conceito'])}</p>
-<dl class="lx-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>
-<section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>
-<section class="lx-s"><div class="lx-k"><span class="eyebrow">Plantas</span><h3>{esc(f.get('faixa', r['metragem']))}</h3><p>Opções tipo, garden e duplex, com {esc(r['tipologias'].lower())}.</p></div>
-<table class="lx-t"><thead><tr><th>Tipologia</th><th>Área</th><th>Suítes</th><th>Vagas</th><th></th></tr></thead><tbody>
-{''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, quero a planta de {b} ({a}) do {e[chr(110)+chr(111)+chr(109)+chr(101)]}.")}" target="_blank" rel="noopener">Ver planta →</a></td></tr>' for a, b, c, d in f['plantas'])}</tbody></table></section>
-<section class="lx-s lx-dk"><div class="lx-k"><span class="eyebrow">Lazer</span><h3>Um clube <em>dentro de casa.</em></h3></div>
-<ul class="lx-lz">{''.join(f'<li>{esc(x)}</li>' for x in f['lazer'])}</ul></section>
-<section class="lx-s lx-loc"><div class="lx-k"><span class="eyebrow">Localização</span><h3>{esc(f['endereco'])}</h3><ul>{''.join(f'<li>{esc(x)}</li>' for x in f['local'])}</ul></div>
-<iframe loading="lazy" title="Mapa {esc(e['nome'])}" src="https://www.google.com/maps?q={q}&output=embed"></iframe></section>
-<section class="lx-s lx-tec"><div class="lx-k"><span class="eyebrow">Ficha técnica</span></div><dl>{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['tecnica'])}</dl></section>
-<section class="lx-end"><span class="eyebrow">Tabela, plantas e condições</span><h3>Receba o material completo <em>do {esc(e['nome'])}.</em></h3>
+    st = e['status'].split()[0].lower().replace('ç', 'c')
+    fig = lambda src, cap, cls='': f'<figure class="bk-f {cls}"><img src="{src}" alt="{esc(cap)}" loading="lazy" decoding="async"><figcaption>{esc(cap)}</figcaption></figure>'
+    nome = e['nome']
+    plantas = ''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, gostaria de solicitar a planta de {b} ({a}) do {nome}.")}" target="_blank" rel="noopener">Solicitar planta</a></td></tr>' for a, b, c, d in f['plantas'])
+    out = f"""<article class="lx bk">
+<header class="bk-cover"><img src="{I.get('capa', e['img'])}" alt="{esc(nome)}"><div class="bk-sh"></div>
+<div class="bk-ct"><div class="bk-top"><span>{esc(e['bairro'])} · São Paulo</span><span class="lx-st st-{st}">{e['status']}</span></div>
+<{h} id="sh-t">{esc(nome)}</{h}><p class="bk-tg">{esc(f['tagline'])}</p></div></header>
+<section class="bk-open"><div class="bk-meta"><span class="eyebrow">{esc(f['endereco'])}</span><span class="eyebrow">Entrega {esc(f['entrega'])}</span></div>
+<p class="bk-lead">{esc(f['conceito'])}</p>
+<dl class="bk-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>"""
+    if I.get('fachada'): out += fig(I['fachada'], 'Fachada · Perspectiva ilustrada', 'bk-full')
+    out += f"""<section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>"""
+    if I.get('par'): out += '<section class="bk-pair">' + ''.join(fig(s2, c2) for s2, c2 in I['par']) + '</section>'
+    out += f"""<section class="bk-txt"><span class="eyebrow">As plantas</span><h3>{esc(f.get('faixa', r['metragem']))}, <em>tipo, garden e duplex.</em></h3>
+<table class="lx-t"><thead><tr><th>Tipologia</th><th>Área</th><th>Suítes</th><th>Vagas</th><th></th></tr></thead><tbody>{plantas}</tbody></table></section>"""
+    if I.get('voo'): out += f'<section class="bk-voo"><img src="{I["voo"]}" alt="Lazer do {esc(nome)}" loading="lazy"><div class="bk-voo-t"><span class="eyebrow">O lazer</span><h3>Um clube <em>dentro de casa.</em></h3></div></section>'
+    if I.get('lazer'): out += '<section class="bk-grid">' + ''.join(fig(s2, c2) for s2, c2 in I['lazer']) + '</section>'
+    out += f'<section class="bk-txt bk-lz"><span class="eyebrow">Tudo o que o lazer oferece</span><ul class="bk-list">{"".join(f"<li>{esc(x)}</li>" for x in f["lazer"])}</ul></section>'
+    if I.get('terraco'): out += fig(I['terraco'], 'Terraço, duplex de 572 m²', 'bk-full')
+    out += f"""<section class="bk-loc"><div><span class="eyebrow">O endereço</span><h3>{esc(f['endereco'])}</h3><ul>{''.join(f'<li>{esc(x)}</li>' for x in f['local'])}</ul></div>
+<iframe loading="lazy" title="Mapa {esc(nome)}" src="https://www.google.com/maps?q={q}&output=embed"></iframe></section>
+<section class="bk-txt bk-tec"><span class="eyebrow">Ficha técnica</span><dl>{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['tecnica'])}</dl>
+<p class="bk-note">Imagens: perspectivas ilustradas fornecidas pela incorporadora. Informações sujeitas a alteração.</p></section>
+<section class="lx-end"><span class="eyebrow">Tabela, plantas e condições</span><h3>Receba o material completo <em>do {esc(nome)}.</em></h3>
 <a class="btn light solid-l" href="{wa(msg)}" target="_blank" rel="noopener">Receber no WhatsApp</a></section>
-<div class="lx-bar"><span><strong>{esc(e['nome'])}</strong><small>{esc(f.get('faixa', r['metragem']))} · {e['status']}</small></span>
-<a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Receber tabela e plantas</a></div>
-</article>"""
+<div class="lx-bar"><span><strong>{esc(nome)}</strong><small>{esc(f.get('faixa', r['metragem']))} · {e['status']}</small></span>
+<a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Receber tabela e plantas</a></div></article>"""
+    return out
 
 def build_home():
     moema = [e for e in E if e['bairro_slug'] == 'moema']
