@@ -405,6 +405,47 @@ html.lock{overflow:hidden}
 .st-em{background:#757E8D!important;color:#F6F7F9!important}
 .st-pronto{background:#EADFCC!important;color:#3B342B!important}
 .pf-ov{z-index:2!important}
+
+/* ficha rica (landing) */
+.lx{position:relative;background:var(--paper-2)}
+.lx-h{position:relative;height:min(78vh,760px);overflow:hidden;color:#F6F7F9;background:#1A1817}
+.lx-h img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lx-hs{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.1) 30%,rgba(18,17,16,.82))}
+.lx-ht{position:absolute;left:0;right:0;bottom:0;padding:0 48px 44px}
+.lx-st{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:6px 11px;margin-bottom:18px}
+.lx-ht h1,.lx-ht h2{font-family:var(--serif);font-weight:300;font-size:clamp(48px,7.5vw,120px);line-height:.92;letter-spacing:-.03em}
+.lx-tg{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,2.4vw,34px);margin-top:12px}
+.lx-ad{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,249,.75);margin-top:18px}
+.lx-s{padding:72px 48px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
+.lx-intro{grid-template-columns:1.4fr 1fr}
+.lx-c{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.4vw,34px);line-height:1.3}
+.lx-sig{border-top:1px solid var(--ink)}.lx-sig div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.lx-sig dt,.lx-tec dt{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.lx-sig dd{font-family:var(--serif);font-weight:300;font-size:20px}
+.lx-num{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#F6F7F9}
+.lx-num div{padding:44px 32px;border-left:1px solid rgba(246,247,249,.12)}.lx-num div:first-child{border-left:0}
+.lx-num strong{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.02em}
+.lx-num span{display:block;margin-top:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,247,249,.7)}
+.lx-k h3{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.4vw,52px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px}.lx-k h3 em{font-style:italic}
+.lx-k p,.lx-k li{font-size:15px;line-height:1.6;color:var(--ink-2)}
+.lx-k ul{list-style:none;margin-top:8px}.lx-k li{padding:10px 0;border-bottom:1px solid var(--line)}
+.lx-t{width:100%;border-collapse:collapse;font-size:15px}
+.lx-t th{text-align:left;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:500;padding:0 8px 12px 0;border-bottom:1px solid var(--ink)}
+.lx-t td{padding:18px 8px 18px 0;border-bottom:1px solid var(--line)}.lx-t td:nth-child(2){font-family:var(--serif);font-size:24px;font-weight:300}
+.lx-t a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid var(--line)}
+.lx-dk{background:#232120;color:#F6F7F9;border-bottom:0}.lx-dk .eyebrow{color:rgba(246,247,249,.6)}
+.lx-lz{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.lx-lz li{font-family:var(--serif);font-weight:300;font-size:21px;padding:14px 0;border-bottom:1px solid rgba(246,247,249,.14)}
+.lx-loc iframe{width:100%;height:420px;border:0;filter:grayscale(1) contrast(1.05)}
+.lx-tec dl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.lx-tec dl div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}.lx-tec dd{font-family:var(--serif);font-weight:300;font-size:22px;margin-top:6px}
+.lx-end{background:var(--slate);color:#F6F7F9;padding:80px 48px;text-align:center}
+.lx-end .eyebrow{color:rgba(246,247,249,.75)}.lx-end h3{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4vw,60px);line-height:1.02;margin:16px auto 32px;max-width:820px}.lx-end h3 em{font-style:italic}
+.lx-bar{position:sticky;bottom:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 48px;background:rgba(246,247,249,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.lx-bar span{display:flex;flex-direction:column}.lx-bar strong{font-family:var(--serif);font-weight:300;font-size:22px}.lx-bar small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.sheet.rich .sh-in{padding:0}.sheet.rich .sh-x{position:sticky;top:12px;margin:12px 14px -58px auto;display:grid;float:none}
+.sheet.rich .sh-grab{position:relative;z-index:2;margin-bottom:-14px;background:rgba(246,247,249,.6)}
+@media(max-width:900px){.lx-ht{padding:0 20px 28px}.lx-s{grid-template-columns:1fr;gap:28px;padding:48px 20px}.lx-intro{grid-template-columns:1fr}.lx-num{grid-template-columns:1fr 1fr}.lx-num div{padding:28px 20px;border-top:1px solid rgba(246,247,249,.12)}.lx-lz{grid-template-columns:1fr}.lx-t th:nth-child(4),.lx-t td:nth-child(4){display:none}.lx-bar{padding:12px 16px}.lx-bar small{display:none}.lx-bar .btn{padding:12px 14px;font-size:10px}.lx-end{padding:56px 20px}.lx-loc iframe{height:300px}.lx-h{height:68vh}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -497,6 +538,32 @@ SHEET = r"""<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-l
 <button class="sh-x" data-close aria-label="Fechar (Esc)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
 <div class="sh-in"></div></div></div>"""
 
+def rich(e, h='h2'):
+    f = e['ficha']; r = e['resumo']
+    msg = f"Olá, vi o {e['nome']} ({e['bairro']}) no site da W3W e quero receber a tabela e as plantas."
+    gal = f.get('galeria') or [e['img']]
+    q = urllib.parse.quote(f"{f.get('endereco', e['nome'])} São Paulo")
+    return f"""<article class="lx">
+<header class="lx-h"><img src="{gal[0]}" alt="{esc(e['nome'])}"><div class="lx-hs"></div>
+<div class="lx-ht"><span class="lx-st st-{e['status'].split()[0].lower().replace('ç','c')}">{e['status']}</span>
+<{h} id="sh-t">{esc(e['nome'])}</{h}><p class="lx-tg">{esc(f['tagline'])}</p><p class="lx-ad">{esc(f['endereco'])} · Entrega {esc(f['entrega'])}</p></div></header>
+<section class="lx-s lx-intro"><p class="lx-c">{esc(f['conceito'])}</p>
+<dl class="lx-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>
+<section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>
+<section class="lx-s"><div class="lx-k"><span class="eyebrow">Plantas</span><h3>{esc(r['metragem'])}</h3><p>Opções tipo, garden e duplex, com {esc(r['tipologias'].lower())}.</p></div>
+<table class="lx-t"><thead><tr><th>Tipologia</th><th>Área</th><th>Suítes</th><th>Vagas</th><th></th></tr></thead><tbody>
+{''.join(f'<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td><td><a href="{wa(f"Olá, quero a planta de {b} ({a}) do {e[chr(110)+chr(111)+chr(109)+chr(101)]}.")}" target="_blank" rel="noopener">Ver planta →</a></td></tr>' for a, b, c, d in f['plantas'])}</tbody></table></section>
+<section class="lx-s lx-dk"><div class="lx-k"><span class="eyebrow">Lazer</span><h3>Um clube <em>dentro de casa.</em></h3></div>
+<ul class="lx-lz">{''.join(f'<li>{esc(x)}</li>' for x in f['lazer'])}</ul></section>
+<section class="lx-s lx-loc"><div class="lx-k"><span class="eyebrow">Localização</span><h3>{esc(f['endereco'])}</h3><ul>{''.join(f'<li>{esc(x)}</li>' for x in f['local'])}</ul></div>
+<iframe loading="lazy" title="Mapa {esc(e['nome'])}" src="https://www.google.com/maps?q={q}&output=embed"></iframe></section>
+<section class="lx-s lx-tec"><div class="lx-k"><span class="eyebrow">Ficha técnica</span></div><dl>{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['tecnica'])}</dl></section>
+<section class="lx-end"><span class="eyebrow">Tabela, plantas e condições</span><h3>Receba o material completo <em>do {esc(e['nome'])}.</em></h3>
+<a class="btn light solid-l" href="{wa(msg)}" target="_blank" rel="noopener">Receber no WhatsApp</a></section>
+<div class="lx-bar"><span><strong>{esc(e['nome'])}</strong><small>{esc(r['metragem'])} · {e['status']}</small></span>
+<a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Receber tabela e plantas</a></div>
+</article>"""
+
 def build_home():
     moema = [e for e in E if e['bairro_slug'] == 'moema']
     outros = [e for e in E if e['bairro_slug'] != 'moema']
@@ -567,6 +634,7 @@ def build_home():
 <small>Ao enviar, você concorda com a nossa <a href="{u('politica-de-privacidade')}">Política de Privacidade</a>.</small></form>
 </div></section></main>
 {SHEET}
+{''.join(f'<template id="fx-{e[chr(115)+chr(108)+chr(117)+chr(103)]}">'+rich(e)+'</template>' for e in E if e.get('ficha'))}
 <script>window.W3W={json.dumps(ficha_data(), ensure_ascii=False)};window.W3W_WA='{WA}';window.W3W_BASE='{BASE}';</script>
 <script src="{BASE}/assets/sheet.js?v={VER}" defer></script>
 <script>(function(){{var st={{b:'moema',c:'',s:''}},lim=16,all=[].slice.call(document.querySelectorAll('.pf-grid .g')),more=document.getElementById('more'),num=document.querySelector('.pf-n');
@@ -629,13 +697,13 @@ document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click
                   f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>')
         pg += header(e['bairro_slug'])
         pg += f'''<main><section class="pg-hd" style="padding-bottom:0"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / <a href="{u(e['bairro_slug'])}">{e['bairro']}</a> / {esc(e['nome'])}</div></div></section>
-<section class="sec fxp" style="padding-top:8px"><div class="wrap">
+''' + (rich(e,'h1') if e.get('ficha') else f'''<section class="sec fxp" style="padding-top:8px"><div class="wrap">
 <div class="fx-ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" decoding="async"><span class="tag st">{e['status']}</span></div>
 <div class="fx-b"><div class="fx-t"><span class="eyebrow">{esc(e['bairro'])} · {e['status']}</span><h1>{esc(e['nome'])}</h1>{f'<p class="fx-q">{esc(e["frase"])}</p>' if e['frase'] else ''}</div>
 <dl class="fx-s">{ficha}</dl></div>
 <div class="fx-c"><a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Quero a ficha completa</a><a class="btn" href="{wa('Olá, quero agendar uma visita ao ' + e['nome'] + '.')}" target="_blank" rel="noopener">Agendar visita</a></div>
 <p class="fx-n">Plantas, lazer, incorporadora e previsão de entrega: fale com um consultor.</p></div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-hd"><h2>Também em {e['bairro']}</h2><a href="{u(e['bairro_slug'])}">Ver todos</a></div>
+''') + f'''<section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-hd"><h2>Também em {e['bairro']}</h2><a href="{u(e['bairro_slug'])}">Ver todos</a></div>
 <div class="grid">{''.join(card(x) for x in rel)}</div></div></section>{band()}</main>'''
         pg += footer()
         write(f"empreendimentos/{e['slug']}/index.html", pg)

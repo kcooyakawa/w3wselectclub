@@ -18,7 +18,126 @@
   "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Agami_EZTEC.png",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "A escultura de viver.",
+   "conceito": "Torre única com apenas duas unidades por andar, a poucos passos do Parque Ibirapuera. Arquitetura de linhas esculturais, materiais nobres e um lazer de clube para quem não abre mão de privacidade.",
+   "endereco": "Avenida Agami, 220 · Moema",
+   "entrega": "Jan/2029",
+   "assinaturas": [
+    [
+     "Incorporação",
+     "EZTEC"
+    ],
+    [
+     "Arquitetura",
+     "Perkins&Will"
+    ],
+    [
+     "Paisagismo",
+     "Benedito Abbud"
+    ],
+    [
+     "Interiores",
+     "Carlos Rossi"
+    ]
+   ],
+   "destaques": [
+    [
+     "2",
+     "unidades por andar"
+    ],
+    [
+     "25 m",
+     "raia na piscina adulto"
+    ],
+    [
+     "650 m",
+     "da estação Moema do metrô"
+    ],
+    [
+     "45",
+     "unidades no total"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "215 m²",
+     "3 suítes",
+     "3 vagas"
+    ],
+    [
+     "Tipo",
+     "290 m²",
+     "4 suítes",
+     "4 vagas"
+    ],
+    [
+     "Garden",
+     "381 m²",
+     "4 suítes",
+     "Vagas determinadas"
+    ],
+    [
+     "Garden",
+     "424 m²",
+     "4 suítes",
+     "Vagas determinadas"
+    ],
+    [
+     "Duplex",
+     "572 m²",
+     "4 suítes",
+     "Até 6 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina adulto com raia de 25 m",
+    "Piscina infantil",
+    "Spa com hidromassagem",
+    "Pool bar",
+    "Fitness completo",
+    "Academia externa",
+    "Salão de festas",
+    "Lounge com lareira",
+    "Salão de jogos",
+    "Brinquedoteca",
+    "Miniquadra gramada",
+    "Playground",
+    "Coworking",
+    "Solarium"
+   ],
+   "local": [
+    "A poucos minutos do Parque Ibirapuera",
+    "650 m da estação Moema do metrô",
+    "Restaurantes, mercados e serviços de Moema a pé",
+    "Acesso rápido a Congonhas e à Av. 23 de Maio"
+   ],
+   "tecnica": [
+    [
+     "Terreno",
+     "1.544 m²"
+    ],
+    [
+     "Torre",
+     "Única, 25 pavimentos"
+    ],
+    [
+     "Elevadores",
+     "6"
+    ],
+    [
+     "Unidades",
+     "45, duas por andar"
+    ],
+    [
+     "Previsão de entrega",
+     "Jan/2029"
+    ]
+   ],
+   "galeria": []
+  }
  },
  {
   "slug": "copa",
