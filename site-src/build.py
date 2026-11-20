@@ -317,6 +317,14 @@ html.lock{overflow:hidden}
 .fx-n{margin-top:18px;font-size:13px;color:var(--ink-2)}
 @media(max-width:900px){.sh-p{top:6vh}.sh-in{padding:8px 18px 40px}.fx-b{grid-template-columns:1fr;gap:28px}.fx-ph{aspect-ratio:4/3}.fx-l{margin-left:0;width:100%}}
 .fxp .fx-ph{aspect-ratio:21/9}@media(max-width:900px){.fxp .fx-ph{aspect-ratio:4/3}}
+
+/* v4 hero */
+.hx{min-height:calc(100svh - 150px)!important;display:flex!important;flex-direction:column;justify-content:space-between}
+.hx-top{position:relative;z-index:1;display:flex;justify-content:space-between;padding-top:120px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,249,.8)}
+.hx h1{font-size:clamp(72px,13vw,210px)!important;line-height:.86!important}
+.hx-b .hx-bg{min-height:150px;padding-top:28px;padding-bottom:28px}
+.hx-b p{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.9vw,28px)!important;line-height:1.3!important;color:var(--ink)!important;max-width:560px}
+@media(max-width:900px){.hx{min-height:calc(100svh - 230px)!important}.hx-top{padding-top:100px;font-size:10px;gap:12px}.hx-b .hx-bg{min-height:230px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -340,7 +348,7 @@ def head(title, desc, path, extra=''):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="{FONTS}/ppeditorial-ultralight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{FONTS}/ppneuemontreal-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{BASE}/assets/site.css">
+<link rel="stylesheet" href="{BASE}/assets/site.css?v=1795186917">
 <link rel="icon" href="{BASE}/assets/favicon.svg" type="image/svg+xml">
 {extra}</head><body>'''
 
@@ -427,9 +435,10 @@ def build_home():
     socio = lambda img, n, c, t: f'<div class="sc"><div class="sc-ph"><img src="https://w3wlp.netlify.app/img/{img}" alt="{n}" loading="lazy"></div><h3>{n}</h3><span class="eyebrow">{c}</span><p>{t}</p></div>'
     pg += f"""<main>
 <section class="hx"><video autoplay muted loop playsinline preload="metadata" poster="{VID}/cidade.jpg"><source src="{VID}/cidade.mp4" type="video/mp4"></video>
+<div class="wrap hx-top"><span>W3W Imóveis</span><span>Boutique de curadoria imobiliária</span></div>
 <div class="wrap hx-in"><h1>Curadoria<br><em>imobiliária.</em></h1></div></section>
-<section class="hx-b"><div class="wrap hx-bg"><span class="eyebrow">Boutique de curadoria imobiliária · Moema</span>
-<p>Studios, apartamentos e imóveis de alto padrão em Moema, selecionados por quem conhece o bairro há mais de 20 anos.</p>
+<section class="hx-b"><div class="wrap hx-bg"><span class="eyebrow">Moema · São Paulo</span>
+<p>Selecionamos os melhores imóveis nos endereços mais desejados de São Paulo.</p>
 <div class="hx-cta"><a class="btn solid" href="#imoveis">Ver os imóveis</a><a class="btn" href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">Fale com um consultor</a></div></div></section>
 
 <section class="sec gx" id="imoveis"><div class="wrap">
@@ -477,7 +486,7 @@ def build_home():
 </div></section></main>
 {SHEET}
 <script>window.W3W={json.dumps(ficha_data(), ensure_ascii=False)};window.W3W_WA='{WA}';window.W3W_BASE='{BASE}';</script>
-<script src="{BASE}/assets/sheet.js" defer></script>
+<script src="{BASE}/assets/sheet.js?v=1795186917" defer></script>
 <script>(function(){{var st={{c:'',b:'moema'}};var cards=[].slice.call(document.querySelectorAll('.g'));
 function ap(){{document.querySelectorAll('.row-s').forEach(function(r){{var n=0;r.querySelectorAll('.g').forEach(function(g){{var ok=(st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1);g.hidden=!ok;if(ok)n++}});r.hidden=!n;r.querySelector('.rc').textContent=n;r.querySelector('.track').scrollLeft=0}})}}
 document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;ap()}}}});
