@@ -733,7 +733,7 @@
  },
  {
   "slug": "saffire",
-  "nome": "Saffire",
+  "nome": "Saffire by Elie Saab",
   "bairro": "Moema",
   "bairro_slug": "moema",
   "status": "Em obras",
@@ -747,10 +747,165 @@
    "vagas": "4 a 6 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/642b1d3c2dba16a98a0a1da9_01.jpg",
+  "img": "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/9_-_perspectiva_ilustrada_da_fachada_torre_2_.webp",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "A alta-costura do morar.",
+   "conceito": "O primeiro residencial assinado pela maison libanesa Elie Saab no Brasil. Duas torres em cerca de 7.500 m², com áreas comuns decoradas com peças exclusivas da coleção Elie Saab Maison, quadra de tênis, beach tennis e private pool house.",
+   "endereco": "Moema · São Paulo",
+   "entrega": "Em obras",
+   "faixa": "360 a 868 m²",
+   "plantas_tit": "4 ou 5 suítes e duplex.",
+   "assinaturas": [
+    [
+     "Incorporação",
+     "Lavvi"
+    ],
+    [
+     "Design",
+     "Elie Saab Maison"
+    ],
+    [
+     "Terreno",
+     "Cerca de 7.500 m²"
+    ],
+    [
+     "Torres",
+     "2"
+    ]
+   ],
+   "destaques": [
+    [
+     "25 m",
+     "raia na piscina coberta e aquecida"
+    ],
+    [
+     "7.500 m²",
+     "de terreno"
+    ],
+    [
+     "2",
+     "torres"
+    ],
+    [
+     "5",
+     "suítes nas maiores plantas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "360 m²",
+     "4 suítes",
+     "4 vagas"
+    ],
+    [
+     "Tipo",
+     "493 m²",
+     "4 ou 5 suítes",
+     "5 vagas"
+    ],
+    [
+     "Duplex",
+     "649 m²",
+     "Sob consulta",
+     "Sob consulta"
+    ],
+    [
+     "Duplex",
+     "868 m²",
+     "Sob consulta",
+     "Sob consulta"
+    ]
+   ],
+   "lazer": [
+    "Piscina coberta aquecida com raia de 25 m",
+    "Piscina descoberta com raia de 25 m",
+    "Spa e sauna",
+    "Private pool house",
+    "Quadra de tênis",
+    "Quadra de beach tennis",
+    "Fitness",
+    "Salão de festas com terraço",
+    "Lounge piano bar",
+    "Brinquedoteca",
+    "Praça central",
+    "Porte-cochère"
+   ],
+   "local": [
+    "Em Moema, próximo às avenidas Ibirapuera e Santo Amaro",
+    "Poucos minutos do Parque Ibirapuera",
+    "Restaurantes e serviços de Moema no entorno"
+   ],
+   "tecnica": [
+    [
+     "Incorporação",
+     "Lavvi"
+    ],
+    [
+     "Design",
+     "Elie Saab Maison"
+    ],
+    [
+     "Terreno",
+     "Cerca de 7.500 m²"
+    ],
+    [
+     "Torres",
+     "2"
+    ],
+    [
+     "Status",
+     "Em obras"
+    ]
+   ],
+   "img": {
+    "capa": "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/12_-_perspectiva_ilustrada_da_praca_lazer.webp",
+    "fachada": "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/9_-_perspectiva_ilustrada_da_fachada_torre_2_.webp",
+    "fachada_cap": "Fachada, torre 2 · Perspectiva ilustrada",
+    "par": [
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/20_-_perspectiva_ilustrada_do_lobby_-_torre_1.webp",
+      "Lobby, torre 1"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/7_-_perspectiva_ilustrada_do_lounge_piano_bar.webp",
+      "Lounge piano bar"
+     ]
+    ],
+    "voo": "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/10_-_perspectiva_ilustrada_da_piscina_descoberta_com_raia_de_25_metros.webp",
+    "lazer": [
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/2_-_perspectiva_ilustrada_da_piscina_coberta_aquecida_com_raia_de_25_m.webp",
+      "Piscina coberta aquecida"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/3_-_persectiva_ilustrada_do_spa_e_sauna.webp",
+      "Spa e sauna"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/14_-_perspectiva_ilustrada_da_private_pool_house.webp",
+      "Private pool house"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/16_-_perspectiva_ilustrada_da_quadra_de_t_enis.webp",
+      "Quadra de tênis"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/26_-_perspectiva_ilustrada_do_sal_ao_de_festas.webp",
+      "Salão de festas"
+     ],
+     [
+      "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/19_-_perspectiva_ilustrada_do_fitness.webp",
+      "Fitness"
+     ]
+    ],
+    "terraco": "https://lavvipublico.s3.us-east-1.amazonaws.com/lavvicombr/empreendimentos/saffire-elie-saab/galeria/27_-_perspectiva_ilustrada_do_terraco_festas.webp",
+    "terraco_cap": "Terraço de festas"
+   }
+  }
  },
  {
   "slug": "ibirapuera-park-houses",

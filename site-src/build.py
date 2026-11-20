@@ -619,7 +619,7 @@ def rich(e, h='h2'):
 <section class="bk-open"><div class="bk-meta"><span class="eyebrow">{esc(f['endereco'])}</span><span class="eyebrow">{esc(f['entrega']) if 'ronto' in f['entrega'] else 'Entrega ' + esc(f['entrega'])}</span></div>
 <p class="bk-lead">{esc(f['conceito'])}</p>
 <dl class="bk-sig">{''.join(f'<div><dt>{a}</dt><dd>{esc(b)}</dd></div>' for a, b in f['assinaturas'])}</dl></section>"""
-    if I.get('fachada'): out += fig(I['fachada'], 'Fachada · Perspectiva ilustrada', 'bk-full')
+    if I.get('fachada'): out += fig(I['fachada'], I.get('fachada_cap', 'Fachada · Perspectiva ilustrada'), 'bk-full')
     out += f"""<section class="lx-num">{''.join(f'<div><strong>{a}</strong><span>{esc(b)}</span></div>' for a, b in f['destaques'])}</section>"""
     if I.get('par'): out += '<section class="bk-pair">' + ''.join(fig(s2, c2) for s2, c2 in I['par']) + '</section>'
     out += f"""<section class="bk-txt"><span class="eyebrow">As plantas</span><h3>{esc(f.get('faixa', r['metragem']))}, <em>{esc(f.get('plantas_tit', 'tipo, garden e duplex.'))}</em></h3>
