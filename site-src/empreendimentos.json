@@ -648,7 +648,7 @@
   "nome": "Atmos Moema",
   "bairro": "Moema",
   "bairro_slug": "moema",
-  "status": "Em obras",
+  "status": "Pronto",
   "tipos": [
    "Apartamento"
   ],
@@ -659,10 +659,134 @@
    "vagas": "2 e 3 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-atmos-moema-sao-paulo-sp-detalhes-2.jpg",
+  "img": "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-1.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "24 residências, selo AQUA e três assinaturas.",
+   "conceito": "Arquitetura de Itamar Berezin, interiores de Fernanda Marques e paisagismo de Marcelo Vassalo num terreno de 1.700 m². Selo AQUA-HQE de construção sustentável.",
+   "endereco": "Av. Pavão, 464 · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "160 a 345 m²",
+   "plantas_tit": "de 160 m² a coberturas de 345 m².",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "Itamar Berezin"
+    ],
+    [
+     "Interiores",
+     "Fernanda Marques"
+    ],
+    [
+     "Paisagismo",
+     "Marcelo Vassalo"
+    ],
+    [
+     "Incorporação",
+     "One Innovation"
+    ]
+   ],
+   "destaques": [
+    [
+     "24",
+     "residências"
+    ],
+    [
+     "8",
+     "andares"
+    ],
+    [
+     "345 m²",
+     "cobertura"
+    ],
+    [
+     "AQUA",
+     "selo sustentável"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "160 m²",
+     "3 suítes",
+     "2 vagas"
+    ],
+    [
+     "Cobertura",
+     "305 m²",
+     "3 suítes",
+     "3 vagas"
+    ],
+    [
+     "Cobertura",
+     "345 m²",
+     "4 suítes",
+     "3 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina",
+    "Fitness",
+    "Salão de festas",
+    "Espaço gourmet",
+    "Hall privativo"
+   ],
+   "local": [
+    "Esquina Av. Pavão com Rua Inhambu",
+    "Moema Pássaros"
+   ],
+   "tecnica": [
+    [
+     "Terreno",
+     "1.700 m²"
+    ],
+    [
+     "Certificação",
+     "AQUA-HQE"
+    ],
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-1.jpg",
+    "par": [
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-2.jpg",
+      "Fachada"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-3.jpg",
+      "Interiores"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-4.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-5.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-6.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-7.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6459/atmos-moema-condominio-8.jpg",
+      "Áreas comuns"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "nex-one-estacao-moema",
@@ -1161,10 +1285,123 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/splend-banner-vitrine.jpg",
+  "img": "https://api.apto.vc/images/realties/7986/splend-moema-condominio-1.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Quatro suítes, hall privativo e unidade personalizável.",
+   "conceito": "Apartamentos de 258 m² com quatro suítes, hall social privativo e depósito individual, com serviço de personalização de layout e acabamentos.",
+   "endereco": "Av. Juriti · Moema",
+   "entrega": "Previsão: out/2027",
+   "faixa": "258 m²",
+   "plantas_tit": "quatro suítes, hall privativo.",
+   "assinaturas": [
+    [
+     "Incorporação",
+     "Exto"
+    ],
+    [
+     "Personalização",
+     "Layout e acabamentos"
+    ],
+    [
+     "Fitness",
+     "Life Fitness"
+    ],
+    [
+     "Entrega",
+     "Prevista para out/2027"
+    ]
+   ],
+   "destaques": [
+    [
+     "258 m²",
+     "privativos"
+    ],
+    [
+     "4",
+     "suítes"
+    ],
+    [
+     "20 m",
+     "de piscina"
+    ],
+    [
+     "3–4",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "258 m²",
+     "4 suítes",
+     "3 ou 4 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina de 20 m",
+    "Quadra de tênis Lisonda",
+    "Spa wellness",
+    "Fitness Life Fitness",
+    "Salão de festas",
+    "Espaço gourmet"
+   ],
+   "local": [
+    "Moema Índios",
+    "Perto do Ibirapuera Shopping"
+   ],
+   "tecnica": [
+    [
+     "Diferenciais",
+     "Hall privativo, depósito individual"
+    ],
+    [
+     "Status",
+     "Em obras"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.apto.vc/images/realties/7986/splend-moema-condominio-1.jpg",
+    "par": [
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-2.jpg",
+      "Fachada"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-3.jpg",
+      "Lazer"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-4.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-5.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-6.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-7.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-8.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7986/splend-moema-condominio-9.jpg",
+      "Áreas comuns"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "casa-sabia",
@@ -1182,14 +1419,138 @@
    "vagas": "4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/ad9d54e7-2381-4c60-b267-5c3360d50a99-29022024204430-1.png",
+  "img": "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-1.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Duas torres, 74 casas suspensas em Moema.",
+   "conceito": "Projeto Aflalo/Gasperini para a Even num terreno de 5.570 m²: 74 residências, piscina coberta com raia de 25 m e quadra de tênis.",
+   "endereco": "Al. dos Arapanés, 522 · Moema",
+   "entrega": "Previsão: nov/2026",
+   "faixa": "315 a 317 m²",
+   "plantas_tit": "três suítes, varanda gourmet.",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "Aflalo/Gasperini"
+    ],
+    [
+     "Incorporação",
+     "Even"
+    ],
+    [
+     "Terreno",
+     "5.570 m²"
+    ],
+    [
+     "Entrega",
+     "Prevista para nov/2026"
+    ]
+   ],
+   "destaques": [
+    [
+     "74",
+     "residências"
+    ],
+    [
+     "2",
+     "torres"
+    ],
+    [
+     "25 m",
+     "raia na piscina coberta"
+    ],
+    [
+     "4",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "315 m²",
+     "3 suítes",
+     "4 vagas"
+    ],
+    [
+     "Tipo",
+     "317 m²",
+     "3 suítes",
+     "4 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina coberta com raia de 25 m",
+    "Quadra de tênis",
+    "Fitness",
+    "Sauna",
+    "Sala de massagem",
+    "Salão de festas",
+    "Playground"
+   ],
+   "local": [
+    "Moema Pássaros, perto da Av. Sabiá",
+    "Caminho do Parque Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Torres",
+     "2"
+    ],
+    [
+     "Unidades",
+     "74"
+    ],
+    [
+     "Status",
+     "Em obras"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-1.jpg",
+    "par": [
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-2.jpg",
+      "Fachada"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-3.jpg",
+      "Lazer"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-4.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-5.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-6.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-7.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-8.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6799/casa-sabia-condominio-9.jpg",
+      "Áreas comuns"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "mona-the-grand-lodge",
-  "nome": "Monã the Grand Lodge",
+  "nome": "Monã The Grand Lodge",
   "bairro": "Moema",
   "bairro_slug": "moema",
   "status": "Em obras",
@@ -1203,10 +1564,121 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/f46633e13c5a0efd06078d2a796bd5457a0722c7.png",
+  "img": "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-2.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "O espírito dos grandes lodges, entre Moema e o Ibirapuera.",
+   "conceito": "Baixa densidade, apenas duas unidades por andar e um lazer inspirado nos lodges de luxo internacionais, a poucos minutos do Parque Ibirapuera.",
+   "endereco": "Av. Indianópolis, 588 · Moema",
+   "entrega": "Previsão: 2026",
+   "faixa": "354 a 392 m²",
+   "plantas_tit": "duas unidades por andar.",
+   "assinaturas": [
+    [
+     "Incorporação e construção",
+     "Diálogo Engenharia"
+    ],
+    [
+     "Conceito",
+     "Grand lodge"
+    ],
+    [
+     "Andares",
+     "2 unidades por andar"
+    ],
+    [
+     "Entrega",
+     "Prevista para 2026"
+    ]
+   ],
+   "destaques": [
+    [
+     "2",
+     "unidades por andar"
+    ],
+    [
+     "392 m²",
+     "maior planta"
+    ],
+    [
+     "4",
+     "suítes"
+    ],
+    [
+     "5",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "354 m²",
+     "3 a 4 suítes",
+     "4 vagas"
+    ],
+    [
+     "Tipo",
+     "392 m²",
+     "4 suítes",
+     "5 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina",
+    "Fitness",
+    "Spa",
+    "Salão de festas",
+    "Espaço gourmet",
+    "Brinquedoteca"
+   ],
+   "local": [
+    "Entre Moema e o Parque Ibirapuera",
+    "Av. Indianópolis"
+   ],
+   "tecnica": [
+    [
+     "Unidades por andar",
+     "2"
+    ],
+    [
+     "Status",
+     "Em obras"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-2.jpg",
+    "par": [
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-3.jpg",
+      "Fachada"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-4.jpg",
+      "Lazer"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-5.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-6.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-7.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/6640/mona-the-grand-lodge-condominio-8.jpg",
+      "Áreas comuns"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "cyrela-for-you-moema",
@@ -1290,14 +1762,98 @@
   "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-ibate-fachada2-scaled-1.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Concreto, jardim e silêncio por Arthur Casas.",
+   "conceito": "Monólito de concreto aparente suavizado por jardins verticais, numa esquina de Moema. Um apartamento por andar, assinado pelo Studio Arthur Casas.",
+   "endereco": "Av. Sabiá · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "479 m²",
+   "plantas_tit": "um apartamento por andar.",
+   "assinaturas": [
+    [
+     "Arquitetura e interiores",
+     "Studio Arthur Casas"
+    ],
+    [
+     "Paisagismo",
+     "Arterra"
+    ],
+    [
+     "Incorporação",
+     "JAC · Cáucaso"
+    ],
+    [
+     "Entrega",
+     "Dezembro de 2023"
+    ]
+   ],
+   "destaques": [
+    [
+     "1",
+     "apartamento por andar"
+    ],
+    [
+     "26",
+     "residências"
+    ],
+    [
+     "479 m²",
+     "privativos"
+    ],
+    [
+     "5",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "479 m²",
+     "4 suítes",
+     "5 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina coberta",
+    "Sauna",
+    "Fitness",
+    "Salão de festas",
+    "Jardim"
+   ],
+   "local": [
+    "Avenida Sabiá, Moema Pássaros",
+    "Caminho do Parque Ibirapuera"
+   ],
+   "tecnica": [
+    [
+     "Terreno",
+     "2.162 m²"
+    ],
+    [
+     "Pavimentos",
+     "27"
+    ],
+    [
+     "Unidades",
+     "26, uma por andar"
+    ],
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-ibate-fachada2-scaled-1.jpg"
+   }
+  }
  },
  {
   "slug": "purity-moema",
   "nome": "Purity Moema",
   "bairro": "Moema",
   "bairro_slug": "moema",
-  "status": "Em obras",
+  "status": "Pronto",
   "tipos": [
    "Apartamento"
   ],
@@ -1308,10 +1864,127 @@
    "vagas": "2 e 3 Vagas (determinadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/img_fachada-pag-int-empreen_ficha-tecnica.jpg",
+  "img": "https://api.apto.vc/images/realties/7157/purity-moema-condominio-3.jpg",
   "categorias": [
    "alto-padrao"
-  ]
+  ],
+  "ficha": {
+   "tagline": "Torre única, linguagem contemporânea na Av. Moema.",
+   "conceito": "Torre única com projeto da JNA Arquitetos, lazer completo e plantas de 140 a 295 m², pronta para morar.",
+   "endereco": "Av. Moema, 756 · Moema",
+   "entrega": "Pronto para morar",
+   "faixa": "140 a 295 m²",
+   "plantas_tit": "de 140 a 295 m².",
+   "assinaturas": [
+    [
+     "Arquitetura",
+     "JNA Arquitetos"
+    ],
+    [
+     "Incorporação",
+     "Barbara · Luni"
+    ],
+    [
+     "Torre",
+     "Única"
+    ],
+    [
+     "Entrega",
+     "Dezembro de 2025"
+    ]
+   ],
+   "destaques": [
+    [
+     "1",
+     "torre"
+    ],
+    [
+     "295 m²",
+     "maior planta"
+    ],
+    [
+     "3",
+     "suítes"
+    ],
+    [
+     "4",
+     "vagas"
+    ]
+   ],
+   "plantas": [
+    [
+     "Tipo",
+     "140 a 150 m²",
+     "3 suítes",
+     "2 vagas"
+    ],
+    [
+     "Amplo",
+     "Até 295 m²",
+     "Sob consulta",
+     "Até 4 vagas"
+    ]
+   ],
+   "lazer": [
+    "Piscina",
+    "Fitness",
+    "Quadra",
+    "Sauna",
+    "Salão de festas",
+    "Espaço gourmet",
+    "Brinquedoteca",
+    "Playground"
+   ],
+   "local": [
+    "Av. Moema",
+    "Perto do Ibirapuera Shopping"
+   ],
+   "tecnica": [
+    [
+     "Status",
+     "Pronto para morar"
+    ]
+   ],
+   "img": {
+    "capa": "https://api.apto.vc/images/realties/7157/purity-moema-condominio-3.jpg",
+    "par": [
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-4.jpg",
+      "Fachada"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-5.jpg",
+      "Lazer"
+     ]
+    ],
+    "lazer": [
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-6.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-7.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-8.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-9.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-10.jpg",
+      "Áreas comuns"
+     ],
+     [
+      "https://api.apto.vc/images/realties/7157/purity-moema-condominio-11.jpg",
+      "Áreas comuns"
+     ]
+    ]
+   }
+  }
  },
  {
   "slug": "ndk-studios-moema",
