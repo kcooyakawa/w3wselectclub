@@ -241,6 +241,81 @@ a{color:inherit;text-decoration:none}
 .cafe-f label:first-of-type{margin-top:0}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.two label{margin-top:0}
 .cafe-f .btn{width:100%}.cafe-f small a{border-bottom:1px solid}
 @media(max-width:900px){.cafe-g{grid-template-columns:1fr;gap:40px}.cafe-f{padding:24px}.two{grid-template-columns:1fr;gap:0}.two>div+div label{margin-top:22px}.cafe-i>div{grid-template-columns:1fr;gap:4px}}
+
+/* v3 */
+.brand svg{height:50px}.hd .wrap{height:92px}.creci{font-size:9.5px}
+@media(max-width:900px){.brand svg{height:42px}.hd .wrap{height:80px}.nav{inset:80px 0 auto 0}}
+.hx{min-height:88svh;display:flex;align-items:flex-end}
+.hx::after{background:linear-gradient(180deg,rgba(18,17,16,.75) 0%,rgba(18,17,16,.15) 28%,rgba(18,17,16,0) 55%,rgba(18,17,16,.55) 100%)!important}
+.hx-in{padding-top:0!important;padding-bottom:56px!important}
+.hx h1{margin:0!important}
+.hx-b{background:var(--paper)}
+.hx-bg{display:grid;grid-template-columns:1fr 1.2fr auto;gap:40px;align-items:center;padding-top:44px;padding-bottom:44px;border-bottom:1px solid var(--line)}
+.hx-b p{font-size:18px;line-height:1.55;color:var(--ink-2);max-width:520px}
+.hx-b .hx-cta{margin:0}
+@media(max-width:900px){.hx-bg{grid-template-columns:1fr;gap:18px}.hx{min-height:72svh}}
+.gx{padding-bottom:40px}
+.rows{display:flex;flex-direction:column;gap:72px}
+.row-s .row-hd{max-width:var(--w);margin:0 auto 24px;padding:0 32px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.row-hd h3{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.6vw,52px);line-height:1;letter-spacing:-.02em;margin-top:8px}
+.rc{font-family:var(--sans);font-size:13px;letter-spacing:.1em;vertical-align:super;color:var(--ink-2)}
+.arr{display:flex;gap:8px}.arr button{width:46px;height:46px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-size:16px;color:var(--ink);transition:background .2s,color .2s}.arr button:hover{background:var(--ink);color:var(--paper-2)}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(32px,calc((100vw - var(--w))/2 + 32px)) 8px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track .g{flex:0 0 clamp(250px,24vw,340px);scroll-snap-align:start}
+.row-s[data-st="Lançamento"] .track .g:first-child{flex-basis:clamp(300px,40vw,560px)}
+.row-s[data-st="Lançamento"] .track .g:first-child .ph{aspect-ratio:4/3.6}
+.g .ph{aspect-ratio:3/4}
+.gi{display:grid;grid-template-columns:auto 1fr;gap:14px;padding-top:16px;border-top:1px solid var(--line);margin-top:14px}
+.gi .n{font-size:11px;letter-spacing:.12em;color:var(--ink-2);padding-top:6px}
+@media(max-width:767px){.row-s .row-hd{padding:0 20px}.arr{display:none}.track{padding:0 20px 8px}.track .g{flex-basis:72vw}.row-s[data-st="Lançamento"] .track .g:first-child{flex-basis:84vw}}
+.socx{background:#232120;color:#F6F7F9;padding:112px 0}
+.g-hd.dk{border-bottom-color:rgba(246,247,249,.15)}.g-hd.dk p,.socx .eyebrow{color:rgba(246,247,249,.65)}
+.scs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sc-ph{aspect-ratio:4/5;overflow:hidden;background:#2d2b2a;margin-bottom:22px}
+.sc-ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .9s var(--ease),filter .6s}
+.sc:hover .sc-ph img{transform:scale(1.03);filter:grayscale(.2)}
+.sc h3{font-family:var(--serif);font-weight:300;font-size:32px;line-height:1.05;margin-bottom:8px}
+.sc p{margin-top:14px;font-size:15px;line-height:1.6;color:rgba(246,247,249,.72)}
+@media(max-width:767px){.scs{grid-template-columns:1fr;gap:44px}.socx{padding:64px 0}}
+.mods>div{display:grid;grid-template-columns:44px 1fr;gap:12px}.mods .n{font-size:12px;letter-spacing:.12em;color:rgba(246,247,249,.55);padding-top:8px}
+.cafe{background:var(--slate);color:#F6F7F9;padding:112px 0}
+.cafe .eyebrow{color:rgba(246,247,249,.75)}.cafe-l{color:rgba(246,247,249,.85)!important}
+.cafe-i{border-top-color:rgba(246,247,249,.3)!important}.cafe-i>div{border-bottom-color:rgba(246,247,249,.3)!important}.cafe-i dt{color:rgba(246,247,249,.7)!important}
+.cafe-f{background:transparent!important;border:1px solid rgba(246,247,249,.35)!important}
+.cafe-f label{color:rgba(246,247,249,.75)!important}.cafe-f input,.cafe-f textarea,.cafe-f select{color:#F6F7F9!important;border-bottom-color:rgba(246,247,249,.4)!important}
+.cafe-f select option{color:var(--ink)}.cafe-f small{color:rgba(246,247,249,.75)!important}
+@media(max-width:767px){.cafe{padding:64px 0}}
+.ft{background:var(--ink)}
+.ft-t{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;padding-top:56px;padding-bottom:44px;border-bottom:1px solid rgba(246,247,249,.1)}
+.ft-b svg{height:46px!important;color:var(--slate-2)!important}
+.ft-n{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center}
+.ft-n a,.ft-c a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9CED5;transition:color .2s}.ft-n a:hover,.ft-c a:hover{color:#fff}
+.ft-c{display:flex;flex-direction:column;gap:8px;text-align:right}.ft-c a{text-transform:none;letter-spacing:.02em;font-size:14px}
+.ft-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;padding-bottom:24px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#7D858F}
+@media(max-width:900px){.ft-t{grid-template-columns:1fr;justify-items:center;text-align:center;gap:28px}.ft-c{text-align:center}.ft-bot{flex-direction:column;align-items:center;text-align:center}}
+/* ficha */
+html.lock{overflow:hidden}
+.sheet{position:fixed;inset:0;z-index:100}
+.sh-bg{position:absolute;inset:0;background:rgba(18,17,16,.6);opacity:0;transition:opacity .35s var(--ease)}
+.sh-p{position:absolute;left:0;right:0;bottom:0;top:4vh;max-width:1180px;margin:0 auto;background:var(--paper-2);overflow-y:auto;overscroll-behavior:contain;transform:translateY(100%);transition:transform .45s var(--ease);outline:none}
+.sheet.on .sh-bg{opacity:1}.sheet.on .sh-p{transform:none}
+.sh-grab{width:44px;height:4px;background:rgba(26,24,23,.25);margin:10px auto 0;border-radius:2px}
+.sh-x{position:sticky;top:12px;float:right;margin:4px 14px 0 0;z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(246,247,249,.92);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.sh-x:hover{background:var(--ink);color:var(--paper-2)}
+.sh-in{padding:16px 48px 56px;clear:both}
+.fx-ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:#d9dde2}.fx-ph img{width:100%;height:100%;object-fit:cover}
+.fx-b{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:44px 0 36px;border-bottom:1px solid var(--line)}
+.fx-t h1,.fx-t h2{font-family:var(--serif);font-weight:300;font-size:clamp(44px,6vw,92px);line-height:.95;letter-spacing:-.03em;margin:14px 0 20px}
+.fx-q{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(19px,1.8vw,24px);line-height:1.4;color:var(--ink-2);max-width:520px}
+.fx-s{display:grid;grid-template-columns:1fr 1fr;align-content:start;border-top:1px solid var(--ink)}
+.fx-s>div{padding:18px 18px 18px 0;border-bottom:1px solid var(--line)}.fx-s>div:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+.fx-s dt{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-bottom:8px}
+.fx-s dd{font-family:var(--serif);font-weight:300;font-size:24px;line-height:1.2}
+.fx-c{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding-top:28px}.fx-l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-left:auto;border-bottom:1px solid var(--line)}
+.fx-n{margin-top:18px;font-size:13px;color:var(--ink-2)}
+@media(max-width:900px){.sh-p{top:6vh}.sh-in{padding:8px 18px 40px}.fx-b{grid-template-columns:1fr;gap:28px}.fx-ph{aspect-ratio:4/3}.fx-l{margin-left:0;width:100%}}
+.fxp .fx-ph{aspect-ratio:21/9}@media(max-width:900px){.fxp .fx-ph{aspect-ratio:4/3}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -280,14 +355,13 @@ def header(active=''):
 <a class="btn" href="{BASE}/#contato">Fale com um consultor</a></nav></div></header>'''
 
 def footer():
-    return f'''<footer class="ft"><div class="wrap top">
-<div><a class="brand" href="{BASE}/">{LOGO}<span class="creci">{CRECI}</span></a></div>
-<div><h5>Bairros</h5><ul><li><a href="{u('moema')}">Moema</a></li><li><a href="{u('vila-nova-conceicao')}">Vila Nova Conceição</a></li></ul></div>
-<div><h5>Institucional</h5><ul><li><a href="{u('quem-somos')}">Quem somos</a></li><li><a href="{u('contato')}">Contato</a></li><li><a href="{u('politica-de-privacidade')}">Política de Privacidade / LGPD</a></li></ul></div>
-<div><h5>Contato</h5><ul><li><a href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener">{TEL}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
-</div><div class="wrap bot"><span>© 2026 W3W Imóveis · Todos os direitos reservados</span><span>{CRECI} · Moema · São Paulo</span></div></footer>
+    return f"""<footer class="ft"><div class="wrap ft-t">
+<a class="brand ft-b" href="{BASE}/">{LOGO}<span class="creci">{CRECI}</span></a>
+<nav class="ft-n"><a href="{BASE}/#imoveis">Imóveis</a><a href="{u('moema')}">Moema</a><a href="{u('vila-nova-conceicao')}">Vila Nova Conceição</a><a href="{BASE}/#socios">Sócios</a><a href="{BASE}/#parcerias">Parcerias</a><a href="{u('politica-de-privacidade')}">Privacidade</a></nav>
+<div class="ft-c"><a href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener">{TEL}</a><a href="mailto:{EMAIL}">{EMAIL}</a></div>
+</div><div class="wrap ft-bot"><span>W3W Imóveis · Curadoria imobiliária · Desde 2004</span><span>{CRECI} · Moema, São Paulo</span></div></footer>
 <a class="wa" href="{wa('Olá, visitei o site da W3W e quero mais informações.')}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">{WA_ICON}</a>
-</body></html>'''
+</body></html>"""
 
 def card(e):
     tags = ''.join(f'<span class="tag">{t}</span>' for t in e['tipos'])
@@ -318,39 +392,51 @@ ORG = {"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "W3
 VID = 'https://w3wlp.netlify.app/v'
 CATS = [('', 'Todos'), ('studios', 'Studios'), ('apartamentos', 'Apartamentos'), ('alto-padrao', 'Alto padrão')]
 
-def gcard(e):
+def gcard(e, i):
     r = e['resumo']
-    spec = ' · '.join(x for x in [r['tipologias'], r['metragem']] if x)
-    return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}" data-st="{e['status']}">
-<div class="ph"><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"><span class="tag st">{e['status']}</span></div>
-<div class="gi"><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])}</p><p class="sp">{esc(spec)}</p></div></a>"""
+    return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-slug="{e['slug']}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}">
+<div class="ph"><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
+<div class="gi"><span class="n">{i:02d}</span><div><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])} · {esc(r['tipologias'])}</p><p class="sp">{esc(r['metragem'])}</p></div></div></a>"""
+
+STATUS = [('Lançamento', 'Lançamentos', 'Antes de todo mundo.'), ('Em obras', 'Em obras', 'Garanta na planta.'), ('Pronto', 'Prontos para morar', 'Chaves na mão.')]
+
+def ficha_data():
+    return [{k: e[k] for k in ('slug', 'nome', 'bairro', 'status', 'frase', 'img', 'resumo', 'categorias')} for e in E]
+
+SHEET = r"""<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t" hidden>
+<div class="sh-bg" data-close></div><div class="sh-p" tabindex="-1"><div class="sh-grab" aria-hidden="true"></div>
+<button class="sh-x" data-close aria-label="Fechar (Esc)"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+<div class="sh-in"></div></div></div>"""
 
 def build_home():
     moema = [e for e in E if e['bairro_slug'] == 'moema']
     outros = [e for e in E if e['bairro_slug'] != 'moema']
-    order = sorted(moema, key=lambda e: (e['status'] != 'Lançamento', 'alto-padrao' not in e['categorias'])) + outros
     chips = ''.join(f'<button class="chip" data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{l}</button>' for v, l in CATS)
-    opts = ''.join(f'<option>{esc(e["nome"])}</option>' for e in sorted(E, key=lambda x: x['nome']))
+    rows = ''
+    for st, tit, sub in STATUS:
+        lst = [e for e in E if e['status'] == st]
+        lst = sorted(lst, key=lambda e: (e['bairro_slug'] != 'moema', 'alto-padrao' not in e['categorias']))
+        rows += f"""<div class="row-s" data-st="{st}"><div class="row-hd"><div><span class="eyebrow">{sub}</span><h3>{tit} <sup class="rc"></sup></h3></div>
+<div class="arr"><button aria-label="Anterior" data-d="-1">←</button><button aria-label="Próximo" data-d="1">→</button></div></div>
+<div class="track">{''.join(gcard(e, i+1) for i, e in enumerate(lst))}</div></div>"""
     pg = head('W3W Imóveis — Curadoria imobiliária em Moema',
               'Studios, apartamentos e imóveis de alto padrão em Moema, com curadoria da W3W Imóveis: mais de 20 anos de mercado e atendimento direto com os sócios.', '',
               f'<script type="application/ld+json">{json.dumps(ORG, ensure_ascii=False)}</script>')
     pg += header('').replace('class="hd"', 'class="hd over"')
+    socio = lambda img, n, c, t: f'<div class="sc"><div class="sc-ph"><img src="https://w3wlp.netlify.app/img/{img}" alt="{n}" loading="lazy"></div><h3>{n}</h3><span class="eyebrow">{c}</span><p>{t}</p></div>'
     pg += f"""<main>
 <section class="hx"><video autoplay muted loop playsinline preload="metadata" poster="{VID}/cidade.jpg"><source src="{VID}/cidade.mp4" type="video/mp4"></video>
-<div class="wrap hx-in"><span class="eyebrow">Boutique de curadoria imobiliária · Moema</span>
-<h1>Curadoria<br><em>imobiliária.</em></h1>
+<div class="wrap hx-in"><h1>Curadoria<br><em>imobiliária.</em></h1></div></section>
+<section class="hx-b"><div class="wrap hx-bg"><span class="eyebrow">Boutique de curadoria imobiliária · Moema</span>
 <p>Studios, apartamentos e imóveis de alto padrão em Moema, selecionados por quem conhece o bairro há mais de 20 anos.</p>
-<div class="hx-cta"><a class="btn light solid-l" href="#imoveis">Ver os imóveis</a><a class="btn light" href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">Fale com um consultor</a></div></div></section>
+<div class="hx-cta"><a class="btn solid" href="#imoveis">Ver os imóveis</a><a class="btn" href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">Fale com um consultor</a></div></div></section>
 
-<section class="sec" id="imoveis"><div class="wrap">
+<section class="sec gx" id="imoveis"><div class="wrap">
 <div class="g-hd"><div><span class="eyebrow">Imóveis</span><h2>Moema, <em>selecionada.</em></h2></div>
-<p>{len(moema)} empreendimentos em Moema e {len(outros)} oportunidades em bairros vizinhos. Toque em um imóvel para ver a ficha.</p></div>
+<p>{len(moema)} empreendimentos em Moema e {len(outros)} oportunidades em bairros vizinhos, organizados pelo momento de cada obra.</p></div>
 <div class="g-ctl"><div class="chips">{chips}</div>
-<div class="seg" role="tablist"><button class="sg" data-b="moema" aria-pressed="true">Moema</button><button class="sg" data-b="outros" aria-pressed="false">Outras oportunidades</button></div></div>
-<p class="count" aria-live="polite"></p>
-<div class="gal">{''.join(gcard(e) for e in order)}</div>
-<div class="more"><button class="btn" id="more">Ver mais imóveis</button></div>
-</div></section>
+<div class="seg"><button class="sg" data-b="moema" aria-pressed="true">Moema</button><button class="sg" data-b="outros" aria-pressed="false">Outras oportunidades</button></div></div>
+</div><div class="rows">{rows}</div></section>
 
 <section class="terr" id="territorio"><video autoplay muted loop playsinline preload="none" poster="{VID}/territorio.jpg"><source src="{VID}/territorio.mp4" type="video/mp4"></video>
 <div class="wrap terr-in"><span class="eyebrow">Território</span><h2>Nossa casa é <em>Moema.</em></h2>
@@ -359,47 +445,51 @@ def build_home():
 <a href="{u('vila-nova-conceicao')}"><strong>Vila Nova Conceição</strong><span>{len(outros)} empreendimentos</span></a>
 <a href="#contato"><strong>Itaim · Brooklin · Paraíso</strong><span>Sob consulta</span></a></div></div></section>
 
-<section class="sec" id="socios"><div class="wrap">
-<div class="g-hd"><div><span class="eyebrow">Os sócios</span><h2>Quem decide, <em>atende.</em></h2></div><p>Três sócios à frente de cada negócio, da primeira conversa ao pós-venda.</p></div>
-<div class="soc"><div><h3>Wilson Rodrigues</h3><span class="eyebrow">Fundador · Diretor · CRECI 69.228</span><p>No mercado imobiliário desde 2004, conduz a W3W e a relação com incorporadoras.</p></div>
-<div><h3>Yoko Rodrigues</h3><span class="eyebrow">Sócia · CRECI 42.877</span><p>Cuida do relacionamento com clientes investidores e dá suporte a cada negociação.</p></div>
-<div><h3>Kco Oyakawa</h3><span class="eyebrow">Sócio · Comunicação</span><p>Head of Art, com trabalhos para FIFA™, Jogos Olímpicos 2016, Coca-Cola e Itaú.</p></div></div></div></section>
+<section class="socx" id="socios"><div class="wrap">
+<div class="g-hd dk"><div><span class="eyebrow">Os sócios</span><h2>Quem decide, <em>atende.</em></h2></div><p>Três sócios à frente de cada negócio, da primeira conversa ao pós-venda.</p></div>
+<div class="scs">{socio('socio-wilson.jpg','Wilson Rodrigues','Fundador · Diretor · CRECI 69.228','No mercado imobiliário desde 2004, conduz a W3W e a relação com incorporadoras.')}
+{socio('socio-yoko.jpg','Yoko Rodrigues','Sócia · CRECI 42.877','Cuida do relacionamento com clientes investidores e dá suporte a cada negociação.')}
+{socio('socio-kco.jpg','Kco Oyakawa','Sócio · Comunicação','Head of Art, com trabalhos para FIFA™, Jogos Olímpicos 2016, Coca-Cola e Itaú.')}</div></div></section>
 
 <section class="par" id="parcerias"><div class="par-v"><video autoplay muted loop playsinline preload="none" poster="{VID}/torre.jpg"><source src="{VID}/torre.mp4" type="video/mp4"></video></div>
-<div class="par-c"><span class="eyebrow">Parcerias</span><h2>Um parceiro do terreno <em>à última chave.</em></h2>
-<div class="mods"><div><h3>Incorporadoras</h3><p>Inteligência de mercado, planejamento de lançamentos e força de vendas consultiva, com um sócio dedicado a cada empreendimento.</p></div>
-<div><h3>Imobiliárias e corretores</h3><p>Parceria em produtos de Moema e região, com material completo e divisão clara de comissão.</p></div>
-<div><h3>Investidores</h3><p>Curadoria de studios e oportunidades com foco em renda e valorização, com a leitura de quem está no bairro todos os dias.</p></div></div>
+<div class="par-c"><span class="eyebrow">Modelos de parceria</span><h2>Para quem constrói <em>o mercado.</em></h2>
+<div class="mods"><div><span class="n">01</span><div><h3>Incorporadoras e construtoras</h3><p>Parceria de lançamento e venda, com inteligência de mercado, marketing e força comercial dedicada.</p></div></div>
+<div><span class="n">02</span><div><h3>Imobiliárias</h3><p>Co-corretagem com regras claras, acesso ao portfólio curado e materiais de apresentação de alto padrão.</p></div></div>
+<div><span class="n">03</span><div><h3>Corretores</h3><p>Estrutura, empreendimentos qualificados, suporte de marketing e uma marca que abre portas no alto padrão.</p></div></div></div>
 <a class="btn light" href="{wa('Olá, quero conversar sobre uma parceria com a W3W.')}" target="_blank" rel="noopener">Propor uma parceria</a></div></section>
 
-<section class="sec cafe" id="contato"><div class="wrap cafe-g">
+<section class="cafe" id="contato"><div class="wrap cafe-g">
 <div><span class="eyebrow">Contato</span><h2>Vamos tomar <em>um café?</em></h2>
-<p class="cafe-l">Conte o que você procura. Um consultor da W3W responde pessoalmente, pelo canal que você preferir.</p>
+<p class="cafe-l">Conte o que você procura. Um consultor da W3W responde pessoalmente.</p>
 <dl class="cafe-i"><div><dt>WhatsApp</dt><dd><a href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">{TEL}</a></dd></div>
 <div><dt>E-mail</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
-<div><dt>Onde estamos</dt><dd>Moema · São Paulo</dd></div><div><dt>Registro</dt><dd>{CRECI}</dd></div></dl></div>
-<form class="form cafe-f" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa" onsubmit="event.preventDefault();var d=new FormData(this);var m='Olá, sou '+d.get('nome')+'. '+(d.get('interesse')?'Interesse: '+d.get('interesse')+'. ':'')+(d.get('mensagem')||'');window.open('https://wa.me/{WA}?text='+encodeURIComponent(m),'_blank')">
+<div><dt>Instagram</dt><dd><a href="https://instagram.com/w3wimoveis" target="_blank" rel="noopener">@w3wimoveis</a></dd></div>
+<div><dt>Onde estamos</dt><dd>Moema · São Paulo</dd></div></dl></div>
+<form class="form cafe-f" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa" onsubmit="event.preventDefault();var d=new FormData(this);var m='Olá, sou '+d.get('nome')+' ('+(d.get('perfil')||'')+'). '+(d.get('mensagem')||'');window.open('https://wa.me/{WA}?text='+encodeURIComponent(m),'_blank')">
 <input type="hidden" name="form-name" value="contato"><p hidden><input name="empresa"></p>
-<div class="two"><div><label for="f-nome">Nome</label><input id="f-nome" name="nome" required autocomplete="name"></div>
-<div><label for="f-tel">WhatsApp</label><input id="f-tel" name="telefone" type="tel" required autocomplete="tel"></div></div>
-<label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email">
-<label for="f-int">Interesse</label><select id="f-int" name="interesse"><option value="">Selecione (opcional)</option><option>Studio em Moema</option><option>Apartamento em Moema</option><option>Alto padrão em Moema</option><option>Outros bairros</option><option>Investimento</option><option>Parceria</option>{opts}</select>
+<label for="f-nome">Nome</label><input id="f-nome" name="nome" required autocomplete="name">
+<label for="f-tel">WhatsApp ou e-mail</label><input id="f-tel" name="contato" required>
+<label for="f-p">Você é</label><select id="f-p" name="perfil"><option>Comprador ou investidor</option><option>Incorporadora ou construtora</option><option>Imobiliária</option><option>Corretor</option></select>
 <label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" rows="3"></textarea>
-<button class="btn solid" type="submit">Enviar para um consultor</button>
+<button class="btn light solid-l" type="submit">Enviar mensagem →</button>
 <small>Ao enviar, você concorda com a nossa <a href="{u('politica-de-privacidade')}">Política de Privacidade</a>.</small></form>
 </div></section></main>
-<script>(function(){{var st={{c:'',b:'moema'}},lim=12,all=[].slice.call(document.querySelectorAll('.g')),cnt=document.querySelector('.count'),more=document.getElementById('more');
-function ap(){{var vis=all.filter(function(g){{return (st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1)}});all.forEach(function(g){{g.hidden=true}});vis.forEach(function(g,i){{g.hidden=i>=lim}});cnt.textContent=vis.length+(vis.length===1?' imóvel':' imóveis');more.parentNode.hidden=vis.length<=lim}}
-document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;lim=12;ap()}}}});
-document.querySelectorAll('.sg').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.sg').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.b=b.dataset.b;lim=12;ap()}}}});
-more.onclick=function(){{lim+=12;ap()}};ap();
-var h=document.querySelector('.hd.over');function sc(){{h.classList.toggle('solid',scrollY>40)}}addEventListener('scroll',sc,{{passive:true}});sc()}})();</script>"""
+{SHEET}
+<script>window.W3W={json.dumps(ficha_data(), ensure_ascii=False)};window.W3W_WA='{WA}';window.W3W_BASE='{BASE}';</script>
+<script src="{BASE}/assets/sheet.js" defer></script>
+<script>(function(){{var st={{c:'',b:'moema'}};var cards=[].slice.call(document.querySelectorAll('.g'));
+function ap(){{document.querySelectorAll('.row-s').forEach(function(r){{var n=0;r.querySelectorAll('.g').forEach(function(g){{var ok=(st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1);g.hidden=!ok;if(ok)n++}});r.hidden=!n;r.querySelector('.rc').textContent=n;r.querySelector('.track').scrollLeft=0}})}}
+document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;ap()}}}});
+document.querySelectorAll('.sg').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.sg').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.b=b.dataset.b;ap()}}}});
+document.querySelectorAll('.arr button').forEach(function(b){{b.onclick=function(){{var t=b.closest('.row-s').querySelector('.track');t.scrollBy({{left:+b.dataset.d*t.clientWidth*.8,behavior:'smooth'}})}}}});ap();
+var h=document.querySelector('.hd.over');function sc(){{h.classList.toggle('solid',scrollY>window.innerHeight*.6)}}addEventListener('scroll',sc,{{passive:true}});sc()}})();</script>"""
     pg += footer()
     write('index.html', pg)
 
 def build():
     if os.path.isdir(OUT): shutil.rmtree(OUT)
     write('assets/site.css', CSS)
+    write('assets/sheet.js', open(os.path.join(ROOT,'sheet.js'),encoding='utf-8').read())
     write('assets/favicon.svg', LOGO.replace('currentColor', '#1A1817'))
     filt_js = '''<script>
 (function(){var st={tipo:'',status:''};var cards=[].slice.call(document.querySelectorAll('.card'));var cnt=document.querySelector('.count');
@@ -434,8 +524,7 @@ document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click
         r = e['resumo']
         b = BAIRROS[e['bairro_slug']]
         desc = f"{e['nome']} em {e['bairro']}, São Paulo: {r['tipologias']}, {r['metragem']}. {e['status']}. Atendimento personalizado W3W Imóveis."
-        rows = [('Bairro', f"{e['bairro']}, São Paulo"), ('Status', e['status']), ('Tipologias', r['tipologias']), ('Metragem', r['metragem'])]
-        if r['vagas']: rows.append(('Vagas', r['vagas']))
+        rows = [('Tipologias', r['tipologias']), ('Metragem', r['metragem'])] + ([('Vagas', r['vagas'])] if r['vagas'] else []) + [('Bairro', f"{e['bairro']}, São Paulo")]
         ficha = ''.join(f'<div><dt>{k}</dt><dd>{esc(v)}</dd></div>' for k, v in rows)
         msg = f"Olá, vi o {e['nome']} ({e['bairro']}) no site da W3W e quero mais informações."
         ld = {"@context": "https://schema.org", "@type": "Residence", "name": e['nome'], "image": e['img'], "description": desc,
@@ -449,13 +538,12 @@ document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click
                   f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script><script type="application/ld+json">{json.dumps(bc, ensure_ascii=False)}</script>')
         pg += header(e['bairro_slug'])
         pg += f'''<main><section class="pg-hd" style="padding-bottom:0"><div class="wrap"><div class="crumbs"><a href="{BASE}/">Home</a> / <a href="{u(e['bairro_slug'])}">{e['bairro']}</a> / {esc(e['nome'])}</div></div></section>
-<section class="sec" style="padding-top:8px"><div class="wrap emp">
-<div class="ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" decoding="async"></div>
-<div class="sticky"><span class="eyebrow">{esc(e['bairro'])} · {e['status']}</span><h1>{esc(e['nome'])}</h1>
-{f'<p class="frase">{esc(e["frase"])}</p>' if e['frase'] else ''}
-<dl class="ficha">{ficha}</dl>
-<div class="cta"><a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Quero mais informações</a>
-<a class="btn" href="{wa('Olá, quero agendar uma visita ao ' + e['nome'] + '.')}" target="_blank" rel="noopener">Agendar visita</a></div></div></div></section>
+<section class="sec fxp" style="padding-top:8px"><div class="wrap">
+<div class="fx-ph"><img src="{e['img']}" alt="Fachada do {esc(e['nome'])}, {esc(e['bairro'])}" decoding="async"><span class="tag st">{e['status']}</span></div>
+<div class="fx-b"><div class="fx-t"><span class="eyebrow">{esc(e['bairro'])} · {e['status']}</span><h1>{esc(e['nome'])}</h1>{f'<p class="fx-q">{esc(e["frase"])}</p>' if e['frase'] else ''}</div>
+<dl class="fx-s">{ficha}</dl></div>
+<div class="fx-c"><a class="btn solid" href="{wa(msg)}" target="_blank" rel="noopener">Quero a ficha completa</a><a class="btn" href="{wa('Olá, quero agendar uma visita ao ' + e['nome'] + '.')}" target="_blank" rel="noopener">Agendar visita</a></div>
+<p class="fx-n">Plantas, lazer, incorporadora e previsão de entrega: fale com um consultor.</p></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap"><div class="sec-hd"><h2>Também em {e['bairro']}</h2><a href="{u(e['bairro_slug'])}">Ver todos</a></div>
 <div class="grid">{''.join(card(x) for x in rel)}</div></div></section>{band()}</main>'''
         pg += footer()
