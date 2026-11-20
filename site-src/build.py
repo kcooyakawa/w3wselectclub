@@ -330,6 +330,26 @@ html.lock{overflow:hidden}
 .hx-b .hx-bg{min-height:150px;padding-top:28px;padding-bottom:28px}
 .hx-b p{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.9vw,28px)!important;line-height:1.3!important;color:var(--ink)!important;max-width:560px}
 @media(max-width:900px){.hx{min-height:calc(100svh - 230px)!important}.hx-top{padding-top:100px;font-size:10px;gap:12px}.hx-b .hx-bg{min-height:230px}}
+
+/* hero LP */
+.hlp{position:relative;height:200vh;background:#0D0D0D}
+.hlp-s{position:sticky;top:0;height:100svh;overflow:hidden;color:#F4F2EF}
+.hlp video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hlp-sh{position:absolute;inset:0;background:linear-gradient(rgba(13,13,13,.55),rgba(13,13,13,.05) 40%,rgba(13,13,13,.6))}
+.hlp-m{position:absolute;left:0;right:0;top:112px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;font-size:12px;color:#D8D5CF;opacity:calc(1 - var(--h,0)*2)}
+.hlp-m span:last-child{text-align:right}
+.hlp-t{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
+.hlp h1{font-weight:300;letter-spacing:-.03em;line-height:.95;margin:0}
+.ht1,.ht2{display:block;white-space:nowrap;will-change:transform}
+.ht1{font-family:var(--sans);font-weight:300;font-size:clamp(64px,15vw,264px);transform:translate3d(calc(var(--h,0)*-42vw),calc(var(--h,0)*-8vh),0) scale(calc(1 + var(--h,0)*.18));opacity:calc(1 - var(--h,0)*.7)}
+.ht2{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(66px,15.5vw,284px);margin-top:-.08em;padding-left:14vw;transform:translate3d(calc(var(--h,0)*34vw),calc(var(--h,0)*8vh),0) scale(calc(1 + var(--h,0)*.18));opacity:calc(1 - var(--h,0)*.7)}
+.hlp-l{position:absolute;left:0;right:0;bottom:36px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hlp-l p{max-width:36ch;font-size:clamp(16px,1.4vw,20px);color:#F4F2EF;font-weight:300;line-height:1.5}
+.cue{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8D5CF;opacity:calc(1 - var(--h,0)*3)}
+.cue i{width:1px;height:40px;background:#D8D5CF;transform-origin:center top;animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:center bottom}}
+@media(max-width:760px){.ht2{padding-left:0}.hlp-m{grid-template-columns:1fr 1fr}.hlp-m span:nth-child(n+3){display:none}.hlp-m{top:96px}.hlp-l{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.hlp{height:auto}.hlp-s{position:relative}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -439,12 +459,12 @@ def build_home():
     pg += header('').replace('class="hd"', 'class="hd over"')
     socio = lambda img, n, c, t: f'<div class="sc"><div class="sc-ph"><img src="https://w3wlp.netlify.app/img/{img}" alt="{n}" loading="lazy"></div><h3>{n}</h3><span class="eyebrow">{c}</span><p>{t}</p></div>'
     pg += f"""<main>
-<section class="hx"><video autoplay muted loop playsinline preload="metadata" poster="{VID}/cidade.jpg"><source src="{VID}/cidade.mp4" type="video/mp4"></video>
-<div class="wrap hx-top"><span>W3W Imóveis</span><span>Boutique de curadoria imobiliária</span></div>
-<div class="wrap hx-in"><h1>Curadoria<br><em>imobiliária.</em></h1></div></section>
-<section class="hx-b"><div class="wrap hx-bg"><span class="eyebrow">Moema · São Paulo</span>
-<p>Selecionamos os melhores imóveis nos endereços mais desejados de São Paulo.</p>
-<div class="hx-cta"><a class="btn solid" href="#imoveis">Ver os imóveis</a><a class="btn" href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">Fale com um consultor</a></div></div></section>
+<section class="hlp" id="inicio"><div class="hlp-s" id="heroStick">
+<video autoplay muted loop playsinline preload="auto" poster="{VID}/cidade.jpg"><source src="{VID}/cidade.mp4" type="video/mp4"></video><div class="hlp-sh"></div>
+<div class="wrap hlp-m"><span>W3W Imóveis</span><span>Boutique de curadoria imobiliária</span><span>Moema · São Paulo</span><span>Desde 2004</span></div>
+<div class="wrap hlp-t"><h1><span class="ht1">Curadoria</span><span class="ht2">imobiliária.</span></h1></div>
+<div class="wrap hlp-l"><span class="cue"><i></i>Role</span><p>Selecionamos os melhores imóveis nos endereços mais desejados de São Paulo.</p></div>
+</div></section>
 
 <section class="sec gx" id="imoveis"><div class="wrap">
 <div class="g-hd"><div><span class="eyebrow">Imóveis</span><h2>Moema, <em>selecionada.</em></h2></div>
