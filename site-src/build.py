@@ -21,6 +21,8 @@ LOGO = open(os.path.join(ROOT, 'logo.svg'), encoding='utf-8').read().strip()
 LOGO = LOGO.replace('aria-label="W3W Imóveis"', 'role="img" aria-label="W3W Imóveis"')
 
 esc = html.escape
+import time
+VER = str(int(time.time()))
 def u(p=''): return f'{BASE}/{p}'.rstrip('/') + '/' if p and not p.endswith('.html') else f'{BASE}/{p}'
 def wa(msg): return f'https://wa.me/{WA}?text=' + urllib.parse.quote(msg)
 
@@ -363,7 +365,7 @@ def head(title, desc, path, extra=''):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="{FONTS}/ppeditorial-ultralight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{FONTS}/ppneuemontreal-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{BASE}/assets/site.css?v=1795186917">
+<link rel="stylesheet" href="{BASE}/assets/site.css?v={VER}">
 <link rel="icon" href="{BASE}/assets/favicon.svg" type="image/svg+xml">
 {extra}</head><body>'''
 
@@ -500,7 +502,7 @@ def build_home():
 </div></section></main>
 {SHEET}
 <script>window.W3W={json.dumps(ficha_data(), ensure_ascii=False)};window.W3W_WA='{WA}';window.W3W_BASE='{BASE}';</script>
-<script src="{BASE}/assets/sheet.js?v=1795186917" defer></script>
+<script src="{BASE}/assets/sheet.js?v={VER}" defer></script>
 <script>(function(){{var st={{c:'',b:'moema'}};var cards=[].slice.call(document.querySelectorAll('.g'));
 function ap(){{document.querySelectorAll('.row-s').forEach(function(r){{var n=0;r.querySelectorAll('.g').forEach(function(g){{var ok=(st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1);g.hidden=!ok;if(ok)n++}});r.hidden=!n;r.querySelector('.rc').textContent=n;r.querySelector('.track').scrollLeft=0}})}}
 document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;ap()}}}});
