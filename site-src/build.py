@@ -177,6 +177,70 @@ a{color:inherit;text-decoration:none}
 /* whatsapp */
 .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);transition:transform .25s var(--ease)}
 .wa:hover{transform:scale(1.06)}.wa svg{width:28px;height:28px;color:#fff}
+
+/* v2 home */
+.hd.over{position:fixed;left:0;right:0;background:transparent;border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;color:#F6F7F9;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s}
+.hd.over .brand svg,.hd.over .burger{color:#F6F7F9}.hd.over .creci{color:rgba(246,247,249,.7)}.hd.over .nav .btn{border-color:rgba(246,247,249,.6);color:#F6F7F9}
+.hd.over.solid{background:rgba(246,247,249,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line);color:var(--ink)}
+.hd.over.solid .brand svg,.hd.over.solid .burger{color:var(--ink)}.hd.over.solid .creci{color:var(--ink-2)}.hd.over.solid .nav .btn{border-color:var(--ink);color:var(--ink)}
+@media(max-width:900px){.hd.over .nav{color:var(--ink)}.hd.over .nav .btn{color:var(--ink);border-color:var(--ink)}}
+.hx{position:relative;min-height:100svh;color:#F6F7F9;overflow:hidden;background:#1A1817}
+.hx video,.terr video,.par-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.55),rgba(18,17,16,.15) 45%,rgba(18,17,16,.6))}
+.hx-in{position:relative;z-index:1;padding-top:180px;padding-bottom:80px}
+.hx .eyebrow{color:rgba(246,247,249,.75)}
+.hx h1{font-family:var(--serif);font-weight:300;font-size:clamp(64px,11vw,176px);line-height:.88;letter-spacing:-.035em;margin:24px 0 32px}
+.hx h1 em{font-style:italic}
+.hx p{max-width:520px;font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:rgba(246,247,249,.85);font-weight:300}
+.hx-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.btn.solid-l{background:#F6F7F9;color:var(--ink);border-color:#F6F7F9}.btn.solid-l:hover{background:transparent;color:#F6F7F9}
+.g-hd{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:32px}
+.g-hd h2,.terr h2,.par h2,.cafe h2{font-family:var(--serif);font-weight:300;font-size:clamp(44px,6vw,96px);line-height:.95;letter-spacing:-.03em;margin-top:12px}
+.g-hd h2 em,.terr h2 em,.par h2 em,.cafe h2 em{font-style:italic}
+.g-hd p{color:var(--ink-2);font-size:17px;line-height:1.6}
+.g-ctl{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.seg{display:flex;border:1px solid var(--ink)}
+.sg{background:transparent;border:0;padding:10px 18px;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;cursor:pointer;color:var(--ink)}
+.sg[aria-pressed=true]{background:var(--ink);color:var(--paper-2)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
+.g .ph{position:relative;aspect-ratio:3/4;overflow:hidden;background:#d9dde2}
+.g .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .5s}
+.g:hover .ph img{transform:scale(1.04)}
+.g .ph::after{content:"";position:absolute;inset:0;background:var(--slate);mix-blend-mode:multiply;opacity:0;transition:opacity .45s var(--ease)}.g:hover .ph::after{opacity:.35}
+.gi{padding-top:14px;border-top:0}.gi h3{font-family:var(--serif);font-weight:300;font-size:24px;line-height:1.1;letter-spacing:-.01em}
+.gi p{font-size:13px;color:var(--ink-2);margin-top:4px}.gi .sp{color:var(--ink)}
+.more{text-align:center;margin-top:48px}
+@media(max-width:1100px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:767px){.gal{grid-template-columns:repeat(2,1fr);gap:22px 12px}.gi h3{font-size:19px}.g-hd{grid-template-columns:1fr;gap:16px}.hx-in{padding-top:130px}}
+.terr{position:relative;color:#F6F7F9;background:#1A1817;overflow:hidden}
+.terr::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,17,16,.85),rgba(18,17,16,.35))}
+.terr-in{position:relative;z-index:1;padding-top:140px;padding-bottom:120px}
+.terr .eyebrow,.par .eyebrow{color:rgba(246,247,249,.65)}
+.terr p{max-width:560px;margin:28px 0 48px;font-size:18px;line-height:1.6;color:rgba(246,247,249,.85);font-weight:300}
+.terr-b{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(246,247,249,.25)}
+.terr-b a{padding:22px 20px 22px 0;border-right:1px solid rgba(246,247,249,.15);display:flex;flex-direction:column;gap:6px;transition:padding .35s var(--ease)}
+.terr-b a:last-child{border-right:0}.terr-b a+a{padding-left:20px}
+.terr-b strong{font-family:var(--serif);font-weight:300;font-size:26px}.terr-b span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,247,249,.6)}
+@media(max-width:767px){.terr-b{grid-template-columns:1fr}.terr-b a,.terr-b a+a{padding:18px 0;border-right:0;border-bottom:1px solid rgba(246,247,249,.15)}}
+.soc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.soc>div{border-top:1px solid var(--ink);padding-top:22px}
+.soc h3{font-family:var(--serif);font-weight:300;font-size:34px;line-height:1.05;margin-bottom:10px}
+.soc p{margin-top:16px;color:var(--ink-2);font-size:15px;line-height:1.6}
+@media(max-width:767px){.soc{grid-template-columns:1fr;gap:32px}}
+.par{display:grid;grid-template-columns:1fr 1fr;background:#1A1817;color:#F6F7F9}
+.par-v{position:relative;min-height:640px;overflow:hidden}
+.par-c{padding:112px 64px}
+.mods{margin:44px 0}.mods>div{border-top:1px solid rgba(246,247,249,.18);padding:22px 0}
+.mods h3{font-family:var(--serif);font-weight:300;font-size:26px;margin-bottom:8px}.mods p{font-size:15px;line-height:1.6;color:rgba(246,247,249,.72)}
+@media(max-width:900px){.par{grid-template-columns:1fr}.par-v{min-height:380px}.par-c{padding:64px 20px}}
+.cafe-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.cafe-l{margin:28px 0 40px;font-size:18px;line-height:1.6;color:var(--ink-2);max-width:440px}
+.cafe-i{border-top:1px solid var(--line)}.cafe-i>div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cafe-i dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);font-weight:500}.cafe-i dd{font-family:var(--serif);font-weight:300;font-size:22px}
+.cafe-f{background:var(--paper-2);border:1px solid var(--line);padding:40px}
+.cafe-f label:first-of-type{margin-top:0}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.two label{margin-top:0}
+.cafe-f .btn{width:100%}.cafe-f small a{border-bottom:1px solid}
+@media(max-width:900px){.cafe-g{grid-template-columns:1fr;gap:40px}.cafe-f{padding:24px}.two{grid-template-columns:1fr;gap:0}.two>div+div label{margin-top:22px}.cafe-i>div{grid-template-columns:1fr;gap:4px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -212,8 +276,8 @@ def header(active=''):
 <a class="brand" href="{BASE}/" aria-label="W3W Imóveis, página inicial">{LOGO}<span class="creci">{CRECI}</span></a>
 <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="var n=document.querySelector('.nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg></button>
 <nav class="nav" aria-label="Principal">
-<a href="{BASE}/"{' aria-current="page"' if active=='' else ''}>Home</a>{a('moema','Moema')}{a('vila-nova-conceicao','Vila Nova Conceição')}{a('quem-somos','Quem somos')}
-<a class="btn" href="{u('contato')}">Fale conosco</a></nav></div></header>'''
+<a href="{BASE}/#imoveis">Imóveis</a><a href="{BASE}/#territorio">Território</a><a href="{BASE}/#socios">Sócios</a><a href="{BASE}/#parcerias">Parcerias</a>
+<a class="btn" href="{BASE}/#contato">Fale com um consultor</a></nav></div></header>'''
 
 def footer():
     return f'''<footer class="ft"><div class="wrap top">
@@ -251,6 +315,88 @@ ORG = {"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "W3
        "address": {"@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR"},
        "identifier": CRECI}
 
+VID = 'https://w3wlp.netlify.app/v'
+CATS = [('', 'Todos'), ('studios', 'Studios'), ('apartamentos', 'Apartamentos'), ('alto-padrao', 'Alto padrão')]
+
+def gcard(e):
+    r = e['resumo']
+    spec = ' · '.join(x for x in [r['tipologias'], r['metragem']] if x)
+    return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}" data-st="{e['status']}">
+<div class="ph"><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"><span class="tag st">{e['status']}</span></div>
+<div class="gi"><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])}</p><p class="sp">{esc(spec)}</p></div></a>"""
+
+def build_home():
+    moema = [e for e in E if e['bairro_slug'] == 'moema']
+    outros = [e for e in E if e['bairro_slug'] != 'moema']
+    order = sorted(moema, key=lambda e: (e['status'] != 'Lançamento', 'alto-padrao' not in e['categorias'])) + outros
+    chips = ''.join(f'<button class="chip" data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{l}</button>' for v, l in CATS)
+    opts = ''.join(f'<option>{esc(e["nome"])}</option>' for e in sorted(E, key=lambda x: x['nome']))
+    pg = head('W3W Imóveis — Curadoria imobiliária em Moema',
+              'Studios, apartamentos e imóveis de alto padrão em Moema, com curadoria da W3W Imóveis: mais de 20 anos de mercado e atendimento direto com os sócios.', '',
+              f'<script type="application/ld+json">{json.dumps(ORG, ensure_ascii=False)}</script>')
+    pg += header('').replace('class="hd"', 'class="hd over"')
+    pg += f"""<main>
+<section class="hx"><video autoplay muted loop playsinline preload="metadata" poster="{VID}/cidade.jpg"><source src="{VID}/cidade.mp4" type="video/mp4"></video>
+<div class="wrap hx-in"><span class="eyebrow">Boutique de curadoria imobiliária · Moema</span>
+<h1>Curadoria<br><em>imobiliária.</em></h1>
+<p>Studios, apartamentos e imóveis de alto padrão em Moema, selecionados por quem conhece o bairro há mais de 20 anos.</p>
+<div class="hx-cta"><a class="btn light solid-l" href="#imoveis">Ver os imóveis</a><a class="btn light" href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">Fale com um consultor</a></div></div></section>
+
+<section class="sec" id="imoveis"><div class="wrap">
+<div class="g-hd"><div><span class="eyebrow">Imóveis</span><h2>Moema, <em>selecionada.</em></h2></div>
+<p>{len(moema)} empreendimentos em Moema e {len(outros)} oportunidades em bairros vizinhos. Toque em um imóvel para ver a ficha.</p></div>
+<div class="g-ctl"><div class="chips">{chips}</div>
+<div class="seg" role="tablist"><button class="sg" data-b="moema" aria-pressed="true">Moema</button><button class="sg" data-b="outros" aria-pressed="false">Outras oportunidades</button></div></div>
+<p class="count" aria-live="polite"></p>
+<div class="gal">{''.join(gcard(e) for e in order)}</div>
+<div class="more"><button class="btn" id="more">Ver mais imóveis</button></div>
+</div></section>
+
+<section class="terr" id="territorio"><video autoplay muted loop playsinline preload="none" poster="{VID}/territorio.jpg"><source src="{VID}/territorio.mp4" type="video/mp4"></video>
+<div class="wrap terr-in"><span class="eyebrow">Território</span><h2>Nossa casa é <em>Moema.</em></h2>
+<p>A W3W nasceu e trabalha em Moema. Conhecemos cada rua, cada lançamento e cada mudança do bairro. Quando a oportunidade certa está ao lado, também acompanhamos de perto Vila Nova Conceição, Itaim Bibi, Brooklin e Paraíso.</p>
+<div class="terr-b"><a href="{u('moema')}"><strong>Moema</strong><span>{len(moema)} empreendimentos</span></a>
+<a href="{u('vila-nova-conceicao')}"><strong>Vila Nova Conceição</strong><span>{len(outros)} empreendimentos</span></a>
+<a href="#contato"><strong>Itaim · Brooklin · Paraíso</strong><span>Sob consulta</span></a></div></div></section>
+
+<section class="sec" id="socios"><div class="wrap">
+<div class="g-hd"><div><span class="eyebrow">Os sócios</span><h2>Quem decide, <em>atende.</em></h2></div><p>Três sócios à frente de cada negócio, da primeira conversa ao pós-venda.</p></div>
+<div class="soc"><div><h3>Wilson Rodrigues</h3><span class="eyebrow">Fundador · Diretor · CRECI 69.228</span><p>No mercado imobiliário desde 2004, conduz a W3W e a relação com incorporadoras.</p></div>
+<div><h3>Yoko Rodrigues</h3><span class="eyebrow">Sócia · CRECI 42.877</span><p>Cuida do relacionamento com clientes investidores e dá suporte a cada negociação.</p></div>
+<div><h3>Kco Oyakawa</h3><span class="eyebrow">Sócio · Comunicação</span><p>Head of Art, com trabalhos para FIFA™, Jogos Olímpicos 2016, Coca-Cola e Itaú.</p></div></div></div></section>
+
+<section class="par" id="parcerias"><div class="par-v"><video autoplay muted loop playsinline preload="none" poster="{VID}/torre.jpg"><source src="{VID}/torre.mp4" type="video/mp4"></video></div>
+<div class="par-c"><span class="eyebrow">Parcerias</span><h2>Um parceiro do terreno <em>à última chave.</em></h2>
+<div class="mods"><div><h3>Incorporadoras</h3><p>Inteligência de mercado, planejamento de lançamentos e força de vendas consultiva, com um sócio dedicado a cada empreendimento.</p></div>
+<div><h3>Imobiliárias e corretores</h3><p>Parceria em produtos de Moema e região, com material completo e divisão clara de comissão.</p></div>
+<div><h3>Investidores</h3><p>Curadoria de studios e oportunidades com foco em renda e valorização, com a leitura de quem está no bairro todos os dias.</p></div></div>
+<a class="btn light" href="{wa('Olá, quero conversar sobre uma parceria com a W3W.')}" target="_blank" rel="noopener">Propor uma parceria</a></div></section>
+
+<section class="sec cafe" id="contato"><div class="wrap cafe-g">
+<div><span class="eyebrow">Contato</span><h2>Vamos tomar <em>um café?</em></h2>
+<p class="cafe-l">Conte o que você procura. Um consultor da W3W responde pessoalmente, pelo canal que você preferir.</p>
+<dl class="cafe-i"><div><dt>WhatsApp</dt><dd><a href="{wa('Olá, quero falar com um consultor da W3W.')}" target="_blank" rel="noopener">{TEL}</a></dd></div>
+<div><dt>E-mail</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
+<div><dt>Onde estamos</dt><dd>Moema · São Paulo</dd></div><div><dt>Registro</dt><dd>{CRECI}</dd></div></dl></div>
+<form class="form cafe-f" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa" onsubmit="event.preventDefault();var d=new FormData(this);var m='Olá, sou '+d.get('nome')+'. '+(d.get('interesse')?'Interesse: '+d.get('interesse')+'. ':'')+(d.get('mensagem')||'');window.open('https://wa.me/{WA}?text='+encodeURIComponent(m),'_blank')">
+<input type="hidden" name="form-name" value="contato"><p hidden><input name="empresa"></p>
+<div class="two"><div><label for="f-nome">Nome</label><input id="f-nome" name="nome" required autocomplete="name"></div>
+<div><label for="f-tel">WhatsApp</label><input id="f-tel" name="telefone" type="tel" required autocomplete="tel"></div></div>
+<label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email">
+<label for="f-int">Interesse</label><select id="f-int" name="interesse"><option value="">Selecione (opcional)</option><option>Studio em Moema</option><option>Apartamento em Moema</option><option>Alto padrão em Moema</option><option>Outros bairros</option><option>Investimento</option><option>Parceria</option>{opts}</select>
+<label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" rows="3"></textarea>
+<button class="btn solid" type="submit">Enviar para um consultor</button>
+<small>Ao enviar, você concorda com a nossa <a href="{u('politica-de-privacidade')}">Política de Privacidade</a>.</small></form>
+</div></section></main>
+<script>(function(){{var st={{c:'',b:'moema'}},lim=12,all=[].slice.call(document.querySelectorAll('.g')),cnt=document.querySelector('.count'),more=document.getElementById('more');
+function ap(){{var vis=all.filter(function(g){{return (st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1)}});all.forEach(function(g){{g.hidden=true}});vis.forEach(function(g,i){{g.hidden=i>=lim}});cnt.textContent=vis.length+(vis.length===1?' imóvel':' imóveis');more.parentNode.hidden=vis.length<=lim}}
+document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;lim=12;ap()}}}});
+document.querySelectorAll('.sg').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.sg').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.b=b.dataset.b;lim=12;ap()}}}});
+more.onclick=function(){{lim+=12;ap()}};ap();
+var h=document.querySelector('.hd.over');function sc(){{h.classList.toggle('solid',scrollY>40)}}addEventListener('scroll',sc,{{passive:true}});sc()}})();</script>"""
+    pg += footer()
+    write('index.html', pg)
+
 def build():
     if os.path.isdir(OUT): shutil.rmtree(OUT)
     write('assets/site.css', CSS)
@@ -261,25 +407,8 @@ function apply(){var n=0;cards.forEach(function(c){var ok=(!st.tipo||c.dataset.t
 document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){var g=b.dataset.g;document.querySelectorAll('.chip[data-g='+g+']').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');st[g]=b.dataset.v;apply()})});apply()})();
 </script>'''
 
-    # HOME
-    dest = [e for e in E if e['status'] == 'Lançamento'] + [e for e in E if e['nome'] in ('Mirage Ibirapuera', 'Ópera Vila Nova', 'Saffire')]
-    def bx(slug):
-        b = BAIRROS[slug]; n = sum(1 for e in E if e['bairro_slug'] == slug)
-        return f'''<div class="bx"><span class="eyebrow">Bairro</span><h2>{b['nome']}</h2><p class="meta">{n} empreendimentos selecionados</p>
-<div class="row"><a class="btn light" href="{u(slug)}?tipo=Apartamento">Apartamentos</a><a class="btn light" href="{u(slug)}?tipo=Studio">Studios</a></div></div>'''
-    home = head('W3W Imóveis — Imóveis novos em Moema e Vila Nova Conceição',
-                'Imobiliária boutique especializada em apartamentos novos e studios de alto padrão em Moema e Vila Nova Conceição, com 20 anos de experiência no mercado imobiliário.', '',
-                f'<script type="application/ld+json">{json.dumps(ORG, ensure_ascii=False)}</script>')
-    home += header('')
-    home += f'''<main><section class="hero" style="background-image:url('{HERO}')"><div class="wrap">
-<span class="eyebrow" style="color:rgba(246,247,249,.6)">Imobiliária boutique · 20 anos de mercado</span>
-<h1 style="margin-top:18px">Imóveis novos em Moema <em>e Vila Nova Conceição.</em></h1>
-<p class="lead">Somos uma imobiliária boutique digital especializada em apartamentos novos em Moema e Vila Nova Conceição, com 20 anos de experiência no mercado imobiliário. Conte conosco para encontrar o imóvel ideal, com a segurança e a atenção que você merece.</p>
-<div class="bairros">{bx('moema')}{bx('vila-nova-conceicao')}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-hd"><h2>Destaques</h2><a href="{u('moema')}">Ver todos</a></div>
-<div class="grid">{''.join(card(e) for e in dest[:6])}</div></div></section>{band()}</main>'''
-    home += footer()
-    write('index.html', home)
+    build_home()
+
 
     # BAIRROS
     for slug, b in BAIRROS.items():

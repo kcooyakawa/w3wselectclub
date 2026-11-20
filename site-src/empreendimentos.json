@@ -15,7 +15,10 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Agami_EZTEC.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Agami_EZTEC.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "copa",
@@ -33,7 +36,10 @@
    "vagas": "4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Copa_Lote-5.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Copa_Lote-5.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "composite-moema",
@@ -51,7 +57,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Composite.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Composite.png",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "autoral-moema",
@@ -69,7 +78,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Autoral.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Autoral.png",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "on-imares",
@@ -87,7 +99,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/ON-IMARES-10.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/ON-IMARES-10.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "on-maracatins",
@@ -105,7 +120,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/01-R00.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/01-R00.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "on-jurupis",
@@ -124,7 +142,11 @@
    "vagas": "2 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/DJI_1046.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/DJI_1046.jpg",
+  "categorias": [
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "nex-one-nhambiquaras",
@@ -142,7 +164,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nhamb.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nhamb.jpg",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "nex-one-jurupis",
@@ -161,7 +186,11 @@
    "vagas": "1 Vaga"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nex-one-juru.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/nex-one-juru.jpg",
+  "categorias": [
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "most-moema",
@@ -180,7 +209,11 @@
    "vagas": "1 e 2 Vagas (demarcadas) + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/most-moema-20230419092314000.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/most-moema-20230419092314000.jpg",
+  "categorias": [
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "bem-moema",
@@ -199,7 +232,12 @@
    "vagas": "1 e 2 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Tegra-Incorporadora-Perspectiva-Ilustrada-Area-Externa-Lazer-Apartamentos-Bem-Moema-Sao-Paulo-SP-001-1715460274740.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Tegra-Incorporadora-Perspectiva-Ilustrada-Area-Externa-Lazer-Apartamentos-Bem-Moema-Sao-Paulo-SP-001-1715460274740.jpg",
+  "categorias": [
+   "alto-padrao",
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "moema-signature-by-you-inc",
@@ -217,7 +255,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/03_YOU_GAI_ESQUINA_FINAL_2SCOPEOMEDIA-2.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/03_YOU_GAI_ESQUINA_FINAL_2SCOPEOMEDIA-2.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "moma-moema",
@@ -236,7 +277,11 @@
    "vagas": "3 e 4 Vagas (demarcadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-listagem_MOMA_vs02.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-listagem_MOMA_vs02.jpg",
+  "categorias": [
+   "alto-padrao",
+   "studios"
+  ]
  },
  {
   "slug": "mirage-ibirapuera",
@@ -255,7 +300,11 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/3021a7ce-8333-49ca-a46a-7cc9ea1ce043.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/3021a7ce-8333-49ca-a46a-7cc9ea1ce043.jpg",
+  "categorias": [
+   "alto-padrao",
+   "studios"
+  ]
  },
  {
   "slug": "canto-sabia",
@@ -273,7 +322,10 @@
    "vagas": "1 Vaga"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_SABIA_EXTERNA_FACHADALATERAL_HR00-1-5000x485-1.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_SABIA_EXTERNA_FACHADALATERAL_HR00-1-5000x485-1.jpg",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "atmos-moema",
@@ -291,7 +343,10 @@
    "vagas": "2 e 3 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-atmos-moema-sao-paulo-sp-detalhes-2.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-atmos-moema-sao-paulo-sp-detalhes-2.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "nex-one-estacao-moema",
@@ -310,7 +365,11 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/8_2x-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/8_2x-1.png",
+  "categorias": [
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "moema-vida-nova",
@@ -328,7 +387,10 @@
    "vagas": "1 Vaga"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/DSC0262-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/DSC0262-1.png",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "villa-versace-home",
@@ -347,7 +409,11 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/644037cb5f7255e46368c870_02.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/644037cb5f7255e46368c870_02.png",
+  "categorias": [
+   "alto-padrao",
+   "studios"
+  ]
  },
  {
   "slug": "saffire",
@@ -365,7 +431,10 @@
    "vagas": "4 a 6 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/642b1d3c2dba16a98a0a1da9_01.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/642b1d3c2dba16a98a0a1da9_01.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "ibirapuera-park-houses",
@@ -383,7 +452,10 @@
    "vagas": "2 vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/01-fachada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/01-fachada.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "park-avenue",
@@ -401,7 +473,10 @@
    "vagas": "4 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/park-avenue-fachada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/park-avenue-fachada.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "z-ibirapuera",
@@ -419,7 +494,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/z-ibirapuera-fachada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/z-ibirapuera-fachada.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "chanes-street",
@@ -438,7 +516,11 @@
    "vagas": "1 Vaga"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/chanes-moema-fachada-1.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/chanes-moema-fachada-1.jpg",
+  "categorias": [
+   "apartamentos",
+   "studios"
+  ]
  },
  {
   "slug": "splend-moema",
@@ -456,7 +538,10 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/splend-banner-vitrine.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/splend-banner-vitrine.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "casa-sabia",
@@ -474,7 +559,10 @@
    "vagas": "4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/ad9d54e7-2381-4c60-b267-5c3360d50a99-29022024204430-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/ad9d54e7-2381-4c60-b267-5c3360d50a99-29022024204430-1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "mona-the-grand-lodge",
@@ -492,7 +580,10 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/f46633e13c5a0efd06078d2a796bd5457a0722c7.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/f46633e13c5a0efd06078d2a796bd5457a0722c7.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "cyrela-for-you-moema",
@@ -510,7 +601,10 @@
    "vagas": "1 Vaga"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CYRELA_ARAPANES_FACHADA_RESIDENCIAL_NOTURNA_HR00.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CYRELA_ARAPANES_FACHADA_RESIDENCIAL_NOTURNA_HR00.jpg",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "cyrela-moema-by-yoo",
@@ -528,7 +622,10 @@
    "vagas": "3 e 4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/JUR_02_Fachada_Frontal_EF3_ajustada_1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/JUR_02_Fachada_Frontal_EF3_ajustada_1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "lis-moema",
@@ -546,7 +643,10 @@
    "vagas": "2 e 3 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CTV_01_Fachada_T1e2_A_EF2_v2-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/CTV_01_Fachada_T1e2_A_EF2_v2-1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "ibate",
@@ -564,7 +664,10 @@
    "vagas": "5 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-ibate-fachada2-scaled-1.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/apartamento-ibate-fachada2-scaled-1.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "purity-moema",
@@ -582,7 +685,10 @@
    "vagas": "2 e 3 Vagas (determinadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/img_fachada-pag-int-empreen_ficha-tecnica.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/img_fachada-pag-int-empreen_ficha-tecnica.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "ndk-studios-moema",
@@ -600,7 +706,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-2.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-2.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "monogram",
@@ -618,7 +727,11 @@
    "vagas": "2 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada.jpg",
+  "categorias": [
+   "alto-padrao",
+   "apartamentos"
+  ]
  },
  {
   "slug": "park-lane",
@@ -636,7 +749,10 @@
    "vagas": "5 à 7 Vagas (determinadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/parklane-fachada-1.jpg-1.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/parklane-fachada-1.jpg-1.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "filadelfo-vila-nova-conceicao",
@@ -654,7 +770,10 @@
    "vagas": "1 ou 2 vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Filadelfo-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2025/01/Fachada-Filadelfo-1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "tiel",
@@ -672,7 +791,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/tiel.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/tiel.jpg",
+  "categorias": [
+   "studios"
+  ]
  },
  {
   "slug": "nex-one-praca-pereira-coutinho",
@@ -690,7 +812,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/apartamento-nex-one-pereira-coutinho-sao-paulo-sp-fachada-destaque-2.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/apartamento-nex-one-pereira-coutinho-sao-paulo-sp-fachada-destaque-2.png",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "nex-one-vila-nova",
@@ -708,7 +833,10 @@
    "vagas": ""
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/next-one.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/next-one.jpg",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "dom-564",
@@ -726,7 +854,10 @@
    "vagas": "1 e 2 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/4c51744dac86d0672fa7b1304acae0380a7756ec.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/4c51744dac86d0672fa7b1304acae0380a7756ec.png",
+  "categorias": [
+   "apartamentos"
+  ]
  },
  {
   "slug": "arbre-vila-nova",
@@ -744,7 +875,10 @@
    "vagas": "4 e 5 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/arbre.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/12/arbre.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "d-o-c-vila-nova",
@@ -762,7 +896,10 @@
    "vagas": "3 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/19-Afonso-Braz_Fachada-R.-Afonso-Braz_R06-HR-.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/19-Afonso-Braz_Fachada-R.-Afonso-Braz_R06-HR-.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "bueno-brandao",
@@ -780,7 +917,10 @@
    "vagas": "5 e 7 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada_noturna.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada_noturna.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "opera-vila-nova",
@@ -798,7 +938,10 @@
    "vagas": "4 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/EMOCOES_HELIO_FACHADA_DIURNA_HR.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/EMOCOES_HELIO_FACHADA_DIURNA_HR.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "helio-454",
@@ -816,7 +959,10 @@
    "vagas": "3 e 4 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_Helio-Pelegrino-01-FACHADA-FRONTAL_HR1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/RFM_Helio-Pelegrino-01-FACHADA-FRONTAL_HR1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "sete-vila-nova-conceicao",
@@ -834,7 +980,10 @@
    "vagas": "5 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-1723570998863-1.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/fachada-1723570998863-1.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "pallazo-grimaldi",
@@ -852,7 +1001,10 @@
    "vagas": "4 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/palazzo-1.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/palazzo-1.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "the-frame",
@@ -870,7 +1022,10 @@
    "vagas": "4 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/theframe_Fachada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/theframe_Fachada.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "praca-da-vila",
@@ -888,7 +1043,10 @@
    "vagas": "2 Vagas"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/destaquehome-praca-da-vila-fachada-m.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/destaquehome-praca-da-vila-fachada-m.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "triad-vila-nova-conceicao",
@@ -906,7 +1064,10 @@
    "vagas": "3 Vagas (demarcadas)"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/galeria-header-triad-entrada.jpg"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/galeria-header-triad-entrada.jpg",
+  "categorias": [
+   "alto-padrao"
+  ]
  },
  {
   "slug": "bosque-vila-nova",
@@ -924,6 +1085,9 @@
    "vagas": "2 e 3 Vagas + depósito"
   },
   "torres": [],
-  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Fachada-Noturna.png"
+  "img": "https://w3wimoveis.com.br/wp-content/uploads/2024/11/Fachada-Noturna.png",
+  "categorias": [
+   "alto-padrao"
+  ]
  }
 ]
