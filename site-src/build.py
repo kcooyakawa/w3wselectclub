@@ -350,6 +350,37 @@ html.lock{overflow:hidden}
 @keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:center bottom}}
 @media(max-width:760px){.ht2{padding-left:0}.hlp-m{grid-template-columns:1fr 1fr}.hlp-m span:nth-child(n+3){display:none}.hlp-m{top:96px}.hlp-l{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.hlp{height:auto}.hlp-s{position:relative}}
+
+/* portfólio */
+.pf{padding:120px 0 96px;background:var(--paper)}
+.pf-hd{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:14px}
+.pf-f{display:flex;flex-wrap:wrap;gap:12px 40px;padding:18px 0 48px}
+.pf-g{display:flex;flex-wrap:wrap;gap:4px 18px}
+.pf-g button{background:none;border:0;padding:4px 0;font-family:var(--serif);font-weight:300;font-size:20px;color:var(--ink-2);cursor:pointer;position:relative;transition:color .2s}
+.pf-g button[aria-pressed=true]{color:var(--ink);font-style:italic}
+.pf-g button[aria-pressed=true]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink)}
+.pf-g+.pf-g{padding-left:40px;border-left:1px solid var(--line)}
+.pf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:56px 28px}
+@media(min-width:1500px){.pf-grid{grid-template-columns:repeat(5,1fr)}}
+.pf-grid .g .ph{aspect-ratio:4/5;background:#dfe2e6}
+.pf-grid .g .ph img{filter:saturate(.92)}
+.pf-st{position:absolute;z-index:1;top:12px;left:12px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;background:rgba(246,247,249,.94);padding:5px 9px;color:var(--ink)}
+.pf-grid .gi{grid-template-columns:28px 1fr;gap:10px;margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.pf-grid .gi h3{font-size:22px}
+.pf-grid .gi p{font-size:12.5px}
+@media(max-width:900px){.pf-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:767px){.pf{padding:72px 0}.pf-grid{grid-template-columns:repeat(2,1fr);gap:36px 12px}.pf-grid .gi{grid-template-columns:1fr;gap:4px}.pf-grid .gi h3{font-size:18px}.pf-g+.pf-g{padding-left:0;border-left:0}.pf-g button{font-size:17px}.pf-f{gap:10px;padding-bottom:32px}}
+
+.fx-x{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:48px 0;border-bottom:1px solid var(--line)}
+.fx-x h4,.fx-cta2 h4{font-family:var(--serif);font-weight:300;font-size:26px;line-height:1.15;margin:10px 0 10px}
+.fx-x p{font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.fx-x ul{list-style:none;margin-top:12px}.fx-x li{font-family:var(--serif);font-weight:300;font-size:20px;padding:8px 0;border-bottom:1px solid var(--line)}
+.fx-map{padding:40px 0}.fx-map iframe{display:block;width:100%;height:360px;border:0;margin-top:14px;filter:grayscale(1) contrast(1.05)}
+.fx-cta2{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--ink);color:#F6F7F9;padding:36px 40px;margin-bottom:24px}
+.fx-cta2 .eyebrow{color:rgba(246,247,249,.6)}.fx-cta2 h4{margin:8px 0 0;max-width:520px}
+.fx-cta2 .btn.solid{background:#F6F7F9;color:var(--ink);border-color:#F6F7F9}
+.sh-in .fx-l{display:inline-block;margin:0}
+@media(max-width:900px){.fx-x{grid-template-columns:1fr;gap:28px}.fx-cta2{padding:28px 22px}.fx-map iframe{height:280px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -428,14 +459,14 @@ CATS = [('', 'Todos'), ('studios', 'Studios'), ('apartamentos', 'Apartamentos'),
 
 def gcard(e, i):
     r = e['resumo']
-    return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-slug="{e['slug']}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}">
-<div class="ph"><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
+    return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-slug="{e['slug']}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}" data-st="{e['status']}">
+<div class="ph"><span class="pf-st">{e['status']}</span><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
 <div class="gi"><span class="n">{i:02d}</span><div><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])} · {esc(r['tipologias'])}</p><p class="sp">{esc(r['metragem'])}</p></div></div></a>"""
 
 STATUS = [('Lançamento', 'Lançamentos', 'Antes de todo mundo.'), ('Em obras', 'Em obras', 'Garanta na planta.'), ('Pronto', 'Prontos para morar', 'Chaves na mão.')]
 
 def ficha_data():
-    return [{k: e[k] for k in ('slug', 'nome', 'bairro', 'status', 'frase', 'img', 'resumo', 'categorias')} for e in E]
+    return [dict({k: e[k] for k in ('slug', 'nome', 'bairro', 'status', 'frase', 'img', 'resumo', 'categorias')}, bt=BAIRROS[e['bairro_slug']]['lead']) for e in E]
 
 SHEET = r"""<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t" hidden>
 <div class="sh-bg" data-close></div><div class="sh-p" tabindex="-1"><div class="sh-grab" aria-hidden="true"></div>
@@ -466,12 +497,14 @@ def build_home():
 <div class="wrap hlp-l"><span class="cue"><i></i>Role</span><p>Selecionamos os melhores imóveis nos endereços mais desejados de São Paulo.</p></div>
 </div></section>
 
-<section class="sec gx" id="imoveis"><div class="wrap">
-<div class="g-hd"><div><span class="eyebrow">Imóveis</span><h2>Moema, <em>selecionada.</em></h2></div>
-<p>{len(moema)} empreendimentos em Moema e {len(outros)} oportunidades em bairros vizinhos, organizados pelo momento de cada obra.</p></div>
-<div class="g-ctl"><div class="chips">{chips}</div>
-<div class="seg"><button class="sg" data-b="moema" aria-pressed="true">Moema</button><button class="sg" data-b="outros" aria-pressed="false">Outras oportunidades</button></div></div>
-</div><div class="rows">{rows}</div></section>
+<section class="pf" id="imoveis"><div class="wrap">
+<div class="pf-hd"><span class="eyebrow">Portfólio W3W</span><span class="eyebrow pf-n"></span></div>
+<div class="pf-f"><div class="pf-g" data-k="b"><button data-v="moema" aria-pressed="true">Moema</button><button data-v="outros" aria-pressed="false">Outras oportunidades</button></div>
+<div class="pf-g" data-k="c">{''.join(f'<button data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{l}</button>' for v,l in CATS)}</div>
+<div class="pf-g" data-k="s"><button data-v="" aria-pressed="true">Todas as fases</button><button data-v="Lançamento" aria-pressed="false">Lançamento</button><button data-v="Em obras" aria-pressed="false">Em obras</button><button data-v="Pronto" aria-pressed="false">Pronto</button></div></div>
+<div class="pf-grid">{''.join(gcard(e, i+1) for i, e in enumerate(sorted(E, key=lambda e: (e['bairro_slug']!='moema', ['Lançamento','Em obras','Pronto'].index(e['status']), 'alto-padrao' not in e['categorias']))))}</div>
+<div class="more"><button class="btn" id="more">Ver mais imóveis</button></div>
+</div></section>
 
 <section class="terr" id="territorio"><video autoplay muted loop playsinline preload="none" poster="{VID}/territorio.jpg"><source src="{VID}/territorio.mp4" type="video/mp4"></video>
 <div class="wrap terr-in"><span class="eyebrow">Território</span><h2>Nossa casa é <em>Moema.</em></h2>
@@ -512,11 +545,10 @@ def build_home():
 {SHEET}
 <script>window.W3W={json.dumps(ficha_data(), ensure_ascii=False)};window.W3W_WA='{WA}';window.W3W_BASE='{BASE}';</script>
 <script src="{BASE}/assets/sheet.js?v={VER}" defer></script>
-<script>(function(){{var st={{c:'',b:'moema'}};var cards=[].slice.call(document.querySelectorAll('.g'));
-function ap(){{document.querySelectorAll('.row-s').forEach(function(r){{var n=0;r.querySelectorAll('.g').forEach(function(g){{var ok=(st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1);g.hidden=!ok;if(ok)n++}});r.hidden=!n;r.querySelector('.rc').textContent=n;r.querySelector('.track').scrollLeft=0}})}}
-document.querySelectorAll('.chip').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.chip').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.c=b.dataset.v;ap()}}}});
-document.querySelectorAll('.sg').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.sg').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st.b=b.dataset.b;ap()}}}});
-document.querySelectorAll('.arr button').forEach(function(b){{b.onclick=function(){{var t=b.closest('.row-s').querySelector('.track');t.scrollBy({{left:+b.dataset.d*t.clientWidth*.8,behavior:'smooth'}})}}}});ap();
+<script>(function(){{var st={{b:'moema',c:'',s:''}},lim=16,all=[].slice.call(document.querySelectorAll('.pf-grid .g')),more=document.getElementById('more'),num=document.querySelector('.pf-n');
+function ap(){{var v=all.filter(function(g){{return (st.b==='moema'?g.dataset.b==='moema':g.dataset.b!=='moema')&&(!st.c||g.dataset.cat.split(' ').indexOf(st.c)>-1)&&(!st.s||g.dataset.st===st.s)}});all.forEach(function(g){{g.hidden=true}});v.forEach(function(g,i){{g.hidden=i>=lim;g.querySelector('.n').textContent=String(i+1).padStart(2,'0')}});num.textContent=v.length+(v.length===1?' imóvel':' imóveis');more.parentNode.hidden=v.length<=lim}}
+document.querySelectorAll('.pf-g').forEach(function(gr){{gr.querySelectorAll('button').forEach(function(b){{b.onclick=function(){{gr.querySelectorAll('button').forEach(function(x){{x.setAttribute('aria-pressed','false')}});b.setAttribute('aria-pressed','true');st[gr.dataset.k]=b.dataset.v;lim=16;ap()}}}})}});
+more.onclick=function(){{lim+=16;ap()}};ap();
 var h=document.querySelector('.hd.over');function sc(){{h.classList.toggle('solid',scrollY>window.innerHeight*.6)}}addEventListener('scroll',sc,{{passive:true}});sc()}})();</script>"""
     pg += footer()
     write('index.html', pg)
