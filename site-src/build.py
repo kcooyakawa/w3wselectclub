@@ -387,7 +387,24 @@ html.lock{overflow:hidden}
 .pf-ov small{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
 .g:hover .pf-ov,.g:focus-visible .pf-ov{opacity:1}.g:hover .pf-ov em{transform:none}
 .pf-grid .g .ph::after{display:none}
-@media(hover:none){.pf-ov{display:none}}
+
+
+/* painel de filtros */
+.pf-f{display:grid!important;grid-template-columns:auto 1.4fr 1.2fr;gap:0!important;margin:28px 0 48px;padding:0!important;background:var(--paper-2);border:1px solid var(--line)}
+.pf-g{display:flex!important;flex-wrap:wrap;align-items:center;gap:6px!important;padding:18px 22px!important;border-left:1px solid var(--line)!important}
+.pf-g:first-child{border-left:0!important}
+.pf-lb{width:100%;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);font-weight:500;margin-bottom:6px}
+.pf-g button{font-family:var(--sans)!important;font-style:normal!important;font-size:11px!important;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--ink)!important;padding:10px 14px!important;border:1px solid var(--line)!important;background:transparent;transition:background .2s,color .2s,border-color .2s}
+.pf-g button::after{display:none!important}
+.pf-g button:hover{border-color:var(--ink)!important}
+.pf-g button[aria-pressed=true]{background:var(--ink)!important;color:var(--paper-2)!important;border-color:var(--ink)!important}
+@media(max-width:900px){.pf-f{grid-template-columns:1fr}.pf-g{border-left:0!important;border-top:1px solid var(--line)}.pf-g:first-child{border-top:0}.pf-g{padding:14px 16px!important}}
+/* selos por fase */
+.pf-st{border:0}
+.st-lancamento{background:#1A1817!important;color:#F6F7F9!important}
+.st-em{background:#757E8D!important;color:#F6F7F9!important}
+.st-pronto{background:#EADFCC!important;color:#3B342B!important}
+.pf-ov{z-index:2!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 """.replace('__F__', FONTS)
 
@@ -467,7 +484,7 @@ CATS = [('', 'Todos'), ('studios', 'Studios'), ('apartamentos', 'Apartamentos'),
 def gcard(e, i):
     r = e['resumo']
     return f"""<a class="g" href="{u('empreendimentos/'+e['slug'])}" data-slug="{e['slug']}" data-cat="{' '.join(e['categorias'])}" data-b="{e['bairro_slug']}" data-st="{e['status']}">
-<div class="ph"><span class="pf-st">{e['status']}</span><span class="pf-ov"><em>{esc(e['nome'])}</em><small>Ver ficha →</small></span><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
+<div class="ph"><span class="pf-st st-{e['status'].split()[0].lower().replace('ç','c')}">{e['status']}</span><span class="pf-ov"><em>{esc(e['nome'])}</em><small>Ver ficha →</small></span><img src="{e['img']}" alt="{esc(e['nome'])}, {esc(e['bairro'])}" loading="lazy" decoding="async"></div>
 <div class="gi"><span class="n">{i:02d}</span><div><h3>{esc(e['nome'])}</h3><p>{esc(e['bairro'])} · {esc(r['tipologias'])}</p><p class="sp">{esc(r['metragem'])}</p></div></div></a>"""
 
 STATUS = [('Lançamento', 'Lançamentos', 'Antes de todo mundo.'), ('Em obras', 'Em obras', 'Garanta na planta.'), ('Pronto', 'Prontos para morar', 'Chaves na mão.')]
@@ -505,10 +522,10 @@ def build_home():
 </div></section>
 
 <section class="pf" id="imoveis"><div class="wrap">
-<div class="pf-hd"><span class="eyebrow">Portfólio W3W</span><span class="eyebrow pf-n"></span></div>
-<div class="pf-f"><div class="pf-g" data-k="b"><button data-v="moema" aria-pressed="true">Moema</button><button data-v="outros" aria-pressed="false">Outras oportunidades</button></div>
-<div class="pf-g" data-k="c">{''.join(f'<button data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{l}</button>' for v,l in CATS)}</div>
-<div class="pf-g" data-k="s"><button data-v="" aria-pressed="true">Todas as fases</button><button data-v="Lançamento" aria-pressed="false">Lançamento</button><button data-v="Em obras" aria-pressed="false">Em obras</button><button data-v="Pronto" aria-pressed="false">Pronto</button></div></div>
+<div class="pf-hd"><span class="eyebrow">Galeria W3W</span><span class="eyebrow pf-n"></span></div>
+<div class="pf-f"><div class="pf-g" data-k="b"><span class="pf-lb">Região</span><button data-v="moema" aria-pressed="true">Moema</button><button data-v="outros" aria-pressed="false">Outras oportunidades</button></div>
+<div class="pf-g" data-k="c"><span class="pf-lb">Tipo</span>{''.join(f'<button data-v="{v}" aria-pressed="{"true" if v=="" else "false"}">{l}</button>' for v,l in CATS)}</div>
+<div class="pf-g" data-k="s"><span class="pf-lb">Fase</span><button data-v="" aria-pressed="true">Todas as fases</button><button data-v="Lançamento" aria-pressed="false">Lançamento</button><button data-v="Em obras" aria-pressed="false">Em obras</button><button data-v="Pronto" aria-pressed="false">Pronto</button></div></div>
 <div class="pf-grid">{''.join(gcard(e, i+1) for i, e in enumerate(sorted(E, key=lambda e: (e['bairro_slug']!='moema', ['Lançamento','Em obras','Pronto'].index(e['status']), 'alto-padrao' not in e['categorias']))))}</div>
 <div class="more"><button class="btn" id="more">Ver mais imóveis</button></div>
 </div></section>
