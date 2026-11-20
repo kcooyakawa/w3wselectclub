@@ -186,7 +186,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:900px){.hd.over .nav{color:var(--ink)}.hd.over .nav .btn{color:var(--ink);border-color:var(--ink)}}
 .hx{position:relative;min-height:100svh;color:#F6F7F9;overflow:hidden;background:#1A1817}
 .hx video,.terr video,.par-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.55),rgba(18,17,16,.15) 45%,rgba(18,17,16,.6))}
+.hx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,17,16,.82) 0%,rgba(18,17,16,.45) 22%,rgba(18,17,16,.2) 50%,rgba(18,17,16,.65) 100%)}
 .hx-in{position:relative;z-index:1;padding-top:180px;padding-bottom:80px}
 .hx .eyebrow{color:rgba(246,247,249,.75)}
 .hx h1{font-family:var(--serif);font-weight:300;font-size:clamp(64px,11vw,176px);line-height:.88;letter-spacing:-.035em;margin:24px 0 32px}
